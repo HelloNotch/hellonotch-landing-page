@@ -1,0 +1,22 @@
+@media (max-width:740px){
+    .container {width: 100%;}
+    .logo {padding: 0 0 0 15px;}
+    .banner_left figure {margin: 0;}
+    .banner {margin: 10px 15px 52px 15px;}
+    .content_blk_right {width: 70%;}
+    .content_blk {padding: 0 15px 39px 15px;}
+    .banner_right h1 {font-size: 28px; letter-spacing: -1px;}
+}
+@media (max-width:599px){
+    .banner_left {float: none; display: block; width: 100%; margin: 0 0 20px 0;}
+    .banner_right {float: none; display: block; padding: 0; width: 100%;}
+    .content_blk_left {float: none; display: block; margin: 0 auto 30px;}
+    .content_blk_right {width: 100%; padding: 0;}
+}
+@media (max-width:479px){
+    .learn {width: 100%; padding: 0 15px 30px;}
+    .content_blk {padding: 0 15px 15px 15px;}
+    .footer_in {width: 100%; padding: 20px 15px 20px 15px;}
+    .footer_cnt {width: 87%;}
+    .banner_right h1 {font-size: 25px; line-height: 30px;}
+}
