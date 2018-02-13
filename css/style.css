@@ -278,10 +278,11 @@ body {
   display: table;
   height: 100%;
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 
 .banner_left {
-  padding: 0 50px 0 0;
+  padding: 0;
   display: table-cell;
   width: 50%;
   text-align: center;
@@ -295,7 +296,7 @@ body {
 }
 
 .banner_left figure img {
-  width: 100%;
+  width: 75%;
 }
 
 .banner_right {
