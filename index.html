@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>WorkOf Enterprise</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,7 +24,7 @@
                                     alt=""></a>
                             <div class="ml-auto btn-grp"> <a href="http://beta.enterprise.workof.com" class="d-inline-block sign-btn">Sign
                                     in</a>
-                                
+
                                 <a href="#" class="d-inline-block get-btn">Get Started</a>
                             </div>
                         </nav>
@@ -50,7 +50,7 @@
                                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                                 <div class="form-group">
                                     <div class="relative">
-                                        <input type="email" class="form-control" id="exampleInputEmail1" name="EMAIL"
+                                        <input type="email" class="form-control" id="subscribeEmailInput" name="EMAIL"
                                             placeholder="Email address" required>
                                         <button type="submit" class="submit-btn">Sign up</button>
                                     </div>
@@ -189,7 +189,8 @@
                         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                         <div class="form-group">
                             <div class="relative">
-                                <input type="email" name="EMAIL" class="form-control" placeholder="Email address" required>
+                                <input type="email" name="EMAIL" class="form-control" placeholder="Email address"
+                                    required>
                                 <button type="submit" class="submit-btn">Sign up</button>
                             </div>
                         </div>
@@ -218,16 +219,18 @@ $( "a" ).click(function( event ) {
   event.preventDefault();
   
 });
-</script> 
-<script>
-	$(".sign-btn").click(function(){
-    $(".login-form").slideToggle();
-});
-	
-	
-	</script>  -->
+</script> -->
+    <script>
+        $(".get-btn").click(function () {
+            $('html,body').animate({
+                scrollTop: $("footer").offset().top
+            }, 'slow');
+            // $(document).scroll('#subscribeEmailInput');
+            $("#subscribeEmailInput").focus();
+        });
 
-    <!-------Js--------->
+
+    </script>
 </body>
 
 </html>
