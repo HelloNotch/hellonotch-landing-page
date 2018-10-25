@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23.999">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c98a6e;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="database-hierarchy" transform="translate(0 -0.001)">
+    <ellipse id="Oval" class="cls-1" cx="6" cy="3" rx="6" ry="3" transform="translate(0.75 3.751)"/>
+    <path id="Path" class="cls-1" d="M0,0V4.5c0,1.657,2.686,3,6,3s6-1.343,6-3V0" transform="translate(0.75 6.751)"/>
+    <path id="Path-2" data-name="Path" class="cls-1" d="M0,0V4.5c0,1.657,2.686,3,6,3s6-1.343,6-3V0" transform="translate(0.75 11.251)"/>
+    <path id="Path-3" data-name="Path" class="cls-1" d="M3,0,0,3" transform="translate(12.75 6.751)"/>
+    <ellipse id="Oval-2" data-name="Oval" class="cls-1" cx="3.75" cy="2.25" rx="3.75" ry="2.25" transform="translate(15.75 0.751)"/>
+    <path id="Path-4" data-name="Path" class="cls-1" d="M0,0V4.5C0,5.742,1.679,6.75,3.75,6.75S7.5,5.742,7.5,4.5V0" transform="translate(15.75 3)"/>
+    <path id="Path-5" data-name="Path" class="cls-1" d="M0,0,3.409,3.409" transform="translate(12.341 16.842)"/>
+    <ellipse id="Oval-3" data-name="Oval" class="cls-1" cx="3.75" cy="2.25" rx="3.75" ry="2.25" transform="translate(15.75 14.251)"/>
+    <path id="Path-6" data-name="Path" class="cls-1" d="M0,0V4.5C0,5.742,1.679,6.75,3.75,6.75S7.5,5.742,7.5,4.5V0" transform="translate(15.75 16.5)"/>
+  </g>
+</svg>

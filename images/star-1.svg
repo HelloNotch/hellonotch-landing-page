@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.5 12.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d8d8d8;
+        stroke: #504a4a;
+        stroke-miterlimit: 10;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <g id="Starred_Product_Indicator_Inactive_" data-name="Starred Product Indicator (Inactive)" transform="translate(0.25 0.25)">
+    <circle id="Oval" class="cls-1" cx="6" cy="6" r="6"/>
+    <path id="Star" class="cls-1" d="M3.8,6.122,1.453,7.236l.333-2.58L0,2.764l2.557-.481L3.8,0,5.052,2.283l2.557.481L5.822,4.656l.333,2.58Z" transform="translate(2 2)"/>
+  </g>
+</svg>

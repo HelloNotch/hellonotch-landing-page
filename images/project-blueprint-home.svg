@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c98a6e;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="project-blueprint-home" transform="translate(0.75 0.75)">
+    <circle id="Oval" class="cls-1" cx="3" cy="3" r="3" transform="translate(0 16)"/>
+    <path id="Path" class="cls-1" d="M0,19.5V3A3,3,0,0,1,6,3V19.5"/>
+    <path id="Path-2" data-name="Path" class="cls-1" d="M0,18.75H18a1.5,1.5,0,0,0,1.5-1.5V1.5A1.5,1.5,0,0,0,18,0H3" transform="translate(3 4)"/>
+    <path id="Path-3" data-name="Path" class="cls-1" d="M6,0V5.75H0V0" transform="translate(11 11)"/>
+    <path id="Path-4" data-name="Path" class="cls-1" d="M0,3.75,4.5,0,9,3.75" transform="translate(10 9)"/>
+  </g>
+</svg>
