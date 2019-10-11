@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206" height="326" viewBox="0 0 206 326">
+    <g fill="none" fill-rule="evenodd" transform="translate(-1294 -2248)">
+        <path fill="#FFF" d="M0 0h1500v3722H0z"/>
+        <path fill="#B9B9B9" d="M-1 879h1500v1507H-1z" opacity=".053"/>
+        <g font-family="Helvetica">
+            <text fill="#343434" font-size="20" transform="translate(969 2239)">
+                <tspan x="0" y="19">Purchase Orders</tspan>
+            </text>
+            <text fill="#6A6A6A" font-size="16" transform="translate(969 2239)">
+                <tspan x="0" y="67">Easily group items together to receive quotes </tspan> <tspan x="0" y="97">from vendors and issue purchase orders</tspan>
+            </text>
+        </g>
+        <circle cx="1457" cy="2411" r="163" fill="#EFEFEF" fill-rule="nonzero"/>
+    </g>
+</svg>
