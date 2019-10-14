@@ -1,1187 +1,1628 @@
-
 /*Responsive css*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
 }
 
 @media (max-width: 1874px) {
-.map {
-	bottom: 161px;
-	left: 90px;
-}
-.dotted {
-	right: -282px;
-}
-.blck-dot {
-	width: 44%;
-}
-.light {
-	left: 495px;
-}
-.vist-circle {
-	left: 120px;
-}
+    .map {
+        bottom: 161px;
+        left: 90px;
+    }
+
+    .img-hold .bite-img {
+        height: 960px;
+        left: 210px;
+        margin-left: 0px;
+    }
+
+    .dotted {
+        right: -282px;
+    }
+
+    .blck-dot {
+        width: 44%;
+    }
+
+    .light {
+        left: 495px;
+    }
+
+    .vist-circle {
+        left: 120px;
+    }
 }
 
 @media (max-width: 1760px) {
-.itm-img img {
-	height: 272px;
-	max-width: 260px;
-}
-.img-hold .bite-img {
-	/* width: 150px;
-	top: -84px;
-	left: 65px; */
-}
-.text-hol {
-	padding-left: 105px;
-}
-.dot-chair {
-	height: 655px;
-	top: -100px;
-}
-.gry-cirle {
-	right: -84px;
-}
-.dumbo-img .gry-cirle {
-	top: -345px;
-	left: 415px;
-}
-.text-id {
-	margin-right: 14px;
-}
-.itm-bar li {
-	margin-right: 50px;
-}
-.small-table {
-	margin-left: 20px;
-	margin-right: 26px;
-}
-.text-box p {
-	font-size: 25px;
-	line-height: 54px;
-	}
+    .itm-img img {
+        height: 272px;
+        max-width: 260px;
+    }
 
-.timeline-box img {
-    width: 40px;
-    height: 40px;
-    margin-right: 25px;
-}
-.timeline-box p {
-    font-size: 18px;
-}
-.timeline-box h5 {
-    font-size: 24px;
-	margin-bottom: 12px;
-}
-.signup .form-control {
-    height: 80px;
-}
-.submit-btn {
-    height: 80px;
-    line-height: 0px;
-}
+    .img-hold .bite-img {
+        /* width: 150px;
+        top: -84px;
+        left: 65px; */
+    }
+
+    .text-hol {
+        padding-left: 105px;
+    }
+
+    .dot-chair {
+        height: 655px;
+        top: -100px;
+    }
+
+    .gry-cirle {
+        right: -84px;
+    }
+
+    .dumbo-img .gry-cirle {
+        top: -345px;
+        left: 415px;
+    }
+
+    .text-id {
+        margin-right: 14px;
+    }
+
+    .itm-bar li {
+        margin-right: 50px;
+    }
+
+    .small-table {
+        margin-left: 20px;
+        margin-right: 26px;
+    }
+
+    .text-box p {
+        font-size: 25px;
+        line-height: 54px;
+    }
+
+    .timeline-box img {
+        width: 40px;
+        height: 40px;
+        margin-right: 25px;
+    }
+
+    .timeline-box p {
+        font-size: 18px;
+    }
+
+    .timeline-box h5 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .signup .form-control {
+        height: 80px;
+    }
+
+    .submit-btn {
+        height: 80px;
+        line-height: 0px;
+    }
 }
 
 @media (max-width: 1487px) {
-.text-hol h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-	line-height: 62px;
-}
-.text-hol p {
-    font-size: 20px;
-    margin-bottom: 80px;
-    line-height: 40px;
-}
-.img-hold .bite-img {
-    width: 150px;
-    left: 190px;
-	}
-	.img-hold img {
-    max-width: 750px;
-}
-.chair-pic {
-    max-width: 600px;
-}
-.dumbo-img .gry-cirle {
-	right: -270px;
-}
-.img-hold {
-    position: relative;
-    top: -235px;
-    right: 20px;
-}
-.management-sec {
-    height: 800px;
-}
-.relative {
-    max-width: 530px;
-}
-.signup .form-control {
-    height: 70px;
-}
-.submit-btn {
-    height: 70px;
-    line-height: 0px;
-}
+    .text-hol h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        line-height: 62px;
+    }
 
+    .text-hol p {
+        font-size: 20px;
+        margin-bottom: 80px;
+        line-height: 40px;
+    }
+
+    .img-hold .bite-img {
+        height: 690px;
+        left: 130px;
+    }
+
+    .img-hold img {
+        max-width: 750px;
+    }
+	.dot-chair{
+		left: -10px;
+	}
+    .chair-pic {
+        max-width: 600px;
+    }
+
+    .dumbo-img .gry-cirle {
+        right: -270px;
+    }
+
+    .img-hold {
+        position: relative;
+        top: -235px;
+        right: 20px;
+    }
+
+    .management-sec {
+        height: 800px;
+    }
+
+    .relative {
+        max-width: 530px;
+    }
+
+    .signup .form-control {
+        height: 70px;
+    }
+
+    .submit-btn {
+        height: 70px;
+        line-height: 0px;
+    }
 
 
 }
 
 @media (max-width: 1368px) {
-.logo img {
-	width: 33px;
-	height: 33px;
-}
-.featur-txt {
-	left: -80px;
-	top: 51px;
-}
-.main-circle {
-	left: -61px;
-}
-.text-hold-trade span {
-	margin-right: 47px;
-}
-.work-logo img {
-	width: 390px;
-	height: 81px;
-}
-.shop-now {
-	max-width: 371px;
-	height: 81px;
-	line-height: 81px;
-}
-.itm-img img {
-	height: 212px;
-	max-width: 210px;
-}
-.img-box {
-	max-width: 205px;
-	width: 100%;
-	margin: 0 auto;
-}
-.featurd-sec .container {
-	max-width: 1090px;
-}
-.cont-box .dolr {
-	font-size: 13px;
-}
-.cont-box .basic {
-	font-size: 13px;
-}
-.overlay-hover {
-	padding: 22px 0;
-}
-.about-txt {
-	left: 78%;
-}
-.map {
-	left: 10px;
-}
-.dotted {
-	right: -223px;
-}
-.vist-circle {
-	top: 160px;
-}
-.light {
-	left: 555px;
-	top: 225px;
-}
-.dot-circle {
-	max-width: 640px;
-	height: 630px;
-}
-.Visit-sec {
-	padding: 0px 0 53px;
-}
-.dot-chair {
-	height: 654px;
-	top: -81px;
-}
-.text-hol {
-	padding-left: 66px;
-}
-.text-hol h2 {
-	margin-bottom: 20px;
-	font-size: 36px;
-	line-height: 50px;
-}
+    .logo img {
+        height: 33px;
+    }
 
-.text-hol p {
-	margin-bottom: 64px;
-	font-size: 18px;
-	line-height: 39px;
-}
-.img-hold .bite-img {
-	width: 124px;
-	left: 140px;
-}
-.text-box {
-	padding: 118px 0 201px 0;
-}
-.gry-cirle {
-	max-width: 460px;
-	height: 460px;
-	right: -214px;
-}
-.timeline-box {
-	margin-bottom: 49px;
-	padding-left: 100px;
-}
-.budget-img {
-	top: -471px;
-}
-.centralized-sec .row {
-	height: 1464px;
-}
-.benefits-sec {
-	padding: 201px 0 0;
-}
-.dumbo-img .gry-cirle {
-	top: -250px;
-	left: 280px;
-}
-.right-dumbo {
-	right: -94px;
-	top: -179px;
-}
-.table-img {
-	padding-left: 80px;
-	margin: -17px 0 0 0;
-}
-.small-table {
-	margin-left: 18px;
-	margin-right: 24px;
-}
-.text-id {
-	margin-right: 17px;
-}
-.itm-bar li {
-	margin-right: 27px;
-}
-.hover-box span {
-	font-size: 11px;
-}
-.hover-box {
-	padding: 30px 15px;
-}
-.signup .form-control {
-	height: 60px;
-	font-size: 16px;
-    padding-left: 20px;
-}
-.submit-btn {
-	height: 60px;
-	width: 129px;
-	line-height: 56px;
-}
-.relative {
-	max-width: 400px;
-}
-.management-sec {
-	padding: 91px 0 18px;
-}
-.img-hold {
-	top: -108px;
-	right: -15px;
-}
-.alredy {
-	padding-top: 15px;
-}
-.key-itm li {
-	margin-bottom: 18px;
-}
-.table-rows {
-	height: 336px;
-}
-.footer {
-	padding: 160px 0 25px;
-}
-.footer-txt h2 {
-	margin-bottom: 50px;
-}
-.footer-txt {
-	margin-bottom: 141px;
-}
-.get-btn {
-	width: 128px;
-	padding: 10px 0;
-}
-.foter-logo {
-	padding: 22px 0 0px;
-}
-.timeline-box p {
-	margin-left: 60px;
-	font-size: 16px;
-}
-.timeline-box img {
-	margin-right: 16px;
-	width: 36px;
-    height: 36px;
-}
-.text-box h2 {
-	margin-bottom: 37px;
-	line-height: 57px;
-	font-size: 42px;
-}
-.img-hold img {
-	max-width: 600px;
-}
-.img-hold {
-	top: -158px;
-	right: -68px;
-}
-.management-sec .row {
-	height: 585px;
-}
-.chair-pic {
-	max-width: 484px;
-}
-.forget a {
-	font-size: 11px;
-}
-.forget .login-hold {
-	margin-left: 0px;
-	font-size: 12px;
-}
-.management-sec {
-    height: 700px;
-}
+    .get-btn span {
+        padding-top: 6%;
+    }
+
+    .centralized-sec .title {
+        margin-top: 70px;
+    }
+
+    .dot-blue {
+        top: 120px;
+        left: 100px;
+    }
+
+    .dot-yellow {
+        top: 115px;
+        right: 90px;
+    }
+
+    .featur-txt {
+        left: -80px;
+        top: 51px;
+    }
+
+    .main-circle {
+        left: -61px;
+    }
+
+    .text-hold-trade span {
+        margin-right: 47px;
+    }
+
+    .work-logo img {
+        width: 390px;
+        height: 81px;
+    }
+
+    .shop-now {
+        max-width: 371px;
+        height: 81px;
+        line-height: 81px;
+    }
+
+    .itm-img img {
+        height: 212px;
+        max-width: 210px;
+    }
+
+    .img-box {
+        max-width: 205px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .featurd-sec .container {
+        max-width: 1090px;
+    }
+
+    .cont-box .dolr {
+        font-size: 13px;
+    }
+
+    .cont-box .basic {
+        font-size: 13px;
+    }
+
+    .overlay-hover {
+        padding: 22px 0;
+    }
+
+    .about-txt {
+        left: 78%;
+    }
+
+    .map {
+        left: 10px;
+    }
+
+    .dotted {
+        right: -223px;
+    }
+
+    .vist-circle {
+        top: 160px;
+    }
+
+    .light {
+        left: 555px;
+        top: 225px;
+    }
+
+    .dot-circle {
+        max-width: 640px;
+        height: 630px;
+    }
+
+    .Visit-sec {
+        padding: 0px 0 53px;
+    }
+
+    .dot-chair {
+        height: 655px;
+        top: -120px;
+        left: -15px;
+    }
+
+    .text-hol {
+        padding-left: 66px;
+    }
+
+    .text-hol h2 {
+        margin-bottom: 20px;
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .text-hol p {
+        margin-bottom: 64px;
+        font-size: 18px;
+        line-height: 39px;
+    }
+
+    .img-hold .bite-img {
+        height: 710px;
+        width: auto;
+        left: 72px;
+    }
+
+    .text-box {
+        padding: 118px 0 201px 0;
+    }
+
+    .gry-cirle {
+        max-width: 460px;
+        height: 460px;
+        right: -214px;
+    }
+
+    .timeline-box {
+        margin-bottom: 49px;
+        padding-left: 100px;
+    }
+
+    .budget-img {
+        top: -471px;
+    }
+
+    .benefits-sec {
+        padding: 201px 0 0;
+    }
+
+    .dumbo-img .gry-cirle {
+        top: -250px;
+        left: 280px;
+    }
+
+    .right-dumbo {
+        right: -94px;
+        top: -179px;
+    }
+
+    .table-img {
+        padding-left: 80px;
+        margin: -17px 0 0 0;
+    }
+
+    .small-table {
+        margin-left: 18px;
+        margin-right: 24px;
+    }
+
+    .text-id {
+        margin-right: 17px;
+    }
+
+    .itm-bar li {
+        margin-right: 27px;
+    }
+
+    .hover-box span {
+        font-size: 11px;
+    }
+
+    .hover-box {
+        padding: 30px 15px;
+    }
+
+    .signup .form-control {
+        height: 60px;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .submit-btn {
+        height: 60px;
+        width: 129px;
+        line-height: 56px;
+    }
+
+    .relative {
+        max-width: 400px;
+    }
+
+    .management-sec {
+        padding: 91px 0 18px;
+    }
+
+    .img-hold {
+        top: -108px;
+        right: -15px;
+    }
+
+    .alredy {
+        padding-top: 15px;
+    }
+
+    .key-itm li {
+        margin-bottom: 18px;
+    }
+
+    .table-rows {
+        height: 336px;
+    }
+
+    .footer {
+        padding: 160px 0 25px;
+    }
+
+    .footer-txt h2 {
+        margin-bottom: 50px;
+    }
+
+    .footer-txt {
+        margin-bottom: 141px;
+    }
+
+    .get-btn {
+        width: 128px;
+        padding: 10px 0;
+    }
+
+    .foter-logo {
+        padding: 22px 0 0px;
+    }
+
+    .timeline-box p {
+        margin-left: 60px;
+        font-size: 16px;
+    }
+
+    .timeline-box img {
+        margin-right: 16px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .text-box h2 {
+        margin-bottom: 37px;
+        line-height: 57px;
+        font-size: 42px;
+    }
+
+    .img-hold img {
+        max-width: 770px;
+    }
+
+    .img-hold {
+        top: -158px;
+        right: 50px;
+    }
+
+    .management-sec .row {
+        height: 585px;
+    }
+
+    .chair-pic {
+        max-width: 484px;
+    }
+
+    .forget a {
+        font-size: 11px;
+    }
+
+    .forget .login-hold {
+        margin-left: 0px;
+        font-size: 12px;
+    }
+
+    .management-sec {
+        height: 700px;
+    }
+
+    .clients-sec .top-row-logos, .clients-sec .bottom-row-logos {
+        margin: 0px 0px;
+    }
+
+    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img {
+        margin: 0px 44px 20px;
+        max-width: 100px;
+        max-height: 40px;
+    }
 }
 
 @media (max-width: 1199px) {
-.logo img {
-	width: 25px;
-	height: 25px;
-}
-.featur-txt {
-	left: -103px;
-	top: 50px;
-}
-.cont-box .basic {
-	font-size: 11px;
-}
-.cont-box .dolr {
-	font-size: 11px;
-}
-.about-txt {
-	left: 69%;
-}
-.circle {
-	height: 453px;
-	top: 23px;
-}
-.carousel-caption p br {
-	display: none;
-}
-.carousel-caption {
-	top: -18px;
-}
-.carousel-caption h3 {
-	font-size: 29px;
-}
-.carousel-caption p {
-	font-size: 15px;
-}
-.itm-img li {
-	margin: 7px 10px;
-}
-.brand-icon li {
-	margin: 0 18px;
-}
-.brand-icon span {
-	font-size: 14px;
-}
-.dot-circle {
-	max-width: 398px;
-	height: 398px;
-	left: 7px;
-}
-.vist-circle {
-	left: 73px;
-	top: 70px;
-	padding: 41px 38px;
-	max-width: 399px;
-	height: 359px;
-}
-.light {
-	top: 145px;
-	left: 408px;
-	max-width: 347px;
-	height: 370px;
-}
-.dotted {
-	right: -140px;
-}
-.map {
-	left: 200px;
-	bottom: 287px;
-	width: 243px;
-	height: 169px;
-}
-.featurd-sec .container {
-	max-width: 815px;
-}
-.overlay-hover a {
-	max-width: 148px;
-}
-.itm-img img {
-	height: 155px;
-	max-width: 155px;
-}
-.hero-sec .container {
-	max-width: 910px;
-}
-.work-logo img {
-	width: 290px;
-	height: 62px;
-}
-.shop-now {
-	max-width: 278px;
-	height: 61px;
-	line-height: 61px;
-}
-.about-txt li {
-	margin: 0 121px 0 0;
-}
-.Visit-sec {
-	padding: 0px 0 0px;
-}
-.text-hol h2 {
-	font-size: 32px;
-	margin-bottom: 12px;
-	line-height: 48px;
-}
-.management-sec {
-	padding: 70px 0 60px;
-}
-.text-hol {
-	padding-left: 15px;
-}
-.text-hol p {
-	margin-bottom: 54px;
-	font-size: 16px;
-	line-height: 34px;
-}
-.img-hold {
-	position: relative;
-	top: -117px;
-	right: 96px;
-}
-.img-hold .bite-img {
-	width: 128px;
-	left: 114px;
-}
-.sign-btn {
-	z-index: 9999999999999;
-}
-.dot-chair {
-	top: -58px;
-	max-width: 324px;
-}
-.gry-cirle {
-	max-width: 360px;
-	height: 360px;
-	right: -134px;
-}
-.chair-img {
-	padding-left: 25px;
-}
-.submit-btn {
-	height: 60px;
-	line-height: 56px;
-}
-.signup .form-control {
-	height: 60px;
-}
-.timeline-box {
-	margin-bottom: 31px;
-	padding-left: 38px;
-}
-.centralized-sec .row {
-	height: 1083px;
-}
-.table-bar {
-	flex-wrap: wrap;
-}
-.itm-bar li {
-	margin: 0 34px;
-}
-.text-id {
-	margin-right: 157px;
-}
-.img-table {
-	text-align: center;
-	margin: 0 auto;
-}
-.table-rows {
-	height: 310px;
-}
-.key-itm li {
-	font-size: 18px;
-	line-height: 36px;
-}
-.budget-img {
-	top: -381px;
-}
-.text-box {
-	padding: 125px 0 97px 0;
-}
-.right-dumbo {
-	right: -12px;
-	height: 601px;
-}
-.footer {
-	padding: 93px 0 25px;
-}
-.table-rows {
-	height: 260px;
-}
-.img-hold img {
-	max-width: 617px;
-}
-.management-sec .row {
-	height: 435px;
-}
-.chair-pic {
-	max-width: 374px;
-}
-.text-box h2 {
-	margin-bottom: 26px;
-	line-height: 47px;
-	font-size: 36px;
-}
-.text-box {
-	padding: 95px 0 92px 11px;
-}
-.text-box p {
-	font-size: 18px;
-}
-.timeline-box h5 {
-	font-size: 18px;
-	margin-bottom: 11px;
-}
-.dumbo-img .gry-cirle {
-	height: 350px;
-	max-width: 350px;
-}
+    .logo img {
+        height: 25px;
+    }
+	.main-section {
+		padding-left: 60px;
+	}
+
+    .featur-txt {
+        left: -103px;
+        top: 50px;
+    }
+
+    .cont-box .basic {
+        font-size: 11px;
+    }
+
+    .cont-box .dolr {
+        font-size: 11px;
+    }
+
+    .about-txt {
+        left: 69%;
+    }
+
+    .circle {
+        height: 453px;
+        top: 23px;
+    }
+
+    .carousel-caption p br {
+        display: none;
+    }
+
+    .carousel-caption {
+        top: -18px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 29px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+
+    .itm-img li {
+        margin: 7px 10px;
+    }
+
+    .brand-icon li {
+        margin: 0 18px;
+    }
+
+    .brand-icon span {
+        font-size: 14px;
+    }
+
+    .dot-circle {
+        max-width: 398px;
+        height: 398px;
+        left: 7px;
+    }
+
+    .vist-circle {
+        left: 73px;
+        top: 70px;
+        padding: 41px 38px;
+        max-width: 399px;
+        height: 359px;
+    }
+
+    .light {
+        top: 145px;
+        left: 408px;
+        max-width: 347px;
+        height: 370px;
+    }
+
+    .dotted {
+        right: -140px;
+    }
+
+    .map {
+        left: 200px;
+        bottom: 287px;
+        width: 243px;
+        height: 169px;
+    }
+
+    .featurd-sec .container {
+        max-width: 815px;
+    }
+
+    .overlay-hover a {
+        max-width: 148px;
+    }
+
+    .itm-img img {
+        height: 155px;
+        max-width: 155px;
+    }
+
+    .hero-sec .container {
+        max-width: 910px;
+    }
+
+    .work-logo img {
+        width: 290px;
+        height: 62px;
+    }
+
+    .shop-now {
+        max-width: 278px;
+        height: 61px;
+        line-height: 61px;
+    }
+
+    .about-txt li {
+        margin: 0 121px 0 0;
+    }
+
+    .Visit-sec {
+        padding: 0px 0 0px;
+    }
+
+    .text-hol h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        line-height: 48px;
+    }
+
+    .management-sec {
+        padding: 70px 0 60px;
+    }
+
+    .text-hol {
+        padding-left: 15px;
+    }
+
+    .text-hol p {
+        margin-bottom: 54px;
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    .img-hold {
+        position: relative;
+        top: -117px;
+        right: 96px;
+    }
+
+    .img-hold .bite-img {
+        height: 590px;
+        left: 114px;
+    }
+
+    .sign-btn {
+        z-index: 9999999999999;
+    }
+
+    .dot-chair {
+        top: -120px;
+        max-width: 324px;
+    }
+
+    .gry-cirle {
+        max-width: 360px;
+        height: 360px;
+        right: -134px;
+    }
+
+    .chair-img {
+        padding-left: 25px;
+    }
+
+    .submit-btn {
+        height: 60px;
+        line-height: 56px;
+    }
+
+    .signup .form-control {
+        height: 60px;
+    }
+
+    .timeline-box {
+        margin-bottom: 31px;
+        padding-left: 38px;
+    }
+
+    .table-bar {
+        flex-wrap: wrap;
+    }
+
+    .itm-bar li {
+        margin: 0 34px;
+    }
+
+    .text-id {
+        margin-right: 157px;
+    }
+
+    .img-table {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .table-rows {
+        height: 310px;
+    }
+
+    .key-itm li {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    .budget-img {
+        top: -381px;
+    }
+
+    .text-box {
+        padding: 125px 0 97px 0;
+    }
+
+    .right-dumbo {
+        right: -12px;
+        height: 601px;
+    }
+
+    .footer {
+        padding: 93px 0 25px;
+    }
+
+    .table-rows {
+        height: 260px;
+    }
+
+    .img-hold img {
+        max-width: 617px;
+    }
+
+    .management-sec .row {
+        height: 435px;
+    }
+
+    .chair-pic {
+        max-width: 374px;
+    }
+
+    .text-box h2 {
+        margin-bottom: 26px;
+        line-height: 47px;
+        font-size: 36px;
+    }
+
+    .text-box {
+        padding: 95px 0 92px 11px;
+    }
+
+    .text-box p {
+        font-size: 18px;
+    }
+
+    .timeline-box h5 {
+        font-size: 18px;
+        margin-bottom: 11px;
+    }
+
+    .dumbo-img .gry-cirle {
+        height: 350px;
+        max-width: 350px;
+    }
+
+	.centralized-sec .title{
+		width: 485px;
+		font-size: 30px;
+	}
+	.centralized-sec .description{
+		width: 485px;
+
+	}
+	.dot-red{
+		left: 375px;
+	}
+
+	.notch-product-container .gry-cirle{
+		top: 240px;
+		left: 145px;
+		height: 400px;
+		width: 400px;
+	}
+	.centralized-sec .notch-project-image, .notch-project-image-bottom{
+		margin-left: 0px;
+	}
+	.clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img{
+		margin: 0px 30px 20px;
+		max-width: 80px;
+	}
+
+    .gray-half-circle{
+        right: -60px;
+        top: -130px;
+        max-width: 150px;
+        height: 250px;
+    }
+
+    .features-container h1{
+        padding-left: 50px;
+    }
+
 }
 
 @media (max-width: 991px) {
-.nav-item {
-	margin-right: 31px;
-}
-.hero-sec {
-	padding: 58px 0;
-}
-.featur-txt {
-	left: 0px;
-	top: 6px;
-}
-.cont-box .dolr {
-	font-size: 11px;
-}
-.cont-box .basic {
-	font-size: 10px;
-}
-.about-txt {
-	left: 56%;
-}
-.circle {
-	left: -43px;
-	height: 413px;
-	top: 23px;
-}
-.carousel-caption {
-	left: 43%;
-}
-.Visit-sec {
-	text-align: left;
-}
-.light {
-	left: 83%;
-}
-.dot-circle {
-	max-width: 353px;
-}
-.vist-circle {
-	max-width: 312px;
-	left: 25px;
-	height: 359px;
-	padding: 41px 38px;
-}
-.blck-dot {
-	width: 47%;
-}
-.main-circle {
-	max-width: 522px;
-	width: 100%;
-	background-color: #e9eaecc2;
-	z-index: 999;
-}
-.img-hero {
-	position: absolute;
-	top: -542px;
-	width: 100%;
-}
-.text-hold-trade {
-	right: 13px;
-}
-.brand-sec {
-	padding: 66px 0 35px;
-}
-.login-sec .col-md-6 {
-	padding-right: 15px;
-}
-.itm-img {
-	justify-content: center;
-}
-.map {
-	left: 130px;
-}
-.text-hol h2 {
-	font-size: 29px;
-	margin-bottom: 8px;
-	line-height: 41px;
-}
-.text-hol p {
-	margin-bottom: 33px;
-	font-size: 14px;
-	line-height: 34px;
-}
-.text-hol p br {
-	display: none;
-}
-.gry-cirle {
-	max-width: 250px;
-	height: 360px;
-	right: -124px;
-}
-.text-box h2 {
-	font-size: 29px;
-	line-height: 37px;
-	margin-bottom: 10px;
-}
-.text-box {
-	padding: 100px 0 50px 0;
-}
-.timeline-box {
-	margin-bottom: 32px;
-	padding-left: 0px;
-}
-.timeline-box img {
-	margin-right: 10px;
-}
-.timeline-box h5 {
-	font-size: 17px;
-}
-.timeline-box p {
-	font-size: 14px;
-	margin-left: 43px;
-}
-.centralized-sec .row {
-	height: 953px;
-}
-.dumbo-img .gry-cirle {
-	left: 110px;
-	top: -140px;
-}
-.key-itm li {
-	font-size: 16px;
-	margin-bottom: 2px;
-}
-.itm-bar li {
-	margin: 0 10px;
-}
-.itm-bar li a {
-	font-size: 12px;
-}
-.table-rows {
-	height: 200px;
-}
-.footer {
-	padding: 59px 0 27px;
-}
-.submit-btn {
-	width: 120px;
-	font-size: 15px;
-}
-.chair-pic {
-	max-width: 315px;
-}
-.text-box p {
-	font-size: 14px;
-}
-.benefits-sec {
-	padding: 101px 0 0;
-}
-.right-dumbo {
-	top: -69px;
-}
-.table-bar {
-	margin: 59px 0 145px;
-}
-.footer-txt {
-	margin-bottom: 60px;
-}
+    .nav-item {
+        margin-right: 31px;
+    }
+
+    .hero-sec {
+        padding: 58px 0;
+    }
+
+    .featur-txt {
+        left: 0px;
+        top: 6px;
+    }
+
+    .cont-box .dolr {
+        font-size: 11px;
+    }
+
+    .cont-box .basic {
+        font-size: 10px;
+    }
+
+    .about-txt {
+        left: 56%;
+    }
+
+    .circle {
+        left: -43px;
+        height: 413px;
+        top: 23px;
+    }
+
+    .carousel-caption {
+        left: 43%;
+    }
+
+    .Visit-sec {
+        text-align: left;
+    }
+
+    .light {
+        left: 83%;
+    }
+
+    .dot-circle {
+        max-width: 353px;
+    }
+
+    .vist-circle {
+        max-width: 312px;
+        left: 25px;
+        height: 359px;
+        padding: 41px 38px;
+    }
+
+    .blck-dot {
+        width: 47%;
+    }
+
+    .main-circle {
+        max-width: 522px;
+        width: 100%;
+        background-color: #e9eaecc2;
+        z-index: 999;
+    }
+
+    .img-hero {
+        position: absolute;
+        top: -542px;
+        width: 100%;
+    }
+
+    .text-hold-trade {
+        right: 13px;
+    }
+
+    .brand-sec {
+        padding: 66px 0 35px;
+    }
+
+    .login-sec .col-md-6 {
+        padding-right: 15px;
+    }
+
+    .itm-img {
+        justify-content: center;
+    }
+
+    .map {
+        left: 130px;
+    }
+
+    .text-hol h2 {
+        font-size: 29px;
+        margin-bottom: 8px;
+        line-height: 41px;
+    }
+
+    .text-hol p {
+        margin-bottom: 33px;
+        font-size: 14px;
+        line-height: 34px;
+    }
+
+    .text-hol p br {
+        display: none;
+    }
+
+    .gry-cirle {
+        max-width: 250px;
+        height: 360px;
+        right: -124px;
+    }
+
+    .text-box h2 {
+        font-size: 29px;
+        line-height: 37px;
+        margin-bottom: 10px;
+    }
+
+    .text-box {
+        padding: 100px 0 50px 0;
+    }
+
+    .timeline-box {
+        margin-bottom: 32px;
+        padding-left: 0px;
+    }
+
+    .timeline-box img {
+        margin-right: 10px;
+    }
+
+    .timeline-box h5 {
+        font-size: 17px;
+    }
+
+    .timeline-box p {
+        font-size: 14px;
+        margin-left: 38px;
+    }
+
+    .dumbo-img .gry-cirle {
+        left: 110px;
+        top: -140px;
+    }
+
+    .key-itm li {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .itm-bar li {
+        margin: 0 10px;
+    }
+
+    .itm-bar li a {
+        font-size: 12px;
+    }
+
+    .table-rows {
+        height: 200px;
+    }
+
+    .footer {
+        padding: 59px 0 27px;
+    }
+
+    .submit-btn {
+        width: 120px;
+        font-size: 15px;
+    }
+
+    .chair-pic {
+        max-width: 315px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+
+    .benefits-sec {
+        padding: 101px 0 0;
+    }
+
+    .right-dumbo {
+        top: -69px;
+    }
+
+    .table-bar {
+        margin: 59px 0 145px;
+    }
+
+    .footer-txt {
+        margin-bottom: 60px;
+    }
+
+    .main-section{
+        padding-left: 20px;
+    }
+    .main-section p{
+        width: 400px;
+        height: 170px;
+        font-size: 17px;
+    }
+    .dot-chair {
+        top: -120px;
+        max-width: 230px;
+        left: -3px;
+    }
+    .centralized-sec .title {
+        width: 400px;
+        font-size: 22px;
+        text-align: justify;
+    }
+
+    .centralized-sec .description {
+        width: 400px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .dot-red {
+        left: 285px;
+    }
+    .dot-yellow {
+        right: 40px;
+    }
+    .notch-product-container .gry-cirle {
+        top: 330px;
+        left: 135px;
+        height: 250px;
+        width: 250px;
+    }
+    .gray-half-circle {
+        max-width: 120px;
+        height: 200px;
+    }
+
+    .clients-sec .description p{
+        font-size: 16px;
+    }
+    .clients-sec .title-row h1{
+        margin-top: 10px;
+    }
+
+    .clients-sec .top-row-logos-container,
+    .clients-sec .bottom-row-logos-container
+    {
+        max-width: 100%;
+    }
+    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img{
+        margin: 0px 24px 20px;
+    }
+
+    .footer .dot-chair{
+        max-width: 440px;
+    }
+
+    .features-container h1 {
+        padding-left: 10px;
+    }
+
 }
 
 @media (max-width: 767px) {
-.logo img {
-	width: 65px;
-	height: 35px;
-}
-.nav-item {
-	margin: 7px 0;
-}
-.text-hold p br {
-	display: none;
-}
-.text-hold p {
-	font-size: 23px;
-	line-height: 28px;
-}
-.shop-now {
-	width: 218px;
-	height: 54px;
-	font-size: 21px;
-	line-height: 54px;
-}
-.work-logo img {
-	width: 204px;
-	height: 42px;
-}
-.hero-sec {
-	padding: 36px 0;
-}
-.cont-box .basic {
-	font-size: 13px;
-}
-.cont-box .dolr {
-	font-size: 13px;
-}
-.about-txt {
-	background-color: #e9eaecc2;
-	width: 100%;
-	height: 100%;
-	max-width: inherit;
-	top: 0;
-	left: 0;
-	padding: 102px 70px;
-}
-.circle {
-	display: none;
-}
-.about-sec {
-	padding: 0px 0 0px;
-	background-image: inherit;
-}
-.carousel-caption {
-	left: 53%;
-	width: 100%;
-}
-.blck-dot {
-	width: 88%;
-}
-.dotted {
-	right: -50px;
-	top: 56px;
-}
-.map {
-	width: 305px;
-	bottom: 301px;
-	left: 140px;
-}
-.dot-circle {
-	border: none;
-	left: -17px;
-}
-.footer-itm {
-	margin-bottom: 20px;
-}
-.brand-icon li {
-	margin: 12px 14px;
-}
-.frame-img {
-	margin: 0px 0 0 0;
-}
-.login-form {
-	top: 60px;
-	left: -200px;
-}
-.img-hold .bite-img {
-	display: none;
-}
-.img-hold {
-	position: static;
-}
-.dot-chair {
-	top: 0px;
-	height: 454px;
-}
-.management-sec {
-	padding: 70px 0 40px;
-}
-.gry-cirle {
-	display: none;
-}
-.budget-img {
-	position: static;
-	padding: 130px 0 0 0;
-}
-.text-box {
-	padding: 40px 0 50px 0;
-}
-.right-dumbo {
-	position: static;
-}
-.centralized-sec .row {
-	height: inherit;
-}
-.benefits-sec .ben-row {
-	height: inherit;
-}
-.table-rows {
-	height: inherit;
-}
-.benefits-sec {
-	padding: 30px 0 0;
-}
-.text-id {
-	margin-right: 197px;
-}
-.itm-bar li {
-	margin: 0 50px;
-}
-.footer-txt h2 {
-	font-size: 32px;
-	margin-bottom: 52px;
-}
-.footer-txt {
-	margin-bottom: 60px;
-}
-.foter-logo {
-	padding: 41px 0 0px;
-}
-.text-box h2 {
-	line-height: 42px;
-}
-.key-itm li {
-	margin-bottom: 15px;
-	line-height: 26px;
-}
-.management-sec .row {
-	height: inherit;
-}
-.chair-img {
-	padding: 0;
-	text-align: center;
-}
-.img-hold img {
-	width: 100%;
-}
-.dumbo-img {
-    margin-top: 40px;
-}
+    .logo img {
+        width: 65px;
+        height: 35px;
+    }
+
+    .nav-item {
+        margin: 7px 0;
+    }
+
+    .text-hold p br {
+        display: none;
+    }
+
+    .text-hold p {
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+    .shop-now {
+        width: 218px;
+        height: 54px;
+        font-size: 21px;
+        line-height: 54px;
+    }
+
+    .work-logo img {
+        width: 204px;
+        height: 42px;
+    }
+
+    .hero-sec {
+        padding: 36px 0;
+    }
+
+    .cont-box .basic {
+        font-size: 13px;
+    }
+
+    .cont-box .dolr {
+        font-size: 13px;
+    }
+
+    .about-txt {
+        background-color: #e9eaecc2;
+        width: 100%;
+        height: 100%;
+        max-width: inherit;
+        top: 0;
+        left: 0;
+        padding: 102px 70px;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    .about-sec {
+        padding: 0px 0 0px;
+        background-image: inherit;
+    }
+
+    .carousel-caption {
+        left: 53%;
+        width: 100%;
+    }
+
+    .blck-dot {
+        width: 88%;
+    }
+
+    .dotted {
+        right: -50px;
+        top: 56px;
+    }
+
+    .map {
+        width: 305px;
+        bottom: 301px;
+        left: 140px;
+    }
+
+    .dot-circle {
+        border: none;
+        left: -17px;
+    }
+
+    .footer-itm {
+        margin-bottom: 20px;
+    }
+
+    .brand-icon li {
+        margin: 12px 14px;
+    }
+
+    .frame-img {
+        margin: 0px 0 0 0;
+    }
+
+    .login-form {
+        top: 60px;
+        left: -200px;
+    }
+
+    .img-hold .bite-img {
+        display: none;
+    }
+
+    .img-hold {
+        position: static;
+    }
+
+    .dot-chair {
+        top: 0px;
+        height: 454px;
+    }
+
+    .management-sec {
+        padding: 70px 0 40px;
+    }
+
+    .gry-cirle {
+        display: none;
+    }
+
+    .budget-img {
+        position: static;
+        padding: 130px 0 0 0;
+    }
+
+    .text-box {
+        padding: 40px 0 50px 0;
+    }
+
+    .right-dumbo {
+        position: static;
+    }
+
+    .centralized-sec .row {
+        height: inherit;
+    }
+
+    .benefits-sec .ben-row {
+        height: inherit;
+    }
+
+    .table-rows {
+        height: inherit;
+    }
+
+    .benefits-sec {
+        padding: 30px 0 0;
+    }
+
+    .text-id {
+        margin-right: 197px;
+    }
+
+    .itm-bar li {
+        margin: 0 50px;
+    }
+
+    .footer-txt h2 {
+        font-size: 32px;
+        margin-bottom: 52px;
+    }
+
+    .footer-txt {
+        margin-bottom: 60px;
+    }
+
+    .foter-logo {
+        padding: 41px 0 0px;
+    }
+
+    .text-box h2 {
+        line-height: 42px;
+    }
+
+    .key-itm li {
+        margin-bottom: 15px;
+        line-height: 26px;
+    }
+
+    .management-sec .row {
+        height: inherit;
+    }
+
+    .chair-img {
+        padding: 0;
+        text-align: center;
+    }
+
+    .img-hold img {
+        width: 100%;
+    }
+
+    .dumbo-img {
+        margin-top: 40px;
+    }
+
+
 }
 
 @media (max-width: 575px) {
-.carousel-caption {
-	width: 87%;
-}
-.dot-circle {
-	left: -38px;
-}
-.map {
-	left: 110px;
-}
-.logo-footer {
-	float: none;
-	margin-bottom: 10px;
-}
-#footer {
-	background-color: #504a4a;
-	padding: 23px 0 0px 47px;
-}
-.Visit-sec {
-	padding: 0px 0 39px;
-}
-.logo-work img {
-	width: 192px;
-	height: 44px;
-}
-.text-hold-trade h3 {
-	font-size: 24px;
-}
-.text-hold-trade p {
-	font-size: 20px;
-}
-.text-hold-trade {
-	right: 18px;
-	bottom: 123px;
-}
-.main-circle {
-	height: 482px;
-}
-.img-hero {
-	top: -504px;
-}
-.about-txt {
-	padding: 58px 30px;
-}
-.dot-chair {
-	height: 554px;
-}
-.forget .login-hold {
-	padding: 8px 8px;
-	margin-left: 0px;
-	font-size: 14px;
-}
-.login-form {
-	top: 40px;
-	left: -140px;
-}
-.get-btn {
-	width: 117px;
-	font-size: 16px;
-	padding: 9px 0;
-}
-.itm-bar li {
-	margin: 0 37px;
-}
+    .carousel-caption {
+        width: 87%;
+    }
+
+    .dot-circle {
+        left: -38px;
+    }
+
+    .map {
+        left: 110px;
+    }
+
+    .logo-footer {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    #footer {
+        background-color: #504a4a;
+        padding: 23px 0 0px 47px;
+    }
+
+    .Visit-sec {
+        padding: 0px 0 39px;
+    }
+
+    .logo-work img {
+        width: 192px;
+        height: 44px;
+    }
+
+    .text-hold-trade h3 {
+        font-size: 24px;
+    }
+
+    .text-hold-trade p {
+        font-size: 20px;
+    }
+
+    .text-hold-trade {
+        right: 18px;
+        bottom: 123px;
+    }
+
+    .main-circle {
+        height: 482px;
+    }
+
+    .img-hero {
+        top: -504px;
+    }
+
+    .about-txt {
+        padding: 58px 30px;
+    }
+
+    .dot-chair {
+        height: 554px;
+    }
+
+    .forget .login-hold {
+        padding: 8px 8px;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+
+    .login-form {
+        top: 40px;
+        left: -140px;
+    }
+
+    .get-btn {
+        width: 117px;
+        font-size: 16px;
+        padding: 9px 0;
+    }
+
+    .itm-bar li {
+        margin: 0 37px;
+    }
 }
 
 @media (max-width: 479px) {
-.overlay-hover {
-	padding: 95px 0;
-}
-.text-hold p {
-	font-size: 16px;
-	line-height: 25px;
-}
-.work-logo img {
-	width: 153px;
-	height: 32px;
-}
-.shop-now {
-	width: 158px;
-	height: 44px;
-	font-size: 18px;
-	line-height: 44px;
-}
-.featur-txt {
-	font-size: 25px;
-}
-.about-txt {
-	padding: 50px 15px;
-}
-.about-txt li {
-	margin: 0 14px 0 0;
-}
-.about-txt h3 {
-	margin-bottom: 15px;
-}
-.carousel-inner img {
-	height: 310px;
-}
-.carousel-caption {
-	width: 93%;
-	top: 0px;
-}
-.carousel-caption h3 {
-	font-size: 26px;
-}
-.vist-circle {
-	max-width: 342px;
-	left: 38px;
-	padding: 14px 30px;
-	height: 280px;
-	border-radius: 0;
-}
-.light {
-	left: 32px;
-	position: relative;
-	top: 150px;
-}
-.map {
-	width: 185px;
-	bottom: 203px;
-	left: 50px;
-	height: 114px;
-}
-.dotted {
-	right: 7px;
-	top: 176px;
-}
-.Visit-sec {
-	padding: 0px 0 109px;
-}
-.blck-dot {
-	width: 299px;
-}
-.Visit-sec {
-	text-align: center;
-}
-.main-circle {
-	margin: 0;
-	height: 421px;
-	border-radius: 0;
-}
-.img-hero {
-	top: -421px;
-}
-.hero-sec-trade {
-	background-image: inherit;
-}
-.text-hold-trade {
-	right: auto;
-	left: 20px;
-	bottom: 83px;
-}
-.brand-sec {
-	padding: 16px 0 35px;
-}
-.heading {
-	font-size: 28px;
-}
-.trade-program-sec h3 {
-	font-size: 17px;
-}
-.text-hold-trade p {
-	font-size: 14px;
-}
-.img-hero img {
-	height: 421px;
-}
-.about-txt img {
-	height: 49px;
-}
-.about-txt p {
-	margin-bottom: 10px;
-}
-.signup .logo {
-	margin-right: 0px;
-}
-.signup .navbar {
-	padding-left: 0;
-	padding-right: 0;
-}
-.signup .logo img {
-	width: 31px;
-}
-.sign-btn {
-	margin-right: 27px;
-}
-.login-form {
-	top: 48px;
-	left: -70px;
-}
-.forget {
-	text-align: center;
-}
-.text-hol h2 {
-	font-size: 24px;
-}
-.management-sec {
-	padding: 40px 0 40px;
-}
-.text-hol {
-	padding-left: 2px;
-}
-.alredy {
-	font-size: 15px;
-}
-.dot-chair {
-	height: 394px;
-}
-.text-box h2 {
-	font-size: 27px;
-	margin-bottom: 18px;
-}
-.timeline-box h5 {
-	font-size: 15px;
-}
-.right-dumbo {
-	height: 390px;
-}
-.table-img {
-	padding-left: 20px;
-}
-.text-id {
-	margin-right: 47px;
-}
-.table-bar {
-	display: block;
-	padding: 19px 30px;
-	margin: 0;
-	height: inherit;
-}
-.itm-bar li {
-	display: block;
-	margin: 0;
-}
-.itm-bar li:last-child {
-	margin: 0px;
-}
-.approve {
-	padding: 12px 83px 8px;
-	left: -127px;
-	top: 94px;
-}
-.hover-box {
-}
-.itm-bar img {
-	width: 17px;
-	height: 17px;
-	margin-left: 3px;
-}
-.table-rows {
-	height: inherit;
-}
-.foter-logo {
-	text-align: center;
-	float: none;
-}
-.foter-itm li {
-	margin: 0 20px;
-}
-.signup .form-control {
-	height: 50px;
-}
-.submit-btn {
-	height: 50px;
-	line-height: 51px;
-}
-.text-hol p {
-	margin-bottom: 24px;
-	line-height: 31px;
-}
-.footer-txt h2 {
-	font-size: 21px;
-	margin-bottom: 26px;
-}
-.footer {
-	padding: 46px 0 19px;
-}
-.footer-txt {
-	margin-bottom: 30px;
-}
-.foter-logo {
-	padding: 26px 0 0px;
-}
-.foter-itm {
-	padding: 20px 0 0px;
-	float: none;
-	text-align: center;
-}
-.img-table {
-	text-align: left;
-	margin: 0 auto 9px;
-}
-.itm-bar li:nth-child(2) {
-	max-width: 86px;
-}
+    .overlay-hover {
+        padding: 95px 0;
+    }
+
+    .text-hold p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .work-logo img {
+        width: 153px;
+        height: 32px;
+    }
+
+    .shop-now {
+        width: 158px;
+        height: 44px;
+        font-size: 18px;
+        line-height: 44px;
+    }
+
+    .featur-txt {
+        font-size: 25px;
+    }
+
+    .about-txt {
+        padding: 50px 15px;
+    }
+
+    .about-txt li {
+        margin: 0 14px 0 0;
+    }
+
+    .about-txt h3 {
+        margin-bottom: 15px;
+    }
+
+    .carousel-inner img {
+        height: 310px;
+    }
+
+    .carousel-caption {
+        width: 93%;
+        top: 0px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 26px;
+    }
+
+    .vist-circle {
+        max-width: 342px;
+        left: 38px;
+        padding: 14px 30px;
+        height: 280px;
+        border-radius: 0;
+    }
+
+    .light {
+        left: 32px;
+        position: relative;
+        top: 150px;
+    }
+
+    .map {
+        width: 185px;
+        bottom: 203px;
+        left: 50px;
+        height: 114px;
+    }
+
+    .dotted {
+        right: 7px;
+        top: 176px;
+    }
+
+    .Visit-sec {
+        padding: 0px 0 109px;
+    }
+
+    .blck-dot {
+        width: 299px;
+    }
+
+    .Visit-sec {
+        text-align: center;
+    }
+
+    .main-circle {
+        margin: 0;
+        height: 421px;
+        border-radius: 0;
+    }
+
+    .img-hero {
+        top: -421px;
+    }
+
+    .hero-sec-trade {
+        background-image: inherit;
+    }
+
+    .text-hold-trade {
+        right: auto;
+        left: 20px;
+        bottom: 83px;
+    }
+
+    .brand-sec {
+        padding: 16px 0 35px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .trade-program-sec h3 {
+        font-size: 17px;
+    }
+
+    .text-hold-trade p {
+        font-size: 14px;
+    }
+
+    .img-hero img {
+        height: 421px;
+    }
+
+    .about-txt img {
+        height: 49px;
+    }
+
+    .about-txt p {
+        margin-bottom: 10px;
+    }
+
+    .signup .logo {
+        margin-right: 0px;
+    }
+
+    .signup .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .signup .logo img {
+        width: 31px;
+    }
+
+    .sign-btn {
+        margin-right: 27px;
+    }
+
+    .login-form {
+        top: 48px;
+        left: -70px;
+    }
+
+    .forget {
+        text-align: center;
+    }
+
+    .text-hol h2 {
+        font-size: 24px;
+    }
+
+    .management-sec {
+        padding: 40px 0 40px;
+    }
+
+    .text-hol {
+        padding-left: 2px;
+    }
+
+    .alredy {
+        font-size: 15px;
+    }
+
+    .dot-chair {
+        height: 394px;
+    }
+
+    .text-box h2 {
+        font-size: 27px;
+        margin-bottom: 18px;
+    }
+
+    .timeline-box h5 {
+        font-size: 15px;
+    }
+
+    .right-dumbo {
+        height: 390px;
+    }
+
+    .table-img {
+        padding-left: 20px;
+    }
+
+    .text-id {
+        margin-right: 47px;
+    }
+
+    .table-bar {
+        display: block;
+        padding: 19px 30px;
+        margin: 0;
+        height: inherit;
+    }
+
+    .itm-bar li {
+        display: block;
+        margin: 0;
+    }
+
+    .itm-bar li:last-child {
+        margin: 0px;
+    }
+
+    .approve {
+        padding: 12px 83px 8px;
+        left: -127px;
+        top: 94px;
+    }
+
+    .hover-box {
+    }
+
+    .itm-bar img {
+        width: 17px;
+        height: 17px;
+        margin-left: 3px;
+    }
+
+    .table-rows {
+        height: inherit;
+    }
+
+    .foter-logo {
+        text-align: center;
+        float: none;
+    }
+
+    .foter-itm li {
+        margin: 0 20px;
+    }
+
+    .signup .form-control {
+        height: 50px;
+    }
+
+    .submit-btn {
+        height: 50px;
+        line-height: 51px;
+    }
+
+    .text-hol p {
+        margin-bottom: 24px;
+        line-height: 31px;
+    }
+
+    .footer-txt h2 {
+        font-size: 21px;
+        margin-bottom: 26px;
+    }
+
+    .footer {
+        padding: 46px 0 19px;
+    }
+
+    .footer-txt {
+        margin-bottom: 30px;
+    }
+
+    .foter-logo {
+        padding: 26px 0 0px;
+    }
+
+    .foter-itm {
+        padding: 20px 0 0px;
+        float: none;
+        text-align: center;
+    }
+
+    .img-table {
+        text-align: left;
+        margin: 0 auto 9px;
+    }
+
+    .itm-bar li:nth-child(2) {
+        max-width: 86px;
+    }
 }

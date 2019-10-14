@@ -1218,11 +1218,11 @@ a:hover {
 }
 
 .img-hold .bite-img {
-    height: 728px;
+    height: 970px;
     position: absolute;
     box-sizing: border-box;
     top: -84px;
-    left: 299px;
+    left: 118px;
     z-index: 2;
     margin-left: 10%;
 }
