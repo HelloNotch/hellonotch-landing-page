@@ -228,7 +228,7 @@ a:hover {
 .img-hold {
     position: relative;
     top: -233px;
-    right: 182px;
+    right: 226px;
 
 }
 
@@ -267,7 +267,7 @@ a:hover {
 .img-hold img {
     position: relative;
     z-index: -1;
-    max-width: 1115px;
+    max-width: 1112px;
 }
 
 .star {
@@ -1008,8 +1008,7 @@ a:hover {
 }
 
 .main-section p{
-	width: 500px;
-	height: 125px;
+	width: 612px;
 	font-size: 18px;
 	line-height: 42px;
 	color: #6a6a6a;
@@ -1069,7 +1068,7 @@ a:hover {
 }
 
 .text-hol,.main-section {
-    padding-left: 185px;
+    padding-left: 12%;
 }
 
 .centralized-sec {
@@ -1130,7 +1129,7 @@ a:hover {
 }
 
 .gray-half-circle{
-    right: -20px;
+    right: -50px;
     top: -160px;
     max-width: 205px;
     height: 325px;
@@ -1139,13 +1138,12 @@ a:hover {
 }
 
 .timeline-box {
-    margin-bottom: 22px;
-    padding-left: 132px;
+    margin-bottom: 3.4%;
 }
 
 .timeline-box h5 {
     font-size: 20px;
-    line-height: 50px;
+    line-height: 60px;
     font-family: 'BrownStd bold';
     color: #343434;
     display: inline-block;
@@ -1163,7 +1161,7 @@ a:hover {
     line-height: 30px;
     color: #6A6A6A;
     margin-left: 69px;
-    margin-bottom: 0;
+    margin-bottom: 1.4%;
     font-family: 'BrownStd regular';
 }
 
@@ -1228,12 +1226,16 @@ a:hover {
 }
 
 .dot-chair {
-    max-width: 280px;
+    max-width: 346px;
     height: 700px;
     object-fit: cover;
     position: absolute;
-    top: -136px;
-    left: -43px;
+    top: -105px;
+    left: 2%;
+}
+
+.centralized-container{
+    padding: 0px 128px;
 }
 
 .footer .dot-chair{
@@ -1257,7 +1259,7 @@ a:hover {
     object-fit: contain;
     position: absolute;
     top: -16px;
-    left: 530px;
+    left: 68%;
     z-index: 9;
 }
 
@@ -1267,7 +1269,7 @@ a:hover {
     object-fit: contain;
     position: absolute;
     top: 140px;
-    right: 150px;
+    right: 184px;
     z-index: 9;
 }
 
@@ -1302,8 +1304,7 @@ a:hover {
 
 .centralized-sec .notch-project-image,.notch-project-image-bottom{
     position: relative;
-    width: 670px;
-    height: 430px;
+    width: 833px;
     box-shadow: 0 22px 55px 0 rgba(0, 0, 0, 0.14);
     margin-left: 70px;
     object-fit: cover;
@@ -1319,8 +1320,7 @@ a:hover {
     font-size: 42px;
     line-height: 60px;
     color: #343434;
-    padding-left: 132px;
-    margin-bottom: 40px;
+    margin: 40px 0px;
 
 }
 
@@ -1335,9 +1335,13 @@ a:hover {
 .notch-product-container .gry-cirle{
     position: absolute;
     top: 210px;
-    left: 245px;
-    height: 550px;
-    max-width: 550px;
+    left: 320px;
+    height: 678px;
+    width: 678px;
+}
+
+.features-container{
+    padding-left: 7.3%;
 }
 
 .right-dumbo {
