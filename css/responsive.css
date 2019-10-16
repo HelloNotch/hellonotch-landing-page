@@ -116,8 +116,7 @@
   }
 
   .timeline-box h5 {
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: 22px;
   }
 
   .signup .form-control {
@@ -477,14 +476,14 @@
     margin-bottom: 20px;
   }
   .timeline-box h5 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 0;
     height: 40px;
   }
 
   .timeline-box p {
     margin-left: 45px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .timeline-box img {
