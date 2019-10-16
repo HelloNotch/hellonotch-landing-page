@@ -225,6 +225,13 @@
 
     .centralized-sec .title {
         margin-top: 70px;
+        font-size: 32px;
+    }
+
+    .centralized-sec .description {
+        width: 550px;
+        margin: auto;
+        line-height: 36px;
     }
 
     .dot-blue {
