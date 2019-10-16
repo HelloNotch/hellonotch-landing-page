@@ -168,9 +168,7 @@
     .img-hold img {
         max-width: 750px;
     }
-	.dot-chair{
-		left: -10px;
-	}
+
     .chair-pic {
         max-width: 600px;
     }
@@ -323,7 +321,6 @@
     .dot-chair {
         height: 655px;
         top: -120px;
-        left: -15px;
     }
 
     .text-hol {
@@ -535,12 +532,22 @@
 }
 
 @media (max-width: 1199px) {
+    .features-container{
+        padding-left: 0px;
+        padding-right: 3%;
+    }
     .logo img {
         height: 25px;
     }
 	.main-section {
 		padding-left: 60px;
 	}
+    .main-section p{
+        width: 340px;
+    }
+    .relative {
+        max-width: 340px;
+    }
 
     .featur-txt {
         left: -103px;
@@ -720,7 +727,7 @@
     }
 
     .timeline-box {
-        margin-bottom: 31px;
+        margin-bottom: 20px;
         padding-left: 38px;
     }
 
@@ -799,7 +806,7 @@
 
     .timeline-box h5 {
         font-size: 18px;
-        margin-bottom: 11px;
+        line-height: 30px;
     }
 
     .dumbo-img .gry-cirle {
@@ -818,15 +825,21 @@
 	.dot-red{
 		left: 375px;
 	}
-
+    .footer .dot-chair{
+        max-width: 512px;
+    }
+    .clients-sec .description p{
+        font-size: 16px;
+    }
 	.notch-product-container .gry-cirle{
-		top: 240px;
-		left: 145px;
-		height: 400px;
-		width: 400px;
+        top: 150px;
+        left: 150px;
+        height: 375px;
+        width: 375px;
 	}
 	.centralized-sec .notch-project-image, .notch-project-image-bottom{
-		margin-left: 0px;
+        width: 464px;
+        margin-left: 0px;
 	}
 	.clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img{
 		margin: 0px 30px 20px;
@@ -1111,6 +1124,9 @@
 }
 
 @media (max-width: 767px) {
+    .features-container{
+        padding-left: 3%;
+    }
     .logo img {
         width: 65px;
         height: 35px;
