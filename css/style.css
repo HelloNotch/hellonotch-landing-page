@@ -85,7 +85,7 @@ a:hover {
 .notch-logo {
     height: 94px;
     object-fit: contain;
-	margin-left: -20px;
+    margin-left: -20px;
 }
 
 .nav-link {
@@ -177,7 +177,7 @@ a:hover {
 }
 
 .main-section p {
-	width: 500px;
+    width: 500px;
     font-size: 18px;
     line-height: 42px;
     color: #6a6a6a;
@@ -1007,13 +1007,13 @@ a:hover {
     font-family: 'BrownStd regular';
 }
 
-.main-section p{
-	width: 612px;
-	font-size: 18px;
-	line-height: 42px;
-	color: #6a6a6a;
-	font-family: 'BrownStd regular';
-	margin-bottom: 34px;
+.main-section p {
+    width: 612px;
+    font-size: 18px;
+    line-height: 42px;
+    color: #6a6a6a;
+    font-family: 'BrownStd regular';
+    margin-bottom: 34px;
 }
 
 .btn-grp {
@@ -1067,7 +1067,7 @@ a:hover {
     box-shadow: none;
 }
 
-.text-hol,.main-section {
+.text-hol, .main-section {
     padding-left: 12%;
 }
 
@@ -1076,7 +1076,7 @@ a:hover {
     padding: 28px 0 0px;
 }
 
-.clients-sec{
+.clients-sec {
     padding: 28px 0 0px;
 }
 
@@ -1128,7 +1128,7 @@ a:hover {
     z-index: 1;
 }
 
-.gray-half-circle{
+.gray-half-circle {
     right: -50px;
     top: -160px;
     max-width: 205px;
@@ -1234,16 +1234,16 @@ a:hover {
     left: 2%;
 }
 
-.centralized-container{
+.centralized-container {
     padding: 0px 128px;
 }
 
-.footer .dot-chair{
+.footer .dot-chair {
     max-width: 750px;
     top: -160px;
 }
 
-.dot-blue{
+.dot-blue {
     width: 36px;
     height: 36px;
     object-fit: contain;
@@ -1253,7 +1253,7 @@ a:hover {
     z-index: 9;
 }
 
-.dot-red{
+.dot-red {
     width: 36px;
     height: 36px;
     object-fit: contain;
@@ -1263,7 +1263,7 @@ a:hover {
     z-index: 9;
 }
 
-.dot-yellow{
+.dot-yellow {
     width: 36px;
     height: 36px;
     object-fit: contain;
@@ -1284,7 +1284,7 @@ a:hover {
     height: 445px;
 }
 
-.centralized-sec .title{
+.centralized-sec .title {
     width: 660px;
     font-family: "BrownStd regular";
     font-size: 42px;
@@ -1292,7 +1292,8 @@ a:hover {
     color: #343434;
     margin-top: 105px;
 }
-.centralized-sec .description{
+
+.centralized-sec .description {
     width: 660px;
     margin-top: 20px;
     font-family: "BrownStd regular";
@@ -1302,7 +1303,7 @@ a:hover {
     color: #6a6a6a;
 }
 
-.centralized-sec .notch-project-image,.notch-project-image-bottom{
+.centralized-sec .notch-project-image, .notch-project-image-bottom {
     position: relative;
     width: 833px;
     box-shadow: 0 22px 55px 0 rgba(0, 0, 0, 0.14);
@@ -1311,11 +1312,11 @@ a:hover {
     z-index: 10;
 }
 
-.centralized-sec .notch-project-image-bottom{
+.centralized-sec .notch-project-image-bottom {
     margin-top: 60px;
 }
 
-.features-container h1{
+.features-container h1 {
     font-family: "BrownStd regular";
     font-size: 42px;
     line-height: 60px;
@@ -1332,7 +1333,7 @@ a:hover {
     max-width: 650px;
 }
 
-.notch-product-container .gry-cirle{
+.notch-product-container .gry-cirle {
     position: absolute;
     top: 210px;
     left: 320px;
@@ -1340,7 +1341,7 @@ a:hover {
     width: 678px;
 }
 
-.features-container{
+.features-container {
     padding-left: 7.3%;
 }
 
@@ -1354,7 +1355,7 @@ a:hover {
     height: 791px;
 }
 
-.clients-sec .title-row h1{
+.clients-sec .title-row h1 {
     font-family: "BrownStd regular";
     font-size: 42px;
     text-align: center;
@@ -1363,11 +1364,11 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.clients-sec .description{
+.clients-sec .description {
     margin-bottom: 60px;
 }
 
-.clients-sec .description p{
+.clients-sec .description p {
     font-family: "BrownStd lt";
     text-align: center;
     line-height: 42px;
@@ -1375,24 +1376,24 @@ a:hover {
     color: #6a6a6a;
 }
 
-.clients-sec .description p#rayOlsen{
+.clients-sec .description p#rayOlsen {
     font-family: "BrownStd regular";
     font-size: 20px;
 
 }
 
-.clients-sec .top-row-logos-container{
+.clients-sec .top-row-logos-container {
     max-width: 80%;
     margin: auto;
 }
 
-.clients-sec .bottom-row-logos-container{
+.clients-sec .bottom-row-logos-container {
     max-width: 80%;
     margin: 50px auto 225px;
 
 }
 
-.clients-sec .top-row-logos,.clients-sec .bottom-row-logos{
+.clients-sec .top-row-logos, .clients-sec .bottom-row-logos {
     margin: 0px 100px;
     display: flex;
     justify-content: flex-start;
@@ -1400,13 +1401,13 @@ a:hover {
 
 }
 
-.clients-sec .bottom-row-logos{
+.clients-sec .bottom-row-logos {
     justify-content: space-between;
 }
 
-.clients-sec .top-row-logos img,.clients-sec .bottom-row-logos img{
+.clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img {
     margin: 0px 70px 20px;
-    max-width: 120px ;
+    max-width: 120px;
     max-height: 40px;
 }
 

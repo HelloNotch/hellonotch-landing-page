@@ -4,39 +4,36 @@
 
 @media (min-width: 1600px) {
 
-    .gray-half-circle{
+    .gray-half-circle {
         top: -125px;
     }
-    .timeline-box p{
+
+    .timeline-box p {
         margin: 0px 70px;
     }
 
     .timeline-box {
         margin-bottom: 5.4%;
     }
+
     /*.map {*/
     /*    bottom: 161px;*/
     /*    left: 90px;*/
     /*}*/
-
     /*.img-hold .bite-img {*/
     /*    height: 892px;*/
     /*    left: 39%;*/
     /*    margin-left: 0px;*/
     /*}*/
-
     /*.dotted {*/
     /*    right: -282px;*/
     /*}*/
-
     /*.blck-dot {*/
     /*    width: 44%;*/
     /*}*/
-
     /*.light {*/
     /*    left: 495px;*/
     /*}*/
-
     /*.vist-circle {*/
     /*    left: 120px;*/
     /*}*/
@@ -47,16 +44,19 @@
         height: 272px;
         max-width: 260px;
     }
-    .notch-product-container .gry-cirle{
+
+    .notch-product-container .gry-cirle {
         width: 568px;
         height: 568px;
         top: 200px;
         left: 290px;
     }
-    .centralized-sec .notch-project-image, .notch-project-image-bottom{
+
+    .centralized-sec .notch-project-image, .notch-project-image-bottom {
         width: 700px;
     }
-    .gray-half-circle{
+
+    .gray-half-circle {
         right: -30px;
         top: -95px;
         max-width: 150px;
@@ -136,24 +136,28 @@
         margin-bottom: 40px;
         line-height: 62px;
     }
+
     .features-container {
         padding-left: 3%;
     }
 
-    .centralized-sec .notch-project-image, .notch-project-image-bottom{
+    .centralized-sec .notch-project-image, .notch-project-image-bottom {
         width: 634px;
 
     }
-    .notch-product-container .gry-cirle{
+
+    .notch-product-container .gry-cirle {
         height: 514px;
         width: 514px;
         left: 280px;
     }
-    .gray-half-circle{
+
+    .gray-half-circle {
         top: -100px;
         max-width: 140px;
         height: 250px;
     }
+
     .text-hol p {
         font-size: 20px;
         margin-bottom: 80px;
@@ -205,17 +209,20 @@
 
 @media (max-width: 1368px) {
     .logo img {
-        height: 33px;
+        height: 35px;
     }
-    .notch-product-container .gry-cirle{
+
+    .notch-product-container .gry-cirle {
         width: 470px;
         height: 470px;
         left: 270px;
     }
-    .features-container{
+
+    .features-container {
         padding-left: 3%;
     }
-    .centralized-sec .notch-project-image, .notch-project-image-bottom{
+
+    .centralized-sec .notch-project-image, .notch-project-image-bottom {
         width: 580px;
     }
 
@@ -354,7 +361,8 @@
         height: 460px;
         right: -214px;
     }
-    .gray-half-circle{
+
+    .gray-half-circle {
         max-width: 150px;
         height: 250px;
         top: -105px;
@@ -363,10 +371,12 @@
     .timeline-box {
         margin-bottom: 20px;
     }
-    .timeline-box h5{
+
+    .timeline-box h5 {
         font-size: 22px;
     }
-    .features-container h1{
+
+    .features-container h1 {
         line-height: 20px;
         margin: 30px 0px;
     }
@@ -532,19 +542,23 @@
 }
 
 @media (max-width: 1199px) {
-    .features-container{
+    .features-container {
         padding-left: 0px;
         padding-right: 3%;
     }
+
     .logo img {
         height: 25px;
     }
-	.main-section {
-		padding-left: 60px;
-	}
-    .main-section p{
+
+    .main-section {
+        padding-left: 60px;
+    }
+
+    .main-section p {
         width: 340px;
     }
+
     .relative {
         max-width: 340px;
     }
@@ -814,46 +828,53 @@
         max-width: 350px;
     }
 
-	.centralized-sec .title{
-		width: 485px;
-		font-size: 30px;
-	}
-	.centralized-sec .description{
-		width: 485px;
+    .centralized-sec .title {
+        width: 485px;
+        font-size: 30px;
+    }
 
-	}
-	.dot-red{
-		left: 375px;
-	}
-    .footer .dot-chair{
+    .centralized-sec .description {
+        width: 485px;
+
+    }
+
+    .dot-red {
+        left: 375px;
+    }
+
+    .footer .dot-chair {
         max-width: 512px;
     }
-    .clients-sec .description p{
+
+    .clients-sec .description p {
         font-size: 16px;
     }
-	.notch-product-container .gry-cirle{
+
+    .notch-product-container .gry-cirle {
         top: 150px;
         left: 150px;
         height: 375px;
         width: 375px;
-	}
-	.centralized-sec .notch-project-image, .notch-project-image-bottom{
+    }
+
+    .centralized-sec .notch-project-image, .notch-project-image-bottom {
         width: 464px;
         margin-left: 0px;
-	}
-	.clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img{
-		margin: 0px 30px 20px;
-		max-width: 80px;
-	}
+    }
 
-    .gray-half-circle{
+    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img {
+        margin: 0px 30px 20px;
+        max-width: 80px;
+    }
+
+    .gray-half-circle {
         right: -60px;
         top: -130px;
         max-width: 150px;
         height: 250px;
     }
 
-    .features-container h1{
+    .features-container h1 {
         padding-left: 50px;
     }
 
@@ -1056,19 +1077,22 @@
         margin-bottom: 60px;
     }
 
-    .main-section{
+    .main-section {
         padding-left: 20px;
     }
-    .main-section p{
+
+    .main-section p {
         width: 400px;
         height: 170px;
         font-size: 17px;
     }
+
     .dot-chair {
         top: -120px;
         max-width: 230px;
         left: -3px;
     }
+
     .centralized-sec .title {
         width: 400px;
         font-size: 22px;
@@ -1080,40 +1104,45 @@
         font-size: 16px;
         line-height: 40px;
     }
+
     .dot-red {
         left: 285px;
     }
+
     .dot-yellow {
         right: 40px;
     }
+
     .notch-product-container .gry-cirle {
         top: 330px;
         left: 135px;
         height: 250px;
         width: 250px;
     }
+
     .gray-half-circle {
         max-width: 120px;
         height: 200px;
     }
 
-    .clients-sec .description p{
+    .clients-sec .description p {
         font-size: 16px;
     }
-    .clients-sec .title-row h1{
+
+    .clients-sec .title-row h1 {
         margin-top: 10px;
     }
 
     .clients-sec .top-row-logos-container,
-    .clients-sec .bottom-row-logos-container
-    {
+    .clients-sec .bottom-row-logos-container {
         max-width: 100%;
     }
-    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img{
+
+    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img {
         margin: 0px 24px 20px;
     }
 
-    .footer .dot-chair{
+    .footer .dot-chair {
         max-width: 440px;
     }
 
@@ -1124,11 +1153,19 @@
 }
 
 @media (max-width: 767px) {
-    .features-container{
+    .centralized-container {
+        padding: 0px 0px 0px 31px;
+    }
+
+    .features-container {
         padding-left: 3%;
     }
+
+    .features-container h1 {
+        padding-top: 30px;
+    }
+
     .logo img {
-        width: 65px;
         height: 35px;
     }
 
@@ -1241,6 +1278,7 @@
     .dot-chair {
         top: 0px;
         height: 454px;
+        max-width: 160px;
     }
 
     .management-sec {
@@ -1320,7 +1358,7 @@
     }
 
     .img-hold img {
-        width: 100%;
+        max-width: 100%;
     }
 
     .dumbo-img {
@@ -1331,6 +1369,23 @@
 }
 
 @media (max-width: 575px) {
+    .chair-img, .dot-red, .dot-yellow {
+        display: none;
+    }
+
+    .clients-sec .top-row-logos, .clients-sec .bottom-row-logos {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .clients-sec .bottom-row-logos-container {
+        margin: 0px auto 225px;
+    }
+
+    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img {
+        margin: 0px 24px 40px;
+    }
+
     .carousel-caption {
         width: 87%;
     }
@@ -1414,6 +1469,52 @@
 }
 
 @media (max-width: 479px) {
+    .notch-logo {
+        height: 50px
+    }
+
+    .main-section p {
+        width: 100%;
+        height: auto;
+    }
+
+    .centralized-container {
+        padding: 0px 10px;
+    }
+
+    .centralized-sec .title,
+    .centralized-sec .description {
+        width: 100%;
+    }
+
+    .centralized-sec .title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .gray-half-circle {
+        max-width: 100px;
+        height: 160px;
+        top: -110px;
+    }
+
+    .chair-img, .dot-red, .dot-yellow {
+        display: none;
+    }
+
+    .clients-sec .top-row-logos, .clients-sec .bottom-row-logos {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .clients-sec .bottom-row-logos-container {
+        margin: 0px auto 225px;
+    }
+
+    .clients-sec .top-row-logos img, .clients-sec .bottom-row-logos img {
+        margin: 0px 24px 40px;
+    }
+
     .overlay-hover {
         padding: 95px 0;
     }
@@ -1560,7 +1661,7 @@
     }
 
     .signup .logo img {
-        width: 31px;
+        height: 35px;
     }
 
     .sign-btn {
