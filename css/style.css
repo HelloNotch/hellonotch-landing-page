@@ -1411,7 +1411,7 @@ a:hover {
 .clients-sec .row-logos-container .top-row-logos,
 .clients-sec .row-logos-container .bottom-row-logos {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
