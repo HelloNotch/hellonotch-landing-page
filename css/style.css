@@ -104,9 +104,9 @@ a:hover {
 }
 
 .notch-logo {
-    height: 94px;
+    height: 48px;
     object-fit: contain;
-    margin-left: -20px;
+    margin-bottom: 10px;
 }
 
 .nav-link {
