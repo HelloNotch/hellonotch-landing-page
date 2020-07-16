@@ -1,263 +1,468 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <title>
+Notch
+</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css?v=81274">
+    <link rel="icon" href="images/favicon.png">
+  </head>
+  <body>
+    <div id="app">
+      
 
-    <title>Notch</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
+<header class="header pt-3 mt-3">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-6 mt-lg-n1 pl-lg-2">
+				<a href="index.html"><img src="images/logo.svg" class="img-fluid mt-n2 ml-lg-1" alt=""></a>
+				<nav class="d-none">
+					<ul class="nolist list list--main mb-0">
+						<li class="scrollable"><a href="#features">Features</a></li>
+						<li class="scrollable"><a href="#pricing">Pricing</a></li>
+					</ul>
+				</nav>
+			</div>
 
-<body class="signup">
-    <div class="wrapper">
+			<div class="col-6 d-none d-md-inline-block text-right">
+				<ul class="nolist list list--second mb-0">
+					<li><a href="https://app.hellonotch.com/" class="text-orange" target="_blank">Sign in</a></li>
+					<li><a href="https://app.hellonotch.com/sign_up" class="btn btn--primary btn--width141 btn--big mt-lg-n1">Get Started</a></li>
+				</ul>
+			</div>
 
-        <!--header-->
-        <header id="header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar  navbar-light navbar-custom"><a class="navbar-brand logo" href="#"><img
-                                    src="images/notch-logo.png" alt=""></a>
-                            <div class="ml-auto btn-grp"><a href="http://beta.enterprise.workof.com"
-                                    class="d-inline-block sign-btn">Login</a>
-
-                                <a href="#" class="get-btn"><span>Apply</span></a>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
+			<div class="col-6 d-md-none z-index2">
+				<div class="header__hamburger ml-auto">
+	              <span class="line-menu"></span>
+	              <span class="line-menu"></span>
+	              <span class="line-menu"></span>
+	            </div>
             </div>
-        </header>
+        </div><!--row-->
+     </div><!--container-->
 
-        <!--	management-sec-->
+    <div class="overlay-menu d-block d-lg-none">
+      <div class="container">
+        <div class="pt-md-5 mt-md-5 px-3 px-md-5 row d-flex justify-content-center flex-column">
+          <ul class="nolist d-flex align-items-center justify-content-center pl-0">
+			<li class="scrollable d-none"><a href="#features">Features</a></li>
+			<li class="scrollable d-none"><a href="#pricing">Pricing</a></li>
+			<li><a href="https://app.hellonotch.com/" class="text-orange" target="_blank">Sign in</a></li>
+			<li><a href="https://app.hellonotch.com/sign_up" class="btn btn--primary btn--width141 btn--big mt-lg-n1">Get Started</a></li>
+		</ul>
+        </div><!--row-->
+      </div><!--container-->
+    </div><!--overlay-menu-->
+</header>
 
-        <section class="management-sec">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="main-section">
-                            <div class="d-flex">
-                                <img src="images/notch-main-section.png" alt="" class="notch-logo"></a>
+<div class="overflow-hidden" id="notch-trigger">
+  <section class="section section--hero position-relative pt-md-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-5 mt-md-4 mt-xl-0">
+          <h1 class="line mt-xl-0 mt-3 mb-4 mb-md-5 pt-1">Procurement Software for Multi-location Brands & Businesses</h1>
+          <div class="medium-paragraph pt-1">
+            <p>Notch is a modern FF&E procurement platform. We help teams build spaces and maintain inventory with easy-to-use planning, specification and purchasing tools.</p>
+          </div>
+          <div class="mt-4 mt-md-5 pt-md-3 section__btn">
+            <a href="https://app.hellonotch.com/sign_up" class="btn btn--primary mb-3 mb-sm-0 mr-sm-3">Get Started</a>
+            <a href="https://calendly.com/notchdemo/30min" class="btn btn--secondary" target="_blank">Book a demo</a>
+          </div>
+        </div><!-- .col-lg-4-->
 
-                            </div>
-                            <p>An intuitive design and procurement software that helps busy teams create thoughtful
-                                spaces.
-                                We power the growth and management of built environments globally.
-                            </p>
-                            <form
-                                action="https://workof.us3.list-manage.com/subscribe/post?u=dd021b057536d3009c6b7201b&amp;id=5b6ac9bbf6"
-                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                target="_blank">
-                                <div class="form-group">
-                                    <div class="relative">
-                                        <input type="email" class="form-control" id="subscribeEmailInput" name="EMAIL"
-                                            placeholder="Email address" required>
-                                        <button type="submit" class="submit-btn">Apply</button>
-                                    </div>
-                                    <span class="alredy">Already on Notch? <a
-                                            href="http://beta.enterprise.workof.com">Sign
-                                            in.</a></span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="img-hold"><img src="images/hero-image.png" alt="" class="img-fluid green"> <img
-                                src="images/Bitmap.png" alt="" class="bite-img"></div>
-                    </div>
-                </div>
+        <div class="col-xl-5 col-lg-6 offset-lg-1 col-12 position-relative">
+          <div class="d-none d-lg-block">
+            <div class="position-absolute position-absolute--first">
+              <img src="images/pic/hero1.png" srcset="images/pic/hero1@2x.png 2x, images/pic/hero1.png 1x" alt="" class="img-fluid scroll-parallax" data-level="1">
             </div>
-        </section>
 
-        <!--centralized sec-->
-
-        <section class="centralized-sec">
-            <div class="container-fluid">
-                <div class="row title-row">
-                    <div class="col-sm-3 col-md-3">
-                        <div class="chair-img">
-                            <img src="images/chair-dot.svg" alt="" class="dot-chair">
-                            <img src="images/blue-dot.png" alt="" class="dot-blue">
-                        </div>
-                    </div>
-                    <div class="col-sm-7 col-md-6 centralized-container">
-                        <img src="images/red-dot.svg" alt="" class="dot-red">
-                        <div>
-                            <h1 class="title">Centralized Project Management</h1>
-                            <p class="description">Notch seamlessly connects space planning, procurement and inventory
-                                to give
-                                teams a better,
-                                faster way to outfit locations and maintain those assets over time.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 col-md-3">
-                        <img src="images/yellow-dot.svg" alt="" class="dot-yellow">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-7 notch-product-container">
-                        <div class="gry-cirle"></div>
-                        <img src="images/notch-project-image.png" alt="" class="notch-project-image">
-                        <img src="images/notch-project-image-bottom.png" alt="" class="notch-project-image-bottom">
-
-                    </div>
-                    <div class="col-md-5 features-container">
-                        <h1>Features</h1>
-
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/hourglass-1.svg" alt="">
-                                <h5>Timeline Tracking</h5>
-                            </div>
-                            <p>Track progress across all of your ongoing
-                                projects</p>
-                        </div>
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/office-file-sheet-alternate.svg" alt="">
-                                <h5>Spec Sheet Generation</h5>
-                            </div>
-                            <p>Automatically generate branded spec sheets</p>
-                        </div>
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/presentation-projector-screen-budget-analytics.svg"
-                                    alt="">
-                                <h5>Integrated Budget</h5>
-                            </div>
-                            <p>Real time budget updating tools allow teams to
-                                efficiently track spending</p>
-                        </div>
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/database-hierarchy.svg" alt="">
-                                <h5>Vendor + Inventory Management</h5>
-                            </div>
-                            <p>Build a database of vendors + FF&E specifc to
-                                your organization and each location</p>
-                        </div>
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/project-blueprint-home.svg" alt="">
-                                <h5>Floorplan Uploads</h5>
-                            </div>
-                            <p>Interactive foorplans, host team
-                                communications and product specifcations</p>
-                        </div>
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/headphones-customer-support-human.svg" alt="">
-                                <h5>Awesome Support</h5>
-                            </div>
-                            <p>Our experienced team will be able to assist you
-                                with projects from start to end</p>
-                        </div>
-                        <div class="timeline-box">
-                            <div class="icon-hold"><img src="images/purchase-image.svg" alt="">
-                                <h5>Purchase Orders</h5>
-                            </div>
-                            <p>Easily group items together to receive quotes
-                                from vendors and issue purchase orders</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="position-absolute position-absolute--second scroll-parallax" data-level="1">
+              <img src="images/pic/hero1b.png" srcset="images/pic/hero1b@2x.png 2x, images/pic/hero1b.png 1x" alt="" class="img-fluid">
+              <p class="saving"><span>.</span><span>.</span><span>.</span></p>
             </div>
-        </section>
 
-        <!--Clients sec-->
+            <div class="position-absolute position-absolute--third">
+              <img src="images/pic/hero2.png" srcset="images/pic/hero2@2x.png 2x, images/pic/hero2.png 1x" alt="" class="img-fluid scroll-parallax" data-level="2">
+            </div>
 
-        <section class="clients-sec">
-            <div class="container-fluid">
-                <div class="row title-row">
-                    <div class="col-md-12">
-                        <h1 class="title mx-auto">Clients</h1>
-                        <img src="images/half-oval.png" class="gray-half-circle">
-                    </div>
-                </div>
-                <div class="row description">
-                    <div class="offset-lg-3 col-lg-6 col-md-12 offset-lg-3">
-                        <p>I would absolutely recommend Notch to any company looking for a solution to design, procure
-                            andmanage their projects at scale. I promise you will never look back.
-                        </p>
-                        <p id="rayOlsen"> - Ray Olsen | Purchasing & Procurement Manager, Domio </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 row-logos-container">
-                        <div class="top-row-logos">
-                            <div class="image-wrapper"><img src="images/w.png"></div>
-                            <div class="image-wrapper"><img src="images/studio-track.png"></div>
-                            <div class="image-wrapper"><img src="images/brookfield.png"></div>
-                            <div class="image-wrapper"><img src="images/bondcollective.png"></div>
-                            <div class="image-wrapper"><img src="images/domio.png"></div>
-                            <div class="image-wrapper"><img src="images/canopy.png"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 row-logos-container">
-                        <div class="bottom-row-logos">
-                            <div class="image-wrapper"><img src="images/eataly.png"></div>
-                            <div class="image-wrapper"><img src="images/foda.png"></div>
-                            <div class="image-wrapper"><img src="images/built-interest.png"></div>
-                            <div class="image-wrapper"><img src="images/home-studios.png"></div>
-                            <div class="image-wrapper"><img src="images/souvla.png"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="position-absolute position-absolute--fourth">
+              <img src="images/pic/hero3.png" srcset="images/pic/hero3@2x.png 2x, images/pic/hero3.png 1x" alt="" class="img-fluid scroll-parallax" data-level="1">
             </div>
-        </section>
 
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="footer-txt text-center">
-                    <img src="images/chair-dot.svg" alt="" class="dot-chair">
-                    <h2>Want to learn more? Join us!</h2>
-                    <form
-                        action="https://workof.us3.list-manage.com/subscribe/post?u=dd021b057536d3009c6b7201b&amp;id=5b6ac9bbf6"
-                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                        <div class="form-group">
-                            <div class="relative">
-                                <input type="email" name="EMAIL" class="form-control" placeholder="Email address"
-                                    required>
-                                <button type="submit" class="submit-btn">Apply</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="position-absolute position-absolute--fifth">
+              <img src="images/pic/hero4.png" srcset="images/pic/hero4@2x.png 2x, images/pic/hero4.png 1x" alt="" class="img-fluid scroll-parallax" data-level="2">
             </div>
-            <hr class="line">
-            <div class="container-fluid clearfix">
-                <ul class="foter-itm">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+
+            <div class="position-absolute position-absolute--sixth">
+              <img src="images/pic/hero5.png" srcset="images/pic/hero5@2x.png 2x, images/pic/hero5.png 1x" alt="" class="img-fluid scroll-parallax" data-level="3">
             </div>
-        </footer>
+          </div><!-- .d-block-->
+
+          <div class="d-lg-none mt-5 pt-5">
+            <img src="images/pic/hero-mobile.png" srcset="images/pic/hero-mobile@2x.png 2x, images/pic/hero-mobile.png 1x" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div><!-- .row-->
+    </div><!-- .container-->
+
+    <div class="position-absolute position-absolute--letter" id="letter-container">
+      <img src="images/notch.svg" alt="" class="img-fluid position-relative">
     </div>
-    <!-------Js--------->
+  </section>
 
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- <script>
-$( "a" ).click(function( event ) {
-event.preventDefault();
+  <section class="section centralized">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 offset-xl-1 col-lg-5 col-12">
+          <h2>Centralized Project Management</h2>
+          <div class="normal-paragraph mt-3 mt-md-4 ml-md-1 pt-2">
+            <p>Collaborate across functions to manage large scale procurement projects and multi-location rollouts.</p>
+          </div><!-- .normal-->
+          <a href="" class="btn btn--secondary mt-3 mt-md-4">Join us now</a>
+        </div>
 
-});
-</script> -->
-    <script>
-        $(".get-btn").click(function () {
-            $('html,body').animate({
-                scrollTop: $("footer").offset().top
-            }, 'slow');
-            // $(document).scroll('#subscribeEmailInput');
-            $("#subscribeEmailInput").focus();
-        });
+        <div class="col-lg-5 offset-lg-2 col-12 large-paragraph position-relative px-lg-5">
 
+          <div class="d-none d-lg-block">
+            <div class="position-relative text-center animated" data-fx="fadein" data-time="750">
+              <img src="images/pic/ellipse2.png" srcset="images/pic/ellipse2@2x.png 2x, images/pic/ellipse2.png 1x" alt="" class="img-fluid">
 
-    </script>
-</body>
+              <div class="position-absolute position-absolute--centralized position-absolute--centralized__1 floating floating--6s">
+                <img src="images/transit.svg" alt="" class="img-fluid">
+                <p>Procurement</p>
+              </div>
 
+              <div class="position-absolute position-absolute--centralized position-absolute--centralized__2 floating floating--4s">
+                <img src="images/truck.svg" alt="" class="img-fluid">
+                <p>Logistics</p>
+              </div>
+
+              <div class="position-absolute position-absolute--centralized position-absolute--centralized__3 floating floating--5s">
+                <img src="images/warehouse.svg" alt="" class="img-fluid">
+                <p>Warehousing</p>
+              </div>
+
+              <div class="position-absolute position-absolute--centralized position-absolute--centralized__4 floating floating--6s">
+                <img src="images/tools.svg" alt="" class="img-fluid">
+                <p>Installation</p>
+              </div>
+
+              <div class="position-absolute position-absolute--centralized position-absolute--centralized__5 floating floating--4s">
+                <img src="images/design.svg" alt="" class="img-fluid">
+                <p>Design</p>
+              </div>
+
+              <div class="position-absolute position-absolute--centralized position-absolute--centralized__6 position-absolute--centralized__shadow floating floating--5s">
+                <img src="images/planning.svg" alt="" class="img-fluid">
+                <p>Planning</p>
+              </div>
+
+              <div class="position-absolute position-absolute--nineth animated" data-fx="fadein" data-time="1050">
+                <img src="images/pic/l-small-2.png" srcset="images/pic/l-small-2@2x.png 2x, images/pic/l-small-2.png 1x" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- .lg-block-->
+
+          <div class="d-lg-none mt-5">
+            <img src="images/pic/centralized.png" srcset="images/pic/centralized@2x.png 2x, images/pic/centralized.png 1x" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div><!-- .row-->
+    </div><!-- .container-->
+  </section>
+
+  <section class="section section--benefits pt-5">
+    <div class="container">
+      <div class="row pt-3">
+        <div class="col-xl-7 col-lg-6 position-relative">
+          <div class="d-none d-lg-block">
+            <div class="position-absolute position-absolute--tenth">
+              <img src="images/pic/section1.png" srcset="images/pic/section1@2x.png 2x, images/pic/section1.png 1x" alt="" class="img-fluid">
+            </div>
+
+            <div class="position-absolute position-absolute--eleventh">
+              <img src="images/pic/section2.png" srcset="images/pic/section2@2x.png 2x, images/pic/section2.png 1x" alt="" class="img-fluid">
+            </div>
+
+          </div><!-- .none-->
+        </div>
+
+        <div class="col-xl-5 col-lg-6 large-paragraph mt-lg-5 pt-lg-5">
+          <h2 class="mt-lg-5 mb-4 pt-5 pb-3">Benefits</h2>
+
+          <div class="d-lg-none mt-5">
+            <img src="images/pic/section-mobile.png" srcset="images/pic/section-mobile@2x.png 2x, images/pic/section-mobile.png 1x" alt="" class="img-fluid">
+          </div>
+
+          <div class="mb-5 pb-lg-4 animated" data-fx="fadeinup" data-time="350">
+            <p>Template and automate <br class="d-none d-lg-block">redundant project workflows <br class="d-none d-lg-block">to <span class="line-small"><b>reduce time by 40%</b></span></p>
+          </div>
+
+          <div class="mb-5 pb-lg-4 pt-1 animated" data-fx="fadeinup" data-time="550">
+            <p>Facilitate <span class="line-small d-inline-block"><b>remote collaboration</b></span><br class="d-none d-lg-block"> between teams and store <br class="d-none d-lg-block">project critical documents</p>
+          </div>
+
+          <div class="mb-5 pb-lg-4 animated" data-fx="fadeinup" data-time="750">
+            <p><span class="line-small"><b>Track inventory assets</b></span> to <br class="d-none d-lg-block">improve project costs and <br class="d-none d-lg-block">ongoing maintenance</p>
+          </div>
+        </div>
+      </div><!-- .row-->
+    </div><!-- .container-->
+  </section>
+</div><!-- .overflow-hidden -->
+
+<section class="section section--bg-gray section--feature py-3 py-sm-4 py-lg-5" id="features">
+  <div class="position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 offset-xl-1 col-12 my-4 my-md-5 pt-lg-4 pb-lg-5">
+          <h2 class="mt-2 pb-3 animated" data-fx="fadeinup" data-time="350">Features</h2>
+
+          <div class="d-xl-none mr-n4">
+            <img src="images/pic/laptop-mobile.png" srcset="images/pic/laptop-mobile@2x.png 2x, images/pic/laptop-mobile.png 1x" alt="" class="img-fluid">
+          </div><!-- .none-->
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat1">
+            <h4 class="mb-1">Catalog</h4>
+            <p>Download our Chrome extension <a href="https://chrome.google.com/webstore/detail/notch/dagepcmigmkadpegobnbjkjfedbacmoi" target="_blank">here</a> to easily grab technical information off the web and build product catalog specific to teams, regions or groups</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat2">
+            <h4 class="mb-1">Vendor Management</h4>
+            <p>Build a centralized database of vendors to maintain payment terms, agreements, production capabilities and pricing discounts</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat3">
+            <h4 class="mb-1">Space Planning</h4>
+            <p>Create projects, upload floor plans, tag items and collaborate with team members to generate spec packages</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat4">
+            <h4 class="mb-1">Project Budget</h4>
+            <p>Real time budget updating tools allow decision makers to easily manage spending across projects</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat5">
+            <h4 class="mb-1">Centralize Approvals</h4>
+            <p>Track and maintain budget approvals from key stakeholders</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat6">
+            <h4 class="mb-1">RFQs and Ordering</h4>
+            <p>Easily send bids to multiple vendors, receive quotes, issue purchase orders and track shipments in a single dashboard</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat7">
+            <h4 class="mb-1">Inventory Management</h4>
+            <p>Confirm receipt, ensure quality assurance and monitor inventory assets across warehouses and locations.</p>
+          </div>
+
+          <div class="mb-4 mb-md-5 pb-lg-3 animated" data-fx="fadeinup" data-time="550" id="feat8">
+            <h4 class="mb-1">Punch List</h4>
+            <p>Track issues during installation, easily identify problems on the floor plan and assign items to the relevant team for resolution</p>
+          </div>
+
+          <div class="pb-2 animated" data-fx="fadeinup" data-time="550">
+            <h4 class="mb-1">Chrome extension</h4>
+            <p>Download our Chrome Extension to easily grab product data from any website and save it to your project.</p>
+          </div>
+
+          <a href="https://chrome.google.com/webstore/detail/notch/dagepcmigmkadpegobnbjkjfedbacmoi" class="btn btn--primary btn--small btn--width118 mt-1 mb-3 mb-md-0 mb-lg-5" target="_blank">Download</a>
+        </div><!-- .col-->
+
+        <div class="col-lg-8 position-static">
+          <div class="section--feature__container position-absolute d-none d-xl-block">
+            <div class="position-sticky mb-7">
+              <div class="section--feature__bg-laptop position-relative">
+                <img src="images/pic/laptop1.png" srcset="images/pic/laptop1@2x.png 2x, images/pic/laptop1.png 1x" alt="" class="feat-img feat-img--one img-fluid">
+                <img src="images/pic/laptop3.png" srcset="images/pic/laptop3@2x.png 2x, images/pic/laptop3.png 1x" alt="" class="feat-img feat-img--two feat-img--hide img-fluid position-absolute">
+                <img src="images/pic/laptop4.png" srcset="images/pic/laptop4@2x.png 2x, images/pic/laptop4.png 1x" alt="" class="feat-img feat-img--three feat-img--hide img-fluid position-absolute">
+                <img src="images/pic/laptop5.png" srcset="images/pic/laptop5@2x.png 2x, images/pic/laptop5.png 1x" alt="" class="feat-img feat-img--four feat-img--hide img-fluid position-absolute">
+                <img src="images/pic/laptop7.png" srcset="images/pic/laptop7@2x.png 2x, images/pic/laptop7.png 1x" alt="" class="feat-img feat-img--five feat-img--hide img-fluid position-absolute">
+                <img src="images/pic/laptop8.png" srcset="images/pic/laptop8@2x.png 2x, images/pic/laptop8.png 1x" alt="" class="feat-img feat-img--six feat-img--hide img-fluid position-absolute">
+                <img src="images/pic/laptop9.png" srcset="images/pic/laptop9@2x.png 2x, images/pic/laptop9.png 1x" alt="" class="feat-img feat-img--seven feat-img--hide img-fluid position-absolute">
+                <img src="images/pic/laptop10.png" srcset="images/pic/laptop10@2x.png 2x, images/pic/laptop10.png 1x" alt="" class="feat-img feat-img--eight feat-img--hide img-fluid position-absolute">
+
+                <img src="images/pic/laptop2.png" srcset="images/pic/laptop2@2x.png 2x, images/pic/laptop2.png 1x" alt="" class="img-fluid position-absolute img-absolute">
+                <img src="images/pic/laptop6.png" srcset="images/pic/laptop6@2x.png 2x, images/pic/laptop6.png 1x" alt="" class="img-fluid position-absolute img-absolute2 img-absolute--hide">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- .row-->
+    </div><!-- .container-->
+  </div><!-- .position-relative-->
+</section>
+
+<section class="section overflow-hidden">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-4 offset-xl-1 col-lg-5 col-12 testimonial py-3 py-lg-0 my-5 my-lg-0 animated" data-fx="fadeinup" data-time="550">
+        <img src="images/logo/built.png" class="img-fluid mb-4 pb-xl-3" alt="">
+        <blockquote class="mb-xl-5 mb-4">"Procurement is integral now, and Notch's intuitive interface powered by consistent software upgrades make the process more seamless than ever. Ultimately if your goal is to build thoughtful places and deliver value, Notch is essential."</blockquote>
+        <div class="d-flex align-items-center">
+          <img src="images/pic/person.png" srcset="images/pic/person@2x.png 2x, images/pic/person.png 1x" alt="" class="img-fluid mr-3 pr-1">
+          <div>
+            <span class="testimonial__author d-block">Laura Mueller-Soppart</span>
+            <span class="testimonial__business d-block">Founder & CEO, Built Interest</span>
+          </div>
+        </div>
+      </div><!-- .col-->
+
+      <div class="col-xl-6 offset-xl-1 col-lg-7 pl-xl-0 pr-0 pr-xl-3 d-none d-lg-block">
+        <div class="mr-xl-n6 mb-xl-n7">
+          <img src="images/pic/testimonial.png" srcset="images/pic/testimonial@2x.png 2x, images/pic/testimonial.png 1x" alt="" class="img-fluid">
+        </div>
+      </div><!-- .col-->
+    </div><!-- .row-->
+  </div><!-- .container-->
+</section>
+
+<section class="section section--bg-gray py-3 py-lg-5 overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="client mb-5 mt-4 pt-3 pb-1">
+          <h5 class="text-uppercase mb-4">our clients</h5>
+          <div class="client__wrapper d-flex align-items-center justify-content-between">
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo1.png" srcset="images/logo/logo1@2x.png 2x, images/logo/logo1.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo2.png" srcset="images/logo/logo2@2x.png 2x, images/logo/logo2.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo3.png" srcset="images/logo/logo3@2x.png 2x, images/logo/logo3.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo4.png" srcset="images/logo/logo4@2x.png 2x, images/logo/logo4.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo5.png" srcset="images/logo/logo5@2x.png 2x, images/logo/logo5.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo6.png" srcset="images/logo/logo6@2x.png 2x, images/logo/logo6.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item d-flex justify-content-center align-items-center">
+              <a href="">
+                <img src="images/logo/logo6.png" srcset="images/logo/logo7@2x.png 2x, images/logo/logo7.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+          </div><!-- .wrapper-->
+        </div><!-- .client-->
+
+        <div class="client pt-4 pb-3 mb-lg-5 d-none">
+          <h5 class="text-uppercase mb-4">Press</h5>
+          <div class="client__wrapper d-flex align-items-center justify-content-between">
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo7.png" srcset="images/logo/logo7@2x.png 2x, images/logo/logo7.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo5.png" srcset="images/logo/logo5@2x.png 2x, images/logo/logo5.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo4.png" srcset="images/logo/logo4@2x.png 2x, images/logo/logo4.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo6.png" srcset="images/logo/logo6@2x.png 2x, images/logo/logo6.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo2.png" srcset="images/logo/logo2@2x.png 2x, images/logo/logo2.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo3.png" srcset="images/logo/logo3@2x.png 2x, images/logo/logo3.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+            <div class="client__item">
+              <a href="">
+                <img src="images/logo/logo1.png" srcset="images/logo/logo1@2x.png 2x, images/logo/logo1.png 1x" alt="" class="img-fluid">
+              </a>
+            </div><!-- .item-->
+
+          </div><!-- .wrapper-->
+        </div><!-- .client-->
+      </div><!-- .col-->
+    </div><!-- .row-->
+  </div><!-- .container-->
+</section>
+
+<div class="overflow-hidden">
+  <div class="section section--bg-orange section--above-footer position-relative pt-7">
+    <div class="position-absolute position-absolute--letter z-index1">
+      <img src="images/notch-simple.svg" class="img-fluid" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 offset-xl-3 col-12 text-center normal-paragraph z-index3 mb-lg-7 mt-5 mt-xl-0" id="join">
+          <h2 class="fw-regular mb-3">Want to learn more?</h2>
+          <div class="mt-5 mb-7 border-less">
+            <a href="https://app.hellonotch.com/sign_up" class="btn btn--primary">Get Started</a>
+            <a href="https://calendly.com/notchdemo/30min" class="btn btn--white" target="_blank">Book a demo</a>
+          </div>
+        </div>
+      </div><!-- .row-->
+    </div><!--  .container-->
+    <footer class="footer z-index2 position-relative">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-xl-1 col-md-2 col-12 text-center text-md-left">
+				<a href=""><img src="images/logo.svg" class="img-fluid" alt=""></a>
+			</div>
+
+			<div class="col-xl-11 col-md-10 col-12 text-center text-md-right">
+				<ul class="nolist list list--main list--footer mt-5 mt-md-0 mb-0">
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</footer>
+
+  </div>
+</div><!-- .overflow-hidden -->
+
+      <div role="banner" class="cookie-banner d-none py-4">
+	<div class="container text-center">
+		<p>We use cookies to ensure that we give you the best experience on our website. By continuing to browse the site, you are agreeing to our use of cookies.</p>
+		<div class="d-flex justify-content-center">
+			<a href="#" class="btn btn--primary btn--small mr-4 cookie-banner__accept">Allow Cookies</a>
+			<a href="privacy-policy.html" target="_self" id="cn-more-info" class="btn btn--white btn--small">Privacy policy</a>
+		</div>
+	</div>
+</div>
+    </div>
+
+    <script src="js/app.js?v=50879"></script>
+
+  </body>
 </html>
