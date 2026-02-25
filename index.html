@@ -46,17 +46,19 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.25rem clamp(1.5rem, 5vw, 3rem);
+      padding: 0 clamp(1.5rem, 5vw, 3rem);
       background: var(--bg-page);
       border-bottom: 1px solid var(--border);
     }
 
     .nav__right { display: flex; align-items: center; gap: 1.5rem; }
-    .nav__sign-in { font-size: 0.9375rem; font-weight: 400; color: #B9B9B9; text-decoration: none; }
+    .nav__sign-in { font-size: 0.9375rem; font-weight: 400; color: var(--gray-mid); text-decoration: none; }
     .nav__sign-in:hover { color: var(--text-body); }
+    .nav .btn { font-size: 0.875rem; padding: 8px 16px; border-radius: 100px; font-weight: 600; }
 
     .btn {
       display: inline-flex;
@@ -162,16 +164,9 @@
       white-space: normal;
     }
     @media (max-width: 768px) {
-      .row, .header-row { grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 1fr); }
-      .row span:nth-child(4), .header-row span:nth-child(4) { display: none; }
-    }
-    @media (max-width: 560px) {
-      .row, .header-row { grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr); }
+      .row, .header-row { grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr); }
+      .row span:nth-child(2), .header-row span:nth-child(2),
       .row span:nth-child(3), .header-row span:nth-child(3) { display: none; }
-    }
-    @media (max-width: 420px) {
-      .row, .header-row { grid-template-columns: 1fr; }
-      .row span:nth-child(2), .header-row span:nth-child(2) { display: none; }
     }
     .header-row {
       color: #6A6A6A;
@@ -180,14 +175,25 @@
       letter-spacing: 0.05em;
       background: #0F0F0F;
     }
+    .row span.status {
+      justify-self: center;
+    }
     .status {
-      display: block;
-      width: 100%;
-      padding: 3px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 115px;
+      max-width: 100%;
+      aspect-ratio: 4 / 1;
+      padding: 0 10px;
       border-radius: 999px;
       font-size: 0.75rem;
       text-align: center;
       box-sizing: border-box;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: 1.2;
     }
     .status.awarded { background: rgba(119,251,116,0.15); color: #77FB74; }
     .status.awaiting { background: rgba(255,191,143,0.15); color: #FFBF8F; }
@@ -253,17 +259,14 @@
       overflow: hidden;
       flex: 1 1 0;
       min-width: 0;
+      aspect-ratio: 3 / 1;
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .pipeline-arrow {
-      flex-shrink: 0;
-      color: #2A2A2A;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
+      display: none;
     }
     @container pipeline (max-width: 900px) { .pipeline-node { font-size: 0.75rem; padding: 8px 14px; } }
     @container pipeline (max-width: 750px) { .pipeline-node { font-size: 0.7rem; padding: 8px 12px; } }
@@ -272,10 +275,17 @@
       .pipeline-track {
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: stretch;
+        align-items: center;
+        width: 100%;
       }
-      .pipeline-arrow { text-align: center; transform: rotate(90deg); }
-      .pipeline-node { flex: 0 0 auto; font-size: 0.8rem; padding: 10px 20px; }
+      .pipeline-node {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 240px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
+        aspect-ratio: 3 / 1;
+      }
     }
 
     .benefits {
@@ -467,11 +477,11 @@
                 <div class="row header-row">
                   <span>Project Name</span><span>Phase</span><span>Budget</span><span>Status</span>
                 </div>
-                <div class="row"><span>Riverside Tower</span><span>Procurement</span><span>$1,240,000</span><span class="status awaiting">Awaiting Bid</span></div>
+                <div class="row"><span>Riverside Tower</span><span>Procurement</span><span>$1,240,000</span><span class="status awaiting">RFQ Sent</span></div>
                 <div class="row"><span>Northgate Development</span><span>Bidding</span><span>$890,000</span><span class="status awarded">Awarded</span></div>
                 <div class="row"><span>Harbor District</span><span>Spec Review</span><span>$2,100,000</span><span class="status review">In Review</span></div>
                 <div class="row"><span>Westfield Campus</span><span>Installation</span><span>$670,000</span><span class="status awarded">Awarded</span></div>
-                <div class="row"><span>Centerline Mixed-use</span><span>Procurement</span><span>$1,450,000</span><span class="status awaiting">Awaiting Bid</span></div>
+                <div class="row"><span>Centerline Mixed-use</span><span>Procurement</span><span>$1,450,000</span><span class="status awaiting">RFQ Sent</span></div>
               </div>
             </div>
           </div>
@@ -481,7 +491,7 @@
 
     <section class="problem">
       <div class="problem__inner">
-        <p class="problem__text">Every FF&E project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers. Every handoff is a chance for information to get lost, re-entered, or delayed. Most teams are managing that chain across email threads, shared folders, and manual processes that were not purpose built for this kind of work. Notch changes that.</p>
+        <p class="problem__text">Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.</p>
       </div>
     </section>
 
@@ -493,13 +503,13 @@
         <div class="pipeline-track">
             <div class="pipeline-node">Specs Imported</div>
             <div class="pipeline-arrow">→</div>
-            <div class="pipeline-node">Quote Requests Sent</div>
+            <div class="pipeline-node">RFQs Sent</div>
             <div class="pipeline-arrow">→</div>
-            <div class="pipeline-node">Pricing Confirmed & Orders Placed</div>
+            <div class="pipeline-node">Orders Placed</div>
             <div class="pipeline-arrow">→</div>
             <div class="pipeline-node">Expediting Tracked</div>
             <div class="pipeline-arrow">→</div>
-            <div class="pipeline-node">Items Received & Installed</div>
+            <div class="pipeline-node">Items Installed</div>
             <div class="pipeline-arrow">→</div>
             <div class="pipeline-node">Assets Maintained</div>
         </div>
