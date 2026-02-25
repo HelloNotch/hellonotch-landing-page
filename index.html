@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <style>
     :root {
       --font-primary: 'Inter', sans-serif;
@@ -451,7 +453,7 @@
     </a>
     <div class="nav__right">
       <a href="https://app.hellonotch.com/login" class="nav__sign-in">Sign In</a>
-      <a href="#demo" class="btn">Schedule a Demo</a>
+      <a href="#" class="btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/notchdemo/15min'});return false;">Schedule a Demo</a>
     </div>
   </nav>
 
@@ -459,7 +461,7 @@
     <section class="hero">
       <h1 class="hero__headline">Procurement Built for Design and Construction Teams</h1>
       <p class="hero__subhead">Notch brings every stakeholder, document, and decision into one connected workflow so your project keeps moving from initial specifications to final installation.</p>
-      <a href="#demo" class="btn">Schedule a Demo</a>
+      <a href="#" class="btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/notchdemo/15min'});return false;">Schedule a Demo</a>
       <div class="hero-visual">
         <div class="product-window">
           <div class="window-bar">
@@ -558,7 +560,7 @@
     <section class="final-cta" id="demo">
       <h2 class="final-cta__header">See It In Action</h2>
       <p class="final-cta__body">Upload a spec package and see how Notch structures it into a quote request ready to go out to vendors.</p>
-      <a href="#demo" class="btn">Schedule a Demo</a>
+      <a href="#" class="btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/notchdemo/15min'});return false;">Schedule a Demo</a>
     </section>
   </main>
 
