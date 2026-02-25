@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Notch is the modern procurement platform for design and construction teams. One connected workflow from initial specifications to final installation.">
+  <title>Notch | Procurement Built for Design and Construction Teams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-primary: 'Inter', sans-serif;
+      --accent: #FFBF8F;
+      --cta-start: #E6B48E;
+      --cta-end: #D09D76;
+      --bg-page: #0A0A0A;
+      --bg-section: #111111;
+      --bg-card: #1A1A1A;
+      --text-body: #E5E5E5;
+      --text-headline: #FFFFFF;
+      --border: #2A2A2A;
+      --gray-mid: #B9B9B9;
+      --gray-dark: #6A6A6A;
+      --success: #77FB74;
+      --error: #FF6477;
+      --max-width: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    section { position: relative; z-index: 1; }
+    body {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-body);
+      background: var(--bg-page);
+      padding-top: 64px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem clamp(1.5rem, 5vw, 3rem);
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav__right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav__sign-in { font-size: 0.9375rem; font-weight: 400; color: #B9B9B9; text-decoration: none; }
+    .nav__sign-in:hover { color: var(--text-body); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      font-family: var(--font-primary);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--cta-start) 0%, var(--cta-end) 100%);
+      border: none;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(214, 157, 118, 0.4); }
+    .btn:active { transform: translateY(0); }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+      margin: 0;
+      background: radial-gradient(ellipse 60% 40% at 50% 40%, rgba(255, 191, 143, 0.08) 0%, transparent 70%), #080808;
+      border-top: 1px solid #222222;
+    }
+    .hero__headline {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      max-width: 900px;
+      margin-bottom: 1.5rem;
+      color: var(--text-headline);
+    }
+    .hero__subhead {
+      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      font-weight: 600;
+      color: var(--text-body);
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .hero-visual {
+      margin-top: 60px;
+      max-width: 920px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-window {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.06),
+        0 40px 80px rgba(0,0,0,0.9),
+        0 8px 32px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+      transform: perspective(1200px) rotateX(4deg) scale(1.02);
+      transform-origin: top center;
+    }
+    .window-layout { display: flex; }
+    .window-sidebar {
+      width: 140px;
+      background: rgba(255,255,255,0.02);
+      border-right: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 0;
+      flex-shrink: 0;
+    }
+    .sidebar-item { padding: 10px 20px; font-size: 0.8rem; color: #6A6A6A; cursor: pointer; }
+    .sidebar-item.active { color: #FFBF8F; background: rgba(255,191,143,0.08); }
+    .window-main { flex: 1; }
+    .window-bar {
+      background: #1A1A1A;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 12px 16px;
+      display: flex;
+      gap: 6px;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #2A2A2A; display: inline-block; }
+    .window-content { padding: 0; width: 100%; }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1.2fr);
+      padding: 18px 24px;
+      border-bottom: 1px solid #1A1A1A;
+      font-size: 0.85rem;
+      color: #E5E5E5;
+      width: 100%;
+    }
+    .row span,
+    .header-row span {
+      word-break: break-word;
+      white-space: normal;
+    }
+    @media (max-width: 768px) {
+      .row, .header-row { grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 1fr); }
+      .row span:nth-child(4), .header-row span:nth-child(4) { display: none; }
+    }
+    @media (max-width: 560px) {
+      .row, .header-row { grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr); }
+      .row span:nth-child(3), .header-row span:nth-child(3) { display: none; }
+    }
+    @media (max-width: 420px) {
+      .row, .header-row { grid-template-columns: 1fr; }
+      .row span:nth-child(2), .header-row span:nth-child(2) { display: none; }
+    }
+    .header-row {
+      color: #6A6A6A;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: #0F0F0F;
+    }
+    .status {
+      display: block;
+      width: 100%;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .status.awarded { background: rgba(119,251,116,0.15); color: #77FB74; }
+    .status.awaiting { background: rgba(255,191,143,0.15); color: #FFBF8F; }
+    .status.bidding { background: rgba(100,150,255,0.15); color: #6496FF; }
+    .status.review { background: rgba(150,100,255,0.15); color: #9664FF; }
+
+    .problem {
+      padding: 72px 40px;
+      margin: 0;
+      background: #101010;
+      border-top: 1px solid #222222;
+    }
+    .problem__inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .problem__text {
+      font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--text-body);
+    }
+
+    .pipeline {
+      padding: 80px 0;
+      margin: 0;
+      background: #161616;
+      border-top: 1px solid #222222;
+    }
+    .pipeline__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .pipeline__inner h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--text-headline);
+    }
+    .pipeline-track-wrap {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 48px;
+      container-type: inline-size;
+      container-name: pipeline;
+    }
+    .pipeline-track {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: nowrap;
+      gap: 8px;
+      max-width: 100%;
+    }
+    .pipeline-node {
+      background: #1A1A1A;
+      color: #E5E5E5;
+      border: 1px solid #2A2A2A;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 0.8rem;
+      white-space: normal;
+      word-break: break-word;
+      overflow: hidden;
+      flex: 1 1 0;
+      min-width: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-arrow {
+      flex-shrink: 0;
+      color: #2A2A2A;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+    @container pipeline (max-width: 900px) { .pipeline-node { font-size: 0.75rem; padding: 8px 14px; } }
+    @container pipeline (max-width: 750px) { .pipeline-node { font-size: 0.7rem; padding: 8px 12px; } }
+    @container pipeline (max-width: 600px) { .pipeline-node { font-size: 0.65rem; padding: 6px 10px; } }
+    @media (max-width: 640px) {
+      .pipeline-track {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      .pipeline-arrow { text-align: center; transform: rotate(90deg); }
+      .pipeline-node { flex: 0 0 auto; font-size: 0.8rem; padding: 10px 20px; }
+    }
+
+    .benefits {
+      padding: 80px 40px;
+      margin: 0;
+      background: #0C0C0C;
+      border-top: 1px solid #222222;
+    }
+    .benefits__header {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--text-headline);
+    }
+    .benefits__grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .benefit-card {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 20px 40px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+      transition: box-shadow 0.2s ease;
+    }
+    .benefit-card:hover { box-shadow: 0 4px 24px rgba(255, 191, 143, 0.08); }
+    .benefit-card__icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(255,191,143,0.1);
+      border: 1px solid rgba(255,191,143,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .benefit-card__icon { width: 28px; height: 28px; color: #FFBF8F; flex-shrink: 0; }
+    .benefit-card__title { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-headline); }
+    .benefit-card__text { font-size: 0.9375rem; font-weight: 400; line-height: 1.6; color: var(--text-body); }
+
+    .social-proof {
+      padding: 80px 40px;
+      margin: 0;
+      background: #131313;
+      border-top: 1px solid #222222;
+    }
+    .social-proof__header {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--text-headline);
+    }
+    .social-proof__logos {
+      max-width: var(--max-width);
+      margin: 0 auto 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    .social-proof__logo {
+      width: 160px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray-mid);
+    }
+    .social-proof__logo img { max-width: 120px; max-height: 40px; object-fit: contain; filter: brightness(0) invert(1); }
+    .social-proof__quote {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid rgba(255,191,143,0.2);
+      background: rgba(255,191,143,0.04);
+      border-radius: 16px;
+      padding: 48px;
+      position: relative;
+    }
+    .social-proof__quote-text {
+      font-size: clamp(1.25rem, 1.5vw, 1.375rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-body);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .social-proof__quote-attribution { font-size: 0.9375rem; font-weight: 300; color: var(--text-headline); }
+
+    .final-cta {
+      padding: 80px 40px;
+      margin: 0;
+      background: #161616;
+      border-top: 1px solid #222222;
+      text-align: center;
+    }
+    .final-cta__header {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color: var(--text-headline);
+    }
+    .final-cta__body {
+      font-size: clamp(1rem, 1.25vw, 1.125rem);
+      font-weight: 400;
+      color: var(--text-body);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .footer {
+      padding: 80px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: #080808;
+      border-top: 1px solid #222222;
+      color: #6A6A6A;
+    }
+    .footer nav { display: flex; align-items: center; gap: 1.5rem; }
+    .footer nav a { font-size: 0.875rem; color: #6A6A6A; text-decoration: none; }
+    .footer nav a:hover { color: var(--text-body); }
+    .footer > span { font-size: 0.8125rem; font-weight: 300; }
+    @media (max-width: 480px) { .footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" style="text-decoration:none; display:flex; align-items:center;">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="406 540 670 140" style="height:22px; width:auto; display:block;">
+        <path fill="#FFBF8F" d="M538.2,670c-3.7,0-7.3-1.5-10-4.3l-72-76.7c-5.5-5.9-12.1-3.9-14-3.1c-1.9,0.7-8,3.8-8,11.8v58.6c0,7.6-6.2,13.7-13.7,13.7s-13.7-6.2-13.7-13.7v-58.6c0-16.6,10-31.3,25.4-37.4c15.4-6.1,32.7-2.2,44.1,9.9l72,76.7c5.2,5.5,4.9,14.2-0.6,19.4C544.9,668.7,541.6,670,538.2,670z"/>
+        <path fill="#FFFFFF" d="M768.2,577.1c-25.6,0-46.4,20.8-46.4,46.4c0,25.6,20.8,46.4,46.4,46.4c25.6,0,46.4-20.8,46.4-46.4C814.7,597.9,793.8,577.1,768.2,577.1z M768.2,651c-15.1,0-27.5-12.3-27.5-27.5c0-15.1,12.3-27.5,27.5-27.5c15.1,0,27.5,12.3,27.5,27.5C795.7,638.7,783.4,651,768.2,651z"/>
+        <path fill="#FFFFFF" d="M923.6,651c-15.1,0-27.5-12.3-27.5-27.5c0-15.1,12.3-27.5,27.5-27.5c9.1,0,17.7,4.5,22.8,12.1l15.7-10.6c-8.7-12.8-23-20.5-38.5-20.5c-25.6,0-46.4,20.8-46.4,46.4c0,25.6,20.8,46.4,46.4,46.4c16.3,0,31.6-8.7,39.9-22.7l-16.3-9.7C942.3,645.9,933.2,651,923.6,651z"/>
+        <polygon fill="#FFFFFF" points="849,545 830,545 830,666.3 849,666.3 849,596.1 869.2,596.1 869.2,577.1 849,577.1"/>
+        <path fill="#FFFFFF" d="M1026,577.1c-13.4,0-22.8,7.1-27.8,12.1V545h-19v121.3h19v-39.8c0-20.9,12.1-30.5,24-30.5c11.9,0,19.2,9.7,19.2,21.6v48.7h19v-50.9C1060.3,593,1048.4,577.1,1026,577.1z"/>
+        <path fill="#FFFFFF" d="M671.4,577.1c-13.4,0-22.8,7.1-27.8,12.1v-9.4h-19v86.5h19v-39.8c0-20.9,12.1-30.5,24-30.5c11.9,0,19.2,9.7,19.2,21.6v48.7h19v-50.9C705.7,593,693.7,577.1,671.4,577.1z"/>
+        <circle fill="#FFBF8F" cx="538.2" cy="571.2" r="13.7"/>
+      </svg>
+    </a>
+    <div class="nav__right">
+      <a href="https://app.hellonotch.com/login" class="nav__sign-in">Sign In</a>
+      <a href="#demo" class="btn">Schedule a Demo</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero__headline">Procurement Built for Design and Construction Teams</h1>
+      <p class="hero__subhead">Notch brings every stakeholder, document, and decision into one connected workflow so your project keeps moving from initial specifications to final installation.</p>
+      <a href="#demo" class="btn">Schedule a Demo</a>
+      <div class="hero-visual">
+        <div class="product-window">
+          <div class="window-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="window-layout">
+            <div class="window-sidebar">
+              <div class="sidebar-item active">Projects</div>
+              <div class="sidebar-item">Bids</div>
+              <div class="sidebar-item">Catalog</div>
+              <div class="sidebar-item">Suppliers</div>
+            </div>
+            <div class="window-main">
+              <div class="window-content">
+                <div class="row header-row">
+                  <span>Project Name</span><span>Phase</span><span>Budget</span><span>Status</span>
+                </div>
+                <div class="row"><span>Riverside Tower</span><span>Procurement</span><span>$1,240,000</span><span class="status awaiting">Awaiting Bid</span></div>
+                <div class="row"><span>Northgate Development</span><span>Bidding</span><span>$890,000</span><span class="status awarded">Awarded</span></div>
+                <div class="row"><span>Harbor District</span><span>Spec Review</span><span>$2,100,000</span><span class="status review">In Review</span></div>
+                <div class="row"><span>Westfield Campus</span><span>Installation</span><span>$670,000</span><span class="status awarded">Awarded</span></div>
+                <div class="row"><span>Centerline Mixed-use</span><span>Procurement</span><span>$1,450,000</span><span class="status awaiting">Awaiting Bid</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="problem__inner">
+        <p class="problem__text">Every FF&E project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers. Every handoff is a chance for information to get lost, re-entered, or delayed. Most teams are managing that chain across email threads, shared folders, and manual processes that were not purpose built for this kind of work. Notch changes that.</p>
+      </div>
+    </section>
+
+    <section class="pipeline" id="how-it-works">
+      <div class="pipeline__inner">
+        <h2>From Initial Specifications to Final Installation</h2>
+      </div>
+      <div class="pipeline-track-wrap">
+        <div class="pipeline-track">
+            <div class="pipeline-node">Specs Imported</div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">Quote Requests Sent</div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">Pricing Confirmed & Orders Placed</div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">Expediting Tracked</div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">Items Received & Installed</div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">Assets Maintained</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <h2 class="benefits__header">Built for the Way Procurement Projects Actually Work</h2>
+      <div class="benefits__grid">
+        <article class="benefit-card">
+          <div class="benefit-card__icon-wrap"><svg class="benefit-card__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFBF8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg></div>
+          <h3 class="benefit-card__title">One connected system</h3>
+          <p class="benefit-card__text">One connected system for every team, every document, and every decision across the life of a project.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-card__icon-wrap"><svg class="benefit-card__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFBF8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></div>
+          <h3 class="benefit-card__title">Spec import in minutes, not days</h3>
+          <p class="benefit-card__text">Spec packages are imported directly into Notch using AI-powered document parsing. What used to take days of manual data entry happens in minutes.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-card__icon-wrap"><svg class="benefit-card__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFBF8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></div>
+          <h3 class="benefit-card__title">Quote requests out to all vendors at once</h3>
+          <p class="benefit-card__text">Send requests to multiple vendors simultaneously. When specs change, every vendor is notified automatically.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-card__icon-wrap"><svg class="benefit-card__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFBF8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
+          <h3 class="benefit-card__title">Side-by-side bid comparison</h3>
+          <p class="benefit-card__text">Review vendor pricing in a structured, leveled view built for fast, confident decisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="social-proof">
+      <h2 class="social-proof__header">Trusted by Leading Teams in Hospitality and Real Estate</h2>
+      <div class="social-proof__logos">
+        <div class="social-proof__logo"><img src="Lightstone-logo-cmyk-red-LRG.png" alt="Lightstone Group"></div>
+        <div class="social-proof__logo"><img src="Moxy_Hotels_logo.svg" alt="Moxy Hotels"></div>
+        <div class="social-proof__logo"><img src="https://images.squarespace-cdn.com/content/v1/684c783fe4aa632916db4c47/e84d0f9e-a423-4a51-b93c-b788e1b5d6cb/Logo_AC_Master_RGB.png?format=1500w" alt="Adams Clinical" style="height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.8;"></div>
+      </div>
+      <blockquote class="social-proof__quote">
+        <p class="social-proof__quote-text">Notch transformed the way we manage FF&E bidding. We went from juggling emails and spreadsheets to having a single source of truth for our bids. The platform is intuitive for both our team and our vendors, and it has saved us countless hours.</p>
+        <cite class="social-proof__quote-attribution">Procurement Lead, Public University System</cite>
+      </blockquote>
+    </section>
+
+    <section class="final-cta" id="demo">
+      <h2 class="final-cta__header">See It In Action</h2>
+      <p class="final-cta__body">Upload a spec package and see how Notch structures it into a quote request ready to go out to vendors.</p>
+      <a href="#demo" class="btn">Schedule a Demo</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="/" style="text-decoration:none; display:flex; align-items:center;">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="406 540 670 140" style="height:18px; width:auto; display:block;">
+        <path fill="#FFBF8F" d="M538.2,670c-3.7,0-7.3-1.5-10-4.3l-72-76.7c-5.5-5.9-12.1-3.9-14-3.1c-1.9,0.7-8,3.8-8,11.8v58.6c0,7.6-6.2,13.7-13.7,13.7s-13.7-6.2-13.7-13.7v-58.6c0-16.6,10-31.3,25.4-37.4c15.4-6.1,32.7-2.2,44.1,9.9l72,76.7c5.2,5.5,4.9,14.2-0.6,19.4C544.9,668.7,541.6,670,538.2,670z"/>
+        <path fill="#FFFFFF" d="M768.2,577.1c-25.6,0-46.4,20.8-46.4,46.4c0,25.6,20.8,46.4,46.4,46.4c25.6,0,46.4-20.8,46.4-46.4C814.7,597.9,793.8,577.1,768.2,577.1z M768.2,651c-15.1,0-27.5-12.3-27.5-27.5c0-15.1,12.3-27.5,27.5-27.5c15.1,0,27.5,12.3,27.5,27.5C795.7,638.7,783.4,651,768.2,651z"/>
+        <path fill="#FFFFFF" d="M923.6,651c-15.1,0-27.5-12.3-27.5-27.5c0-15.1,12.3-27.5,27.5-27.5c9.1,0,17.7,4.5,22.8,12.1l15.7-10.6c-8.7-12.8-23-20.5-38.5-20.5c-25.6,0-46.4,20.8-46.4,46.4c0,25.6,20.8,46.4,46.4,46.4c16.3,0,31.6-8.7,39.9-22.7l-16.3-9.7C942.3,645.9,933.2,651,923.6,651z"/>
+        <polygon fill="#FFFFFF" points="849,545 830,545 830,666.3 849,666.3 849,596.1 869.2,596.1 869.2,577.1 849,577.1"/>
+        <path fill="#FFFFFF" d="M1026,577.1c-13.4,0-22.8,7.1-27.8,12.1V545h-19v121.3h19v-39.8c0-20.9,12.1-30.5,24-30.5c11.9,0,19.2,9.7,19.2,21.6v48.7h19v-50.9C1060.3,593,1048.4,577.1,1026,577.1z"/>
+        <path fill="#FFFFFF" d="M671.4,577.1c-13.4,0-22.8,7.1-27.8,12.1v-9.4h-19v86.5h19v-39.8c0-20.9,12.1-30.5,24-30.5c11.9,0,19.2,9.7,19.2,21.6v48.7h19v-50.9C705.7,593,693.7,577.1,671.4,577.1z"/>
+        <circle fill="#FFBF8F" cx="538.2" cy="571.2" r="13.7"/>
+      </svg>
+    </a>
+    <span>© 2026 Notch. All rights reserved.</span>
+    <nav>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+      <a href="mailto:team@hellonotch.com">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    const steps = document.querySelectorAll('.pipeline-node');
+    const arrows = document.querySelectorAll('.pipeline-arrow');
+
+    steps.forEach(step => {
+      step.style.opacity = '0.3';
+      step.style.borderColor = '#2A2A2A';
+      step.style.color = '#6A6A6A';
+      step.style.transition = 'all 0.4s ease';
+    });
+    arrows.forEach(a => {
+      a.style.opacity = '0';
+      a.style.transition = 'opacity 0.3s ease';
+    });
+
+    let animated = false;
+
+    function animatePipeline() {
+      const track = document.querySelector('.pipeline-track');
+      if (!track || animated) return;
+      const rect = track.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8) {
+        animated = true;
+        steps.forEach((step, i) => {
+          setTimeout(() => {
+            step.style.opacity = '1';
+            step.style.borderColor = '#FFBF8F';
+            step.style.color = '#FFFFFF';
+          }, i * 350);
+          if (arrows[i]) {
+            setTimeout(() => {
+              arrows[i].style.opacity = '1';
+              arrows[i].style.color = '#FFBF8F';
+            }, i * 350 + 200);
+            setTimeout(() => {
+              arrows[i].style.opacity = '0.4';
+            }, i * 350 + 500);
+          }
+        });
+        window.removeEventListener('scroll', animatePipeline);
+      }
+    }
+    window.addEventListener('scroll', animatePipeline);
+  </script>
+  <div id="cookie-banner" style="
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20,20,20,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 9999;
+  max-width: 600px;
+  width: calc(100% - 48px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+">
+  <p style="margin:0; font-size:0.85rem; color:#B9B9B9; flex:1;">
+    We use cookies to ensure the best experience on our site. By continuing to browse you agree to our 
+    <a href="https://www.hellonotch.com/privacy-policy.html" style="color:#FFBF8F; text-decoration:none;">Privacy Policy</a>.
+  </p>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookies-accepted','true');" style="
+    background: linear-gradient(135deg, #E6B48E, #D09D76);
+    color: #000;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: inherit;
+  ">Accept</button>
+</div>
+<script>
+  if (localStorage.getItem('cookies-accepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+</body>
+</html>
