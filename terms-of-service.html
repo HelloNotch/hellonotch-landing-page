@@ -123,19 +123,21 @@
     }
 
     .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 32px;
+      flex-shrink: 0;
     }
 
     .footer-copy {
       color: #6A6A6A;
       font-size: 0.8rem;
+      text-align: center;
+      flex: 1;
+      min-width: 0;
     }
 
     .footer-links {
       display: flex;
       gap: 24px;
+      flex-shrink: 0;
     }
 
     .footer-links a {
@@ -261,8 +263,8 @@
           <circle fill="#FFBF8F" cx="538.2" cy="571.2" r="13.7"/>
         </svg>
       </a>
-      <span class="footer-copy">© 2026 Notch Procurement, Inc. All rights reserved.</span>
     </div>
+    <span class="footer-copy">© 2026 Notch Procurement, Inc. All rights reserved.</span>
     <div class="footer-links">
       <a href="privacy-policy.html">Privacy</a>
       <a href="terms-of-service.html">Terms</a>

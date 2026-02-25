@@ -31,6 +31,7 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    main { overflow: visible; }
     section { position: relative; z-index: 1; }
     body {
       font-family: var(--font-primary);
@@ -47,7 +48,7 @@
     .nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
+      z-index: 999;
       height: 64px;
       display: flex;
       align-items: center;
@@ -91,6 +92,7 @@
       margin: 0;
       background: radial-gradient(ellipse 60% 40% at 50% 40%, rgba(255, 191, 143, 0.08) 0%, transparent 70%), #080808;
       border-top: 1px solid #222222;
+      overflow: visible;
     }
     .hero__headline {
       font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -115,6 +117,7 @@
       width: 100%;
       margin-left: auto;
       margin-right: auto;
+      overflow: visible;
     }
     .product-window {
       background: rgba(255, 255, 255, 0.04);
@@ -203,17 +206,26 @@
     .status.review { background: rgba(150,100,255,0.15); color: #9664FF; }
 
     .problem {
+      position: relative;
+      z-index: 2;
       padding: 72px 40px;
       margin: 0;
       background: #101010;
       border-top: 1px solid #222222;
+      overflow: visible;
     }
-    .problem__inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .problem__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      overflow: visible;
+    }
     .problem__text {
       font-size: clamp(1.125rem, 1.5vw, 1.25rem);
       font-weight: 400;
       line-height: 1.75;
       color: var(--text-body);
+      overflow: visible;
     }
 
     .pipeline {
@@ -357,11 +369,11 @@
     .social-proof__logos {
       max-width: var(--max-width);
       margin: 0 auto 3rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       gap: 2rem;
+      align-items: center;
+      justify-items: center;
     }
     .social-proof__logo {
       width: 160px;
@@ -377,6 +389,7 @@
       color: var(--gray-mid);
     }
     .social-proof__logo img { max-width: 120px; max-height: 40px; object-fit: contain; filter: brightness(0) invert(1); }
+    .social-proof__logo img.no-filter { filter: none; }
     .social-proof__quote {
       max-width: 720px;
       margin: 0 auto;
@@ -503,7 +516,7 @@
 
     <section class="problem">
       <div class="problem__inner">
-        <p class="problem__text">Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.</p>
+        <p class="problem__text">Every FF&E project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers. Every handoff is a chance for information to get lost, re-entered, or delayed. Most teams are managing that chain across email threads, shared folders, and manual processes that were not purpose built for this kind of work. Notch changes that.</p>
       </div>
     </section>
 
@@ -555,11 +568,13 @@
     </section>
 
     <section class="social-proof">
-      <h2 class="social-proof__header">Trusted by Leading Teams in Hospitality and Real Estate</h2>
+      <h2 class="social-proof__header">Trusted by the Teams Behind Great Spaces</h2>
       <div class="social-proof__logos">
         <div class="social-proof__logo"><img src="Lightstone-logo-cmyk-red-LRG.png" alt="Lightstone Group"></div>
         <div class="social-proof__logo"><img src="Moxy_Hotels_logo.svg" alt="Moxy Hotels"></div>
         <div class="social-proof__logo"><img src="https://images.squarespace-cdn.com/content/v1/684c783fe4aa632916db4c47/e84d0f9e-a423-4a51-b93c-b788e1b5d6cb/Logo_AC_Master_RGB.png?format=1500w" alt="Adams Clinical" style="height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.8;"></div>
+        <div class="social-proof__logo"><img src="waterloo-logo.png" alt="Waterloo" class="no-filter"></div>
+        <div class="social-proof__logo"><img src="sway-logo.png" alt="Sway" class="no-filter"></div>
       </div>
       <blockquote class="social-proof__quote">
         <p class="social-proof__quote-text">Notch transformed the way we manage FF&E bidding. We went from juggling emails and spreadsheets to having a single source of truth for our bids. The platform is intuitive for both our team and our vendors, and it has saved us countless hours.</p>
@@ -652,7 +667,7 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  z-index: 9999;
+  z-index: 998;
   max-width: 600px;
   width: calc(100% - 48px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
