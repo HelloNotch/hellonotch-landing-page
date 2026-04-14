@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Logo } from './components/Logo';
 import { useScrollReveal } from './hooks/useScrollReveal';
+import { ensureCalendlyAssets, openCalendlyPopup } from '../lib/calendly';
 
 export default function App() {
   const [showCookieBanner, setShowCookieBanner] = useState(true);
@@ -13,13 +14,13 @@ export default function App() {
     }
   }, []);
 
+  useEffect(() => {
+    ensureCalendlyAssets();
+  }, []);
+
   const handleAcceptCookies = () => {
     localStorage.setItem('cookies-accepted', 'true');
     setShowCookieBanner(false);
-  };
-
-  const handleScheduleDemo = () => {
-    alert('Demo scheduling would open here (Calendly integration)');
   };
 
   return (
@@ -38,7 +39,7 @@ export default function App() {
 
       <main>
         {/* Hero */}
-        <HeroSection onScheduleDemo={handleScheduleDemo} />
+        <HeroSection />
         
         {/* Problem */}
         <ProblemSection />
@@ -50,7 +51,7 @@ export default function App() {
         <SocialProofSection />
         
         {/* Final CTA */}
-        <FinalCTASection onScheduleDemo={handleScheduleDemo} />
+        <FinalCTASection />
       </main>
 
       {/* Footer */}
@@ -88,7 +89,7 @@ export default function App() {
   );
 }
 
-function HeroSection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
+function HeroSection() {
   return (
     <section className="relative pt-9 pb-9 overflow-visible" style={{
       background: `
@@ -161,15 +162,16 @@ function HeroSection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
           }} className="mx-auto md:mx-0">
             Notch connects your specs, documents, vendors, and orders in one place, so projects stay on track.
           </p>
-          <button 
-            onClick={onScheduleDemo}
+          <button
+            type="button"
+            onClick={() => void openCalendlyPopup()}
             className="inline-flex items-center justify-center px-7 py-[14px] text-[15px] font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px"
             style={{
               background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
               boxShadow: '0 4px 20px rgba(214,157,118,0)'
             }}
-            onMouseOver={(e) => e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,.4)'}
-            onMouseOut={(e) => e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,0)'}
+            onMouseOver={(e) => { e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,.4)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,0)'; }}
           >
             Schedule a Demo
           </button>
@@ -399,7 +401,7 @@ function SocialProofSection() {
   );
 }
 
-function FinalCTASection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
+function FinalCTASection() {
   return (
     <section className="py-20 px-6 lg:px-12 text-center" style={{ background: '#161616', borderTop: '1px solid #222' }}>
       <h2 className="reveal" style={{
@@ -420,15 +422,16 @@ function FinalCTASection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
       }}>
         Upload a spec package and see how Notch structures it into a quote request ready to go out to vendors.
       </p>
-      <button 
-        onClick={onScheduleDemo}
+      <button
+        type="button"
+        onClick={() => void openCalendlyPopup()}
         className="reveal inline-flex items-center justify-center px-7 py-[14px] text-[15px] font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px"
         style={{
           background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
           boxShadow: '0 4px 20px rgba(214,157,118,0)'
         }}
-        onMouseOver={(e) => e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,.4)'}
-        onMouseOut={(e) => e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,0)'}
+        onMouseOver={(e) => { e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,.4)'; }}
+        onMouseOut={(e) => { e.currentTarget.style.boxShadow = '0 4px 20px rgba(214,157,118,0)'; }}
       >
         Schedule a Demo
       </button>

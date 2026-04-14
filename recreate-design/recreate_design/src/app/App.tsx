@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Logo } from './components/Logo';
 import { useScrollReveal } from './hooks/useScrollReveal';
+import { ensureCalendlyAssets, openCalendlyPopup } from '../lib/calendly';
 import heroImage from '../assets/a917b0da6e43abb492dc03d7126e4b7e7ce53771.png';
 
 export default function App() {
@@ -14,13 +15,13 @@ export default function App() {
     }
   }, []);
 
+  useEffect(() => {
+    ensureCalendlyAssets();
+  }, []);
+
   const handleAcceptCookies = () => {
     localStorage.setItem('cookies-accepted', 'true');
     setShowCookieBanner(false);
-  };
-
-  const handleScheduleDemo = () => {
-    alert('Demo scheduling would open here (Calendly integration)');
   };
 
   return (
@@ -39,7 +40,7 @@ export default function App() {
 
       <main>
         {/* Hero */}
-        <HeroSection onScheduleDemo={handleScheduleDemo} />
+        <HeroSection />
         
         {/* Problem */}
         <ProblemSection />
@@ -51,7 +52,7 @@ export default function App() {
         <SocialProofSection />
         
         {/* Final CTA */}
-        <FinalCTASection onScheduleDemo={handleScheduleDemo} />
+        <FinalCTASection />
       </main>
 
       {/* Footer */}
@@ -89,7 +90,7 @@ export default function App() {
   );
 }
 
-function HeroSection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
+function HeroSection() {
   return (
     <section className="relative pt-9 pb-0 overflow-hidden" style={{
       background: 'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(255,255,255,.15) 0%, transparent 70%), #080808',
@@ -159,7 +160,8 @@ function HeroSection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
             Notch connects your specs, documents, vendors, and orders in one place, so projects stay on track.
           </p>
           <button 
-            onClick={onScheduleDemo}
+            type="button"
+            onClick={() => void openCalendlyPopup()}
             className="inline-flex items-center justify-center px-7 py-[14px] text-[15px] font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px"
             style={{
               background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
@@ -384,7 +386,7 @@ function SocialProofSection() {
   );
 }
 
-function FinalCTASection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
+function FinalCTASection() {
   return (
     <section className="py-20 px-6 lg:px-12 text-center" style={{ background: '#161616', borderTop: '1px solid #222' }}>
       <h2 className="reveal" style={{
@@ -406,7 +408,8 @@ function FinalCTASection({ onScheduleDemo }: { onScheduleDemo: () => void }) {
         Upload a spec package and see how Notch structures it into a quote request ready to go out to vendors.
       </p>
       <button 
-        onClick={onScheduleDemo}
+        type="button"
+        onClick={() => void openCalendlyPopup()}
         className="reveal inline-flex items-center justify-center px-7 py-[14px] text-[15px] font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px"
         style={{
           background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',

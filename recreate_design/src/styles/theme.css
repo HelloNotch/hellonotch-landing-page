@@ -259,3 +259,10 @@
 .rd2 {
   transition-delay: 0.19s;
 }
+
+/* Calendly popup above fixed nav (z-[999]) and cookie banner */
+iframe[src*='calendly.com'],
+.calendly-overlay,
+.calendly-popup-content {
+  z-index: 10000 !important;
+}
