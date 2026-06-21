@@ -31,7 +31,7 @@ export default function App() {
           <Logo />
         </a>
         <div className="flex items-center gap-6">
-          <a href="https://app.hellonotch.com/login" className="text-[15px] no-underline" style={{ color: 'var(--gray-mid)' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--text)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--gray-mid)'}>
+          <a href="https://platform.hellonotch.com/auth/sign-in" className="text-[15px] no-underline" style={{ color: 'var(--gray-mid)' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--text)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--gray-mid)'}>
             Sign In
           </a>
         </div>
