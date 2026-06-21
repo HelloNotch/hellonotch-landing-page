@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
-import { Link } from 'react-router';
-import { DemoButton } from '../components/Layout';
+import { DemoButton, TextLink } from '../components/Layout';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const challengeCards = [
@@ -59,19 +58,13 @@ export default function CaseStudyPage() {
   return (
     <>
       <section
-        className="pt-12 pb-16 px-6 lg:px-12"
+        className="pt-12 pb-8 px-6 lg:px-12"
         style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
       >
         <div className="max-w-[820px] mx-auto reveal">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-[15px] no-underline mb-8 transition-colors duration-200"
-            style={{ color: 'var(--text-muted)' }}
-            onMouseOver={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
-            onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; }}
-          >
+          <TextLink to="/" className="mb-8">
             ← Back to home
-          </Link>
+          </TextLink>
           <p
             className="uppercase tracking-[0.1em] text-[0.75rem] font-semibold mb-4"
             style={{ color: 'var(--accent)' }}
@@ -87,6 +80,7 @@ export default function CaseStudyPage() {
               letterSpacing: '-0.025em',
               color: 'var(--headline)',
               marginBottom: '1.25rem',
+              textWrap: 'balance',
             }}
           >
             Statewide public university system streamlines FF&amp;E bidding with Notch
@@ -105,10 +99,10 @@ export default function CaseStudyPage() {
       </section>
 
       <section
-        className="py-12 px-6 lg:px-12"
+        className="py-8 px-6 lg:px-12"
         style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
       >
-        <div className="max-w-[820px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 reveal">
+        <div className="max-w-[820px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 reveal">
           <StatCell value="75%" label="reduction in FF&E bid processing time" />
           <StatCell value="60+" label="hours saved on large projects (estimated)" />
         </div>
@@ -126,16 +120,16 @@ export default function CaseStudyPage() {
         </p>
       </ContentSection>
 
-      <ContentSection title="The Challenge">
+      <ContentSection title="The Challenge" alt>
         <p className="mb-8">
           The team&apos;s existing workflow created friction at every stage of the bid process, slowing turnaround and increasing
           the risk of errors on high-stakes projects.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
           {challengeCards.map((card) => (
             <article
               key={card.title}
-              className="p-6 rounded-2xl"
+              className="p-6 rounded-2xl h-full"
               style={{
                 background: 'rgba(255,255,255,.03)',
                 border: '1px solid rgba(255,255,255,.08)',
@@ -159,7 +153,7 @@ export default function CaseStudyPage() {
         </div>
       </ContentSection>
 
-      <ContentSection title="The Solution" alt>
+      <ContentSection title="The Solution">
         <p className="mb-8">
           Notch gave the team a single platform for the full bid lifecycle, replacing the patchwork of spreadsheets, email,
           and legacy tools they had relied on.
@@ -191,42 +185,7 @@ export default function CaseStudyPage() {
         </div>
       </ContentSection>
 
-      <ContentSection title="Results">
-        <p className="mb-8">
-          After adopting Notch, the team reported a 75% reduction in FF&E bid processing time and an estimated 60+ hours saved
-          on large projects, freeing staff to focus on vendor relationships and project delivery.
-        </p>
-        <blockquote
-          className="rounded-2xl p-8 md:p-10"
-          style={{
-            border: '1px solid rgba(224,165,107,.25)',
-            background: 'rgba(224,165,107,.05)',
-          }}
-        >
-          <p
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
-              fontStyle: 'italic',
-              lineHeight: 1.75,
-              color: 'var(--text)',
-              marginBottom: '1.25rem',
-            }}
-          >
-            &ldquo;Notch transformed the way we manage FF&amp;E bidding&hellip; a single source of truth for our bids. Intuitive for both our team and our vendors, and it has saved us countless hours.&rdquo;
-          </p>
-          <cite
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: '0.9375rem',
-              fontStyle: 'normal',
-              color: 'var(--text-muted)',
-            }}
-          >
-            Interiors Project Manager, Statewide Public University System
-          </cite>
-        </blockquote>
-      </ContentSection>
+      <ResultsSection />
 
       <ContentSection title="Key Outcomes" alt>
         <ul className="flex flex-col gap-4">
@@ -267,6 +226,88 @@ export default function CaseStudyPage() {
         <DemoButton className="reveal" />
       </section>
     </>
+  );
+}
+
+function ResultsSection() {
+  return (
+    <section
+      className="py-16 px-6 lg:px-12 reveal"
+      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
+    >
+      <div className="max-w-[820px] mx-auto">
+        <h2
+          className="mb-6 text-left"
+          style={{
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+            fontWeight: 400,
+            letterSpacing: '-0.02em',
+            color: 'var(--headline)',
+          }}
+        >
+          Results
+        </h2>
+        <p
+          className="mb-10 text-left max-w-[640px]"
+          style={{
+            fontFamily: 'var(--sans)',
+            fontSize: '1rem',
+            lineHeight: 1.7,
+            color: 'var(--text-muted)',
+          }}
+        >
+          After adopting Notch, the team reported a 75% reduction in FF&E bid processing time and an estimated 60+ hours saved
+          on large projects, freeing staff to focus on vendor relationships and project delivery.
+        </p>
+
+        <div className="max-w-[640px] mx-auto text-center">
+          <div
+            className="mb-8 h-12 w-36 mx-auto rounded-lg flex items-center justify-center"
+            style={{
+              border: '1px dashed rgba(255,255,255,.15)',
+              background: 'rgba(255,255,255,.02)',
+            }}
+            aria-label="Customer logo placeholder"
+          >
+            <span style={{ fontFamily: 'var(--sans)', fontSize: '0.6875rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+              Customer logo
+            </span>
+          </div>
+
+          <blockquote
+            className="rounded-2xl p-8 md:p-10 text-left md:text-center"
+            style={{
+              border: '1px solid rgba(224,165,107,.25)',
+              background: 'rgba(224,165,107,.05)',
+            }}
+          >
+            <p
+              style={{
+                fontFamily: 'var(--serif)',
+                fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
+                fontStyle: 'italic',
+                lineHeight: 1.75,
+                color: 'var(--text)',
+                marginBottom: '1.25rem',
+              }}
+            >
+              &ldquo;Notch transformed the way we manage FF&amp;E bidding&hellip; a single source of truth for our bids. Intuitive for both our team and our vendors, and it has saved us countless hours.&rdquo;
+            </p>
+            <cite
+              style={{
+                fontFamily: 'var(--sans)',
+                fontSize: '0.9375rem',
+                fontStyle: 'normal',
+                color: 'var(--text-muted)',
+              }}
+            >
+              Interiors Project Manager, Statewide Public University System
+            </cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -317,7 +358,7 @@ function ContentSection({
     >
       <div className="max-w-[820px] mx-auto">
         <h2
-          className="mb-6"
+          className="mb-6 text-left"
           style={{
             fontFamily: 'var(--serif)',
             fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',

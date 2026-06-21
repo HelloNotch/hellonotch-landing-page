@@ -62,16 +62,7 @@ export function Layout({ children }: { children: ReactNode }) {
           >
             Sign In
           </a>
-          <button
-            type="button"
-            onClick={() => void openCalendlyPopup()}
-            className="inline-flex items-center justify-center px-4 py-2 text-[14px] font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px"
-            style={{
-              background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
-            }}
-          >
-            Schedule a Demo
-          </button>
+          <DemoButton size="sm" />
         </div>
       </nav>
 
@@ -116,12 +107,51 @@ export function Layout({ children }: { children: ReactNode }) {
   );
 }
 
-export function DemoButton({ className = '' }: { className?: string }) {
+export function TextLink({
+  to,
+  href,
+  children,
+  className = '',
+}: {
+  to?: string;
+  href?: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  const classes = `inline-flex items-center text-[15px] font-medium no-underline transition-colors duration-200 hover:text-[var(--accent)] ${className}`;
+  const style = { color: 'var(--text-muted)' } as const;
+
+  if (to) {
+    return (
+      <Link to={to} className={classes} style={style}>
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={href} className={classes} style={style}>
+      {children}
+    </a>
+  );
+}
+
+export function DemoButton({
+  className = '',
+  size = 'default',
+}: {
+  className?: string;
+  size?: 'default' | 'sm';
+}) {
+  const sizeClasses = size === 'sm'
+    ? 'px-4 py-2 text-[14px]'
+    : 'px-7 py-[14px] text-[15px]';
+
   return (
     <button
       type="button"
       onClick={() => void openCalendlyPopup()}
-      className={`inline-flex items-center justify-center px-7 py-[14px] text-[15px] font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px ${className}`}
+      className={`inline-flex items-center justify-center font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px hover:brightness-105 ${sizeClasses} ${className}`}
       style={{
         background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
         boxShadow: '0 4px 20px rgba(214,157,118,0)',

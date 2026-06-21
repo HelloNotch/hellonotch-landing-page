@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { DemoButton } from '../components/Layout';
+import { DemoButton, TextLink } from '../components/Layout';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function HomePage() {
@@ -8,6 +8,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <CaseStudyCardSection />
       <ProblemSection />
       <BenefitsSection />
       <SocialProofSection />
@@ -19,13 +20,14 @@ export default function HomePage() {
 function HeroSection() {
   return (
     <section
-      className="relative pt-12 pb-16 overflow-hidden"
+      className="relative pt-12 pb-10 lg:pb-14 overflow-hidden"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-8 items-center lg:items-start justify-between reveal overflow-visible">
-          <div className="flex-1 lg:min-w-0 text-center lg:text-left lg:max-w-[520px] lg:flex-shrink-0">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-center lg:items-center justify-between reveal overflow-visible">
+          <div className="flex-1 lg:min-w-0 text-center lg:text-left lg:max-w-[500px] lg:flex-shrink-0">
             <h1
+              className="hero-headline"
               style={{
                 fontFamily: 'var(--serif)',
                 fontSize: 'clamp(2.5rem, 5vw, 4.25rem)',
@@ -34,9 +36,12 @@ function HeroSection() {
                 letterSpacing: '-0.025em',
                 color: 'var(--headline)',
                 marginBottom: '1.25rem',
+                textWrap: 'balance',
               }}
             >
-              Procurement Built for Design and Construction Teams
+              Procurement Built for{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>Design and</span>{' '}
+              Construction Teams
             </h1>
             <p
               style={{
@@ -53,37 +58,30 @@ function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
               <DemoButton />
-              <a
-                href="#features"
-                className="inline-flex items-center text-[15px] font-medium no-underline transition-colors duration-200"
-                style={{ color: 'var(--text-muted)' }}
-                onMouseOver={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
-                onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; }}
-              >
-                See how it works ↓
-              </a>
+              <TextLink href="#features">See how it works ↓</TextLink>
             </div>
           </div>
 
-          <div className="reveal relative w-full lg:w-[55%] lg:flex-shrink-0 lg:mr-[-240px]">
+          <div className="reveal relative w-full lg:w-[58%] xl:w-[62%] lg:flex-shrink-0 lg:mr-0 xl:mr-[-300px]">
             <div
-              className="pointer-events-none absolute inset-[-10%_-5%_-20%_10%] z-0"
+              className="pointer-events-none absolute inset-[-8%_-5%_-12%_5%] z-0 hidden lg:block"
               style={{
                 background: 'radial-gradient(54% 56% at 64% 38%, rgba(224,165,107,.22), transparent 72%)',
                 filter: 'blur(48px)',
               }}
               aria-hidden="true"
             />
-            <div className="relative z-[1]">
-              <div className="relative overflow-hidden rounded-l-2xl rounded-r-none">
+            <div className="relative z-[1] w-full">
+              <div
+                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none min-h-[220px] sm:min-h-[280px] lg:min-h-[440px] xl:min-h-[520px]"
+              >
                 <img
                   src="/hero-product-screenshot.png"
                   alt="Notch products table showing Downtown PA Hotel bidding workflow"
-                  className="block w-full min-w-[640px] max-w-none h-auto"
-                  style={{ width: 'calc(100% + 80px)', maxWidth: 'none' }}
+                  className="absolute inset-0 block h-full w-full object-cover object-left-top scale-[1.45] lg:scale-[1.55] xl:scale-[1.65] origin-top-left"
                 />
                 <div
-                  className="pointer-events-none absolute inset-0"
+                  className="pointer-events-none absolute inset-0 hidden lg:block"
                   style={{
                     background: `
                       linear-gradient(to right, transparent 0%, transparent 54%, rgba(11,11,13,.06) 66%, rgba(11,11,13,.20) 76%, rgba(11,11,13,.42) 85%, rgba(11,11,13,.70) 92%, rgba(11,11,13,.90) 97%, #0B0B0D 100%),
@@ -92,90 +90,92 @@ function HeroSection() {
                   }}
                   aria-hidden="true"
                 />
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0D] to-transparent lg:hidden"
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </div>
         </div>
-
-        <CaseStudyCard />
       </div>
     </section>
   );
 }
 
-function CaseStudyCard() {
+function CaseStudyCardSection() {
   return (
-    <Link
-      to="/customers/statewide-university"
-      className="reveal mt-14 block no-underline rounded-2xl p-8 md:p-10 transition-all duration-200 hover:-translate-y-1"
-      style={{
-        background: 'rgba(255,255,255,.03)',
-        border: '1px solid rgba(255,255,255,.10)',
-      }}
-      onMouseOver={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(224,165,107,.35)';
-        e.currentTarget.style.background = 'rgba(255,255,255,.05)';
-      }}
-      onMouseOut={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,.10)';
-        e.currentTarget.style.background = 'rgba(255,255,255,.03)';
-      }}
+    <section
+      className="py-12 lg:py-16 px-6 lg:px-12"
+      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-start">
-        <div>
-          <div
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(3rem, 6vw, 4.5rem)',
-              fontWeight: 600,
-              lineHeight: 1,
-              letterSpacing: '-0.03em',
-              color: 'var(--accent)',
-              marginBottom: '0.75rem',
-            }}
-          >
-            75%
+      <div className="max-w-[1200px] mx-auto">
+        <Link
+          to="/customers/statewide-university"
+          className="reveal block no-underline rounded-2xl p-8 md:p-10 transition-all duration-200 hover:-translate-y-1 hover:border-[rgba(224,165,107,.35)]"
+          style={{
+            background: 'rgba(255,255,255,.03)',
+            border: '1px solid rgba(255,255,255,.10)',
+          }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-start">
+            <div>
+              <div
+                style={{
+                  fontFamily: 'var(--serif)',
+                  fontSize: 'clamp(3rem, 6vw, 4.5rem)',
+                  fontWeight: 600,
+                  lineHeight: 1,
+                  letterSpacing: '-0.03em',
+                  color: 'var(--accent)',
+                  marginBottom: '0.75rem',
+                }}
+              >
+                75%
+              </div>
+              <p
+                style={{
+                  fontFamily: 'var(--sans)',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  color: 'var(--headline)',
+                  marginBottom: '0.35rem',
+                }}
+              >
+                less time spent bidding
+              </p>
+              <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', color: 'var(--text-muted)' }}>
+                60+ hours saved on large projects
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <p
+                style={{
+                  fontFamily: 'var(--sans)',
+                  fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                  lineHeight: 1.65,
+                  color: 'var(--text)',
+                  margin: 0,
+                }}
+              >
+                Learn how a large public university system cut their bidding time by over 75%, saving more than 60 hours on large projects after moving to Notch.
+              </p>
+              <span
+                className="transition-colors duration-200 group-hover:text-[var(--accent)]"
+                style={{
+                  fontFamily: 'var(--sans)',
+                  fontSize: '0.9375rem',
+                  fontWeight: 600,
+                  color: 'var(--accent)',
+                }}
+              >
+                Read the case study →
+              </span>
+            </div>
           </div>
-          <p
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: '1rem',
-              fontWeight: 600,
-              color: 'var(--headline)',
-              marginBottom: '0.35rem',
-            }}
-          >
-            less time spent bidding
-          </p>
-          <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', color: 'var(--text-muted)' }}>
-            60+ hours saved on large projects
-          </p>
-        </div>
-        <div className="flex flex-col gap-4">
-          <p
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
-              lineHeight: 1.65,
-              color: 'var(--text)',
-              margin: 0,
-            }}
-          >
-            Learn how a large public university system cut their bidding time by over 75%, saving more than 60 hours on large projects after moving to Notch.
-          </p>
-          <span
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: '0.9375rem',
-              fontWeight: 600,
-              color: 'var(--accent)',
-            }}
-          >
-            Read the case study →
-          </span>
-        </div>
+        </Link>
       </div>
-    </Link>
+    </section>
   );
 }
 
@@ -183,32 +183,57 @@ function ProblemSection() {
   return (
     <section
       className="py-20 px-6 lg:px-12 reveal"
-      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
+      style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <div className="max-w-[720px]">
-        <p
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10 lg:gap-16 items-start">
+        <div className="max-w-[640px]">
+          <p
+            style={{
+              fontFamily: 'var(--serif)',
+              fontSize: 'clamp(1.15rem, 1.5vw, 1.3rem)',
+              fontWeight: 400,
+              lineHeight: 1.75,
+              color: 'var(--text)',
+            }}
+          >
+            Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
+          </p>
+          <p
+            className="mt-4"
+            style={{
+              fontFamily: 'var(--sans)',
+              fontSize: '1rem',
+              lineHeight: 1.7,
+              color: 'var(--text-muted)',
+            }}
+          >
+            Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work.{' '}
+            <span style={{ color: 'var(--headline)', fontWeight: 500 }}>Notch changes that.</span>
+          </p>
+        </div>
+        <aside
+          className="hidden lg:flex flex-col justify-center rounded-2xl p-8"
           style={{
-            fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.15rem, 1.5vw, 1.3rem)',
-            fontWeight: 400,
-            lineHeight: 1.75,
-            color: 'var(--text)',
+            background: 'rgba(255,255,255,.03)',
+            border: '1px solid rgba(255,255,255,.08)',
           }}
         >
-          Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
-        </p>
-        <p
-          className="mt-4"
-          style={{
-            fontFamily: 'var(--sans)',
-            fontSize: '1rem',
-            lineHeight: 1.7,
-            color: 'var(--text-muted)',
-          }}
-        >
-          Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work.{' '}
-          <span style={{ color: 'var(--headline)', fontWeight: 500 }}>Notch changes that.</span>
-        </p>
+          <div
+            style={{
+              fontFamily: 'var(--serif)',
+              fontSize: '2.5rem',
+              fontWeight: 600,
+              lineHeight: 1,
+              color: 'var(--accent)',
+              marginBottom: '0.5rem',
+            }}
+          >
+            75%
+          </div>
+          <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.5, color: 'var(--text-muted)' }}>
+            average reduction in bid processing time for teams on Notch
+          </p>
+        </aside>
       </div>
     </section>
   );
@@ -265,7 +290,7 @@ function BenefitsSection() {
     <section
       id="features"
       className="py-20 px-6 lg:px-12"
-      style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
+      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
     >
       <h2
         className="reveal"
@@ -281,7 +306,7 @@ function BenefitsSection() {
       >
         Built for the Way Procurement Projects Actually Work
       </h2>
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
         {benefits.map((benefit, i) => (
           <article
             key={benefit.title}
@@ -331,20 +356,21 @@ function BenefitsSection() {
 
 function SocialProofSection() {
   const logos = [
-    { src: 'Lightstone-logo-cmyk-red-LRG.png', alt: 'Lightstone Group' },
-    { src: 'Moxy_Hotels_logo.svg', alt: 'Moxy Hotels' },
+    { src: 'Lightstone-logo-cmyk-red-LRG.png', alt: 'Lightstone Group', scale: 0.72 },
+    { src: 'Moxy_Hotels_logo.svg', alt: 'Moxy Hotels', scale: 0.88 },
     {
       src: 'https://images.squarespace-cdn.com/content/v1/684c783fe4aa632916db4c47/e84d0f9e-a423-4a51-b93c-b788e1b5d6cb/Logo_AC_Master_RGB.png?format=1500w',
       alt: 'AC Hotel',
+      scale: 0.82,
     },
-    { src: 'waterloo-logo.png', alt: 'Waterloo' },
-    { src: 'sway-logo.png', alt: 'Sway' },
+    { src: 'waterloo-logo.png', alt: 'Waterloo', scale: 1 },
+    { src: 'sway-logo.png', alt: 'Sway', scale: 0.78 },
   ];
 
   return (
     <section
       className="py-20 px-6 lg:px-12"
-      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
+      style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
       <h2
         className="reveal"
@@ -361,14 +387,21 @@ function SocialProofSection() {
         Trusted by the Teams Behind Great Spaces
       </h2>
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 items-center justify-items-center reveal">
+      <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-8 reveal">
         {logos.map((logo) => (
-          <div key={logo.alt} className="h-10 flex items-center justify-center px-2">
+          <div
+            key={logo.alt}
+            className="h-8 w-[120px] flex items-center justify-center shrink-0"
+          >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="max-h-10 w-auto object-contain"
-              style={{ filter: 'brightness(0) invert(1)', opacity: 0.55 }}
+              className="max-h-7 max-w-[120px] w-auto object-contain"
+              style={{
+                filter: 'brightness(0) invert(1)',
+                opacity: 0.55,
+                transform: `scale(${logo.scale})`,
+              }}
             />
           </div>
         ))}
@@ -382,7 +415,7 @@ function FinalCTASection() {
     <section
       id="demo"
       className="py-20 px-6 lg:px-12 text-center"
-      style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
+      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
     >
       <h2
         className="reveal"
