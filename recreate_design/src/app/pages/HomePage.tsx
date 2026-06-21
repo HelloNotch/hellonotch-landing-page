@@ -25,7 +25,7 @@ function HeroSection() {
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-center lg:items-center justify-between reveal overflow-visible">
-          <div className="flex-1 lg:min-w-0 text-center lg:text-left lg:max-w-[500px] lg:flex-shrink-0">
+          <div className="flex-1 lg:min-w-0 text-center lg:text-left lg:max-w-[540px] lg:flex-shrink-0">
             <h1
               className="hero-headline"
               style={{
@@ -62,7 +62,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="reveal relative w-full lg:w-[58%] xl:w-[62%] lg:flex-shrink-0 lg:mr-0 xl:mr-[-300px]">
+          <div className="reveal relative w-full lg:w-[50%] xl:w-[52%] lg:flex-shrink-0 lg:mr-0 xl:mr-[-180px]">
             <div
               className="pointer-events-none absolute inset-[-8%_-5%_-12%_5%] z-0 hidden lg:block"
               style={{
@@ -73,12 +73,12 @@ function HeroSection() {
             />
             <div className="relative z-[1] w-full">
               <div
-                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none min-h-[220px] sm:min-h-[280px] lg:min-h-[440px] xl:min-h-[520px]"
+                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none min-h-[220px] sm:min-h-[260px] lg:min-h-[360px] xl:min-h-[400px]"
               >
                 <img
                   src="/hero-product-screenshot.png"
                   alt="Notch products table showing Downtown PA Hotel bidding workflow"
-                  className="absolute inset-0 block h-full w-full object-cover object-left-top scale-[1.45] lg:scale-[1.55] xl:scale-[1.65] origin-top-left"
+                  className="absolute inset-0 block h-full w-full object-cover object-left-top scale-[1.28] lg:scale-[1.35] xl:scale-[1.4] origin-top-left"
                 />
                 <div
                   className="pointer-events-none absolute inset-0 hidden lg:block"
@@ -185,55 +185,30 @@ function ProblemSection() {
       className="py-20 px-6 lg:px-12 reveal"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10 lg:gap-16 items-start">
-        <div className="max-w-[640px]">
-          <p
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(1.15rem, 1.5vw, 1.3rem)',
-              fontWeight: 400,
-              lineHeight: 1.75,
-              color: 'var(--text)',
-            }}
-          >
-            Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
-          </p>
-          <p
-            className="mt-4"
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: '1rem',
-              lineHeight: 1.7,
-              color: 'var(--text-muted)',
-            }}
-          >
-            Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work.{' '}
-            <span style={{ color: 'var(--headline)', fontWeight: 500 }}>Notch changes that.</span>
-          </p>
-        </div>
-        <aside
-          className="hidden lg:flex flex-col justify-center rounded-2xl p-8"
+      <div className="max-w-[640px]">
+        <p
           style={{
-            background: 'rgba(255,255,255,.03)',
-            border: '1px solid rgba(255,255,255,.08)',
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(1.15rem, 1.5vw, 1.3rem)',
+            fontWeight: 400,
+            lineHeight: 1.75,
+            color: 'var(--text)',
           }}
         >
-          <div
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: '2.5rem',
-              fontWeight: 600,
-              lineHeight: 1,
-              color: 'var(--accent)',
-              marginBottom: '0.5rem',
-            }}
-          >
-            75%
-          </div>
-          <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.5, color: 'var(--text-muted)' }}>
-            average reduction in bid processing time for teams on Notch
-          </p>
-        </aside>
+          Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
+        </p>
+        <p
+          className="mt-4"
+          style={{
+            fontFamily: 'var(--sans)',
+            fontSize: '1rem',
+            lineHeight: 1.7,
+            color: 'var(--text-muted)',
+          }}
+        >
+          Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work.{' '}
+          <span style={{ color: 'var(--headline)', fontWeight: 500 }}>Notch changes that.</span>
+        </p>
       </div>
     </section>
   );
@@ -306,11 +281,11 @@ function BenefitsSection() {
       >
         Built for the Way Procurement Projects Actually Work
       </h2>
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {benefits.map((benefit, i) => (
           <article
             key={benefit.title}
-            className={`reveal ${i < 2 ? 'rd1' : 'rd2'} p-8 transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(224,165,107,.08)]`}
+            className={`reveal ${i < 2 ? 'rd1' : 'rd2'} h-full flex flex-col p-8 transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(224,165,107,.08)]`}
             style={{
               background: 'rgba(255,255,255,.04)',
               border: '1px solid rgba(255,255,255,.08)',
@@ -356,15 +331,15 @@ function BenefitsSection() {
 
 function SocialProofSection() {
   const logos = [
-    { src: 'Lightstone-logo-cmyk-red-LRG.png', alt: 'Lightstone Group', scale: 0.72 },
-    { src: 'Moxy_Hotels_logo.svg', alt: 'Moxy Hotels', scale: 0.88 },
+    { src: 'Lightstone-logo-cmyk-red-LRG.png', alt: 'Lightstone Group', scale: 0.9 },
+    { src: 'Moxy_Hotels_logo.svg', alt: 'Moxy Hotels', scale: 1.05 },
     {
       src: 'https://images.squarespace-cdn.com/content/v1/684c783fe4aa632916db4c47/e84d0f9e-a423-4a51-b93c-b788e1b5d6cb/Logo_AC_Master_RGB.png?format=1500w',
       alt: 'AC Hotel',
-      scale: 0.82,
+      scale: 0.98,
     },
-    { src: 'waterloo-logo.png', alt: 'Waterloo', scale: 1 },
-    { src: 'sway-logo.png', alt: 'Sway', scale: 0.78 },
+    { src: 'waterloo-logo.png', alt: 'Waterloo', scale: 1.15 },
+    { src: 'sway-logo.png', alt: 'Sway', scale: 0.95 },
   ];
 
   return (
@@ -387,16 +362,16 @@ function SocialProofSection() {
         Trusted by the Teams Behind Great Spaces
       </h2>
 
-      <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-8 reveal">
+      <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-10 reveal">
         {logos.map((logo) => (
           <div
             key={logo.alt}
-            className="h-8 w-[120px] flex items-center justify-center shrink-0"
+            className="h-10 w-[140px] flex items-center justify-center shrink-0"
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="max-h-7 max-w-[120px] w-auto object-contain"
+              className="max-h-9 max-w-[140px] w-auto object-contain"
               style={{
                 filter: 'brightness(0) invert(1)',
                 opacity: 0.55,

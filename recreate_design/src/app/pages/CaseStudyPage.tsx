@@ -25,22 +25,56 @@ const solutionRows = [
   {
     title: 'Single point of access',
     text: 'All project specs, bids, and vendor communications centralized in one platform accessible to the full team.',
+    icon: (
+      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E0A56B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 17H7A5 5 0 0 1 7 7h2" />
+        <path d="M15 7h2a5 5 0 1 1 0 10h-2" />
+        <line x1="8" x2="16" y1="12" y2="12" />
+      </svg>
+    ),
   },
   {
     title: 'Streamlined bid creation',
     text: 'Structured bid packages built directly from imported specs, ready to send to vendors in minutes.',
+    icon: (
+      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E0A56B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="12" x2="12" y1="18" y2="12" />
+        <line x1="9" x2="15" y1="15" y2="15" />
+      </svg>
+    ),
   },
   {
     title: 'Automated data collection',
     text: 'Vendor responses captured in a standardized format, eliminating manual re-entry and comparison prep.',
+    icon: (
+      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E0A56B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="17 8 12 3 7 8" />
+        <line x1="12" x2="12" y1="3" y2="15" />
+      </svg>
+    ),
   },
   {
     title: 'Real-time comparison & review',
     text: 'Side-by-side bid leveling gives procurement teams instant visibility into pricing across all vendors.',
+    icon: (
+      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E0A56B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" x2="18" y1="20" y2="10" />
+        <line x1="12" x2="12" y1="20" y2="4" />
+        <line x1="6" x2="6" y1="20" y2="14" />
+      </svg>
+    ),
   },
   {
     title: 'Established system controls',
     text: 'Role-based permissions and audit trails support state compliance requirements without slowing the team down.',
+    icon: (
+      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E0A56B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
   },
 ];
 
@@ -158,30 +192,11 @@ export default function CaseStudyPage() {
           Notch gave the team a single platform for the full bid lifecycle, replacing the patchwork of spreadsheets, email,
           and legacy tools they had relied on.
         </p>
-        <div className="flex flex-col gap-0">
-          {solutionRows.map((row, index) => (
-            <article
-              key={row.title}
-              className="py-6 grid grid-cols-1 md:grid-cols-[240px_1fr] gap-3 md:gap-8"
-              style={{
-                borderTop: index === 0 ? '1px solid var(--border)' : undefined,
-                borderBottom: '1px solid var(--border)',
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: 'var(--serif)',
-                  fontSize: '1.125rem',
-                  color: 'var(--headline)',
-                }}
-              >
-                {row.title}
-              </h3>
-              <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
-                {row.text}
-              </p>
-            </article>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {solutionRows.slice(0, 4).map((row) => (
+            <SolutionCard key={row.title} {...row} />
           ))}
+          <SolutionCard {...solutionRows[4]} className="md:col-span-2" />
         </div>
       </ContentSection>
 
@@ -262,19 +277,6 @@ function ResultsSection() {
         </p>
 
         <div className="max-w-[640px] mx-auto text-center">
-          <div
-            className="mb-8 h-12 w-36 mx-auto rounded-lg flex items-center justify-center"
-            style={{
-              border: '1px dashed rgba(255,255,255,.15)',
-              background: 'rgba(255,255,255,.02)',
-            }}
-            aria-label="Customer logo placeholder"
-          >
-            <span style={{ fontFamily: 'var(--sans)', fontSize: '0.6875rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-              Customer logo
-            </span>
-          </div>
-
           <blockquote
             className="rounded-2xl p-8 md:p-10 text-left md:text-center"
             style={{
@@ -308,6 +310,51 @@ function ResultsSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function SolutionCard({
+  icon,
+  title,
+  text,
+  className = '',
+}: {
+  icon: ReactNode;
+  title: string;
+  text: string;
+  className?: string;
+}) {
+  return (
+    <article
+      className={`p-6 md:p-8 rounded-2xl h-full ${className}`}
+      style={{
+        background: 'rgba(255,255,255,.03)',
+        border: '1px solid rgba(255,255,255,.08)',
+      }}
+    >
+      <div
+        className="w-14 h-14 rounded-[14px] flex items-center justify-center mb-4"
+        style={{
+          background: 'rgba(224,165,107,.1)',
+          border: '1px solid rgba(224,165,107,.2)',
+        }}
+      >
+        {icon}
+      </div>
+      <h3
+        className="mb-2"
+        style={{
+          fontFamily: 'var(--serif)',
+          fontSize: '1.125rem',
+          color: 'var(--headline)',
+        }}
+      >
+        {title}
+      </h3>
+      <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
+        {text}
+      </p>
+    </article>
   );
 }
 

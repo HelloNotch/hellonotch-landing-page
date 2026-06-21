@@ -30,29 +30,31 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen">
       <nav
-        className="fixed top-0 left-0 right-0 z-[999] h-16 flex items-center justify-between px-6 lg:px-12"
+        className="fixed top-0 left-0 right-0 z-[999] h-16 flex items-center px-6 lg:px-12"
         style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}
       >
-        <Link to="/" className="no-underline flex items-center">
-          <Logo />
-        </Link>
+        <div className="flex items-center gap-8 lg:gap-10">
+          <Link to="/" className="no-underline flex items-center shrink-0">
+            <Logo />
+          </Link>
 
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className="text-[15px] no-underline transition-colors duration-200"
-              style={{ color: 'var(--gray-mid)' }}
-              onMouseOver={(e) => { e.currentTarget.style.color = 'var(--text)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.color = 'var(--gray-mid)'; }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-[15px] no-underline transition-colors duration-200"
+                style={{ color: 'var(--gray-mid)' }}
+                onMouseOver={(e) => { e.currentTarget.style.color = 'var(--text)'; }}
+                onMouseOut={(e) => { e.currentTarget.style.color = 'var(--gray-mid)'; }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="flex items-center gap-4 lg:gap-6">
+        <div className="flex items-center gap-4 lg:gap-6 ml-auto">
           <a
             href="https://platform.hellonotch.com/auth/sign-in"
             className="text-[15px] no-underline hidden sm:inline"
