@@ -2,5 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "npm run install:app",
   "buildCommand": "npm run build",
-  "outputDirectory": "recreate_design/dist"
+  "outputDirectory": "recreate_design/dist",
+  "rewrites": [
+    { "source": "/customers/:path*", "destination": "/index.html" }
+  ]
 }

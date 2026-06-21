@@ -3,16 +3,18 @@
 :root {
   --serif: 'Newsreader', Georgia, serif;
   --sans: 'Geist', 'Inter', system-ui, sans-serif;
-  --accent: #FFBF8F;
+  --accent: #E0A56B;
   --cta-start: #E6B48E;
   --cta-end: #D09D76;
-  --bg: #0A0A0A;
+  --bg: #0B0B0D;
+  --bg-alt: #0E0E11;
   --bg-card: #1A1A1A;
-  --text: #E5E5E5;
+  --text: #E8E8E8;
+  --text-muted: #A8A8AE;
   --headline: #FFFFFF;
-  --border: #2A2A2A;
-  --gray-mid: #B9B9B9;
-  --gray-dark: #6A6A6A;
+  --border: #222228;
+  --gray-mid: #A8A8AE;
+  --gray-dark: #8A8A92;
   --success: #77FB74;
   --max-w: 1200px;
   
