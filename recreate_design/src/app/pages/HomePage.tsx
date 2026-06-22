@@ -73,19 +73,19 @@ function HeroSection() {
             />
             <div className="relative z-[1] w-full">
               <div
-                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none max-h-[60vh] min-h-[200px] sm:min-h-[240px]"
+                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none"
               >
                 <img
                   src="/hero-product-screenshot.png"
                   alt="Notch products table showing Downtown PA Hotel bidding workflow"
-                  className="absolute inset-0 block h-full w-full max-h-[60vh] object-cover object-left-top scale-[1.12] lg:scale-[1.18] origin-top-left"
+                  className="block w-full h-auto max-h-[60vh] object-contain object-left-top"
                 />
                 <div
                   className="pointer-events-none absolute inset-0 hidden lg:block"
                   style={{
                     background: `
-                      linear-gradient(to right, transparent 0%, transparent 54%, rgba(11,11,13,.06) 66%, rgba(11,11,13,.20) 76%, rgba(11,11,13,.42) 85%, rgba(11,11,13,.70) 92%, rgba(11,11,13,.90) 97%, #0B0B0D 100%),
-                      linear-gradient(to bottom, transparent 0%, transparent 58%, rgba(11,11,13,.07) 70%, rgba(11,11,13,.24) 81%, rgba(11,11,13,.50) 90%, rgba(11,11,13,.80) 96%, #0B0B0D 100%)
+                      linear-gradient(to right, transparent 0%, transparent 72%, rgba(11,11,13,.10) 84%, rgba(11,11,13,.35) 92%, rgba(11,11,13,.72) 97%, #0B0B0D 100%),
+                      linear-gradient(to bottom, transparent 0%, transparent 76%, rgba(11,11,13,.08) 86%, rgba(11,11,13,.30) 93%, rgba(11,11,13,.65) 98%, #0B0B0D 100%)
                     `,
                   }}
                   aria-hidden="true"
@@ -185,7 +185,8 @@ function ProblemSection() {
       className="py-20 px-6 lg:px-12 reveal"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <div className="max-w-[720px] mx-auto text-center">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="w-full max-w-[720px] mx-auto text-center">
         <p
           style={{
             fontFamily: 'var(--serif)',
@@ -193,6 +194,7 @@ function ProblemSection() {
             fontWeight: 400,
             lineHeight: 1.5,
             color: 'var(--text)',
+            textAlign: 'center',
           }}
         >
           Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
@@ -204,11 +206,12 @@ function ProblemSection() {
             fontSize: '1.0625rem',
             lineHeight: 1.7,
             color: 'var(--text-muted)',
+            textAlign: 'center',
           }}
         >
-          Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work.{' '}
-          <strong style={{ color: 'var(--headline)', fontWeight: 600 }}>Notch changes that.</strong>
+          Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work. Notch changes that.
         </p>
+        </div>
       </div>
     </section>
   );
