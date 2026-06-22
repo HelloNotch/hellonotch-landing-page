@@ -20,10 +20,10 @@ export default function HomePage() {
 function HeroSection() {
   return (
     <section
-      className="relative pt-12 pb-10 lg:pb-14 overflow-hidden"
+      className="relative pt-12 pb-10 lg:pb-14 overflow-x-clip"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <div className="grid lg:grid-cols-[minmax(0,540px)_1fr] lg:gap-10 lg:items-center">
+      <div className="grid lg:grid-cols-[minmax(0,540px)_1fr] lg:gap-8 lg:items-center">
         <div
           className="px-6 lg:pl-[max(1.5rem,calc((100vw-1200px)/2+1.5rem))] lg:pr-6 text-center lg:text-left reveal"
         >
@@ -60,21 +60,21 @@ function HeroSection() {
           <DemoButton />
         </div>
 
-        <div className="px-6 lg:px-0 reveal relative w-full min-w-0">
+        <div className="px-6 lg:pl-0 lg:pr-0 reveal relative w-full min-w-0 flex justify-end">
           <div
-            className="pointer-events-none absolute inset-[-8%_0_-12%_5%] z-0 hidden lg:block"
+            className="pointer-events-none absolute inset-[-8%_0_-12%_20%] z-0 hidden lg:block"
             style={{
-              background: 'radial-gradient(54% 56% at 72% 38%, rgba(224,165,107,.22), transparent 72%)',
+              background: 'radial-gradient(54% 56% at 88% 38%, rgba(224,165,107,.22), transparent 72%)',
               filter: 'blur(48px)',
             }}
             aria-hidden="true"
           />
-          <div className="relative z-[1] w-full">
+          <div className="relative z-[1] w-full lg:w-[calc(100%+110px)] lg:max-w-none">
             <div className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none">
               <img
                 src="/hero-product-screenshot.png"
                 alt="Notch products table showing Downtown PA Hotel bidding workflow"
-                className="block w-full h-auto max-h-[60vh] object-contain object-left-top"
+                className="block w-full h-auto max-h-[60vh] object-contain object-right-top"
               />
               <div
                 className="pointer-events-none absolute inset-0 hidden lg:block"
