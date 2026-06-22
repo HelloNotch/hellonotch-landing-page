@@ -3,12 +3,6 @@ import { Link } from 'react-router';
 import { Logo } from './Logo';
 import { ensureCalendlyAssets, openCalendlyPopup } from '../../lib/calendly';
 
-const navLinks = [
-  { label: 'Product', href: '/#features' },
-  { label: 'Customers', href: '/customers/statewide-university' },
-  { label: 'Pricing', href: '/#demo' },
-];
-
 export function Layout({ children }: { children: ReactNode }) {
   const [showCookieBanner, setShowCookieBanner] = useState(true);
 
@@ -33,26 +27,9 @@ export function Layout({ children }: { children: ReactNode }) {
         className="fixed top-0 left-0 right-0 z-[999] h-16 flex items-center px-6 lg:px-12"
         style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}
       >
-        <div className="flex items-center gap-8 lg:gap-10">
-          <Link to="/" className="no-underline flex items-center shrink-0">
-            <Logo />
-          </Link>
-
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="text-[15px] no-underline transition-colors duration-200"
-                style={{ color: 'var(--gray-mid)' }}
-                onMouseOver={(e) => { e.currentTarget.style.color = 'var(--text)'; }}
-                onMouseOut={(e) => { e.currentTarget.style.color = 'var(--gray-mid)'; }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
+        <Link to="/" className="no-underline flex items-center shrink-0">
+          <Logo />
+        </Link>
 
         <div className="flex items-center gap-4 lg:gap-6 ml-auto">
           <a
