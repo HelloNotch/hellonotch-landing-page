@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { DemoButton, TextLink } from '../components/Layout';
+import { DemoButton } from '../components/Layout';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function HomePage() {
@@ -23,78 +23,71 @@ function HeroSection() {
       className="relative pt-12 pb-10 lg:pb-14 overflow-hidden"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-center lg:items-center justify-between reveal overflow-visible">
-          <div className="flex-1 lg:min-w-0 text-center lg:text-left lg:max-w-[540px] lg:flex-shrink-0">
-            <h1
-              className="hero-headline"
-              style={{
-                fontFamily: 'var(--serif)',
-                fontSize: 'clamp(2.25rem, 4vw, 3.125rem)',
-                fontWeight: 600,
-                lineHeight: 1.08,
-                letterSpacing: '-0.025em',
-                color: 'var(--headline)',
-                marginBottom: '1.25rem',
-                textWrap: 'balance',
-              }}
-            >
-              Procurement Built for{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>Design and</span>{' '}
-              Construction Teams
-            </h1>
-            <p
-              style={{
-                fontFamily: 'var(--sans)',
-                fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
-                color: 'var(--text-muted)',
-                maxWidth: '520px',
-                marginBottom: '2rem',
-                lineHeight: 1.65,
-              }}
-              className="mx-auto lg:mx-0"
-            >
-              Notch connects your specs, documents, vendors, and orders in one place, so projects stay on track.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
-              <DemoButton />
-              <TextLink href="#features">See how it works ↓</TextLink>
-            </div>
-          </div>
+      <div className="grid lg:grid-cols-[minmax(0,540px)_1fr] lg:gap-10 lg:items-center">
+        <div
+          className="px-6 lg:pl-[max(1.5rem,calc((100vw-1200px)/2+1.5rem))] lg:pr-6 text-center lg:text-left reveal"
+        >
+          <h1
+            className="hero-headline"
+            style={{
+              fontFamily: 'var(--serif)',
+              fontSize: 'clamp(2.25rem, 4vw, 3.125rem)',
+              fontWeight: 600,
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
+              color: 'var(--headline)',
+              marginBottom: '1.25rem',
+              textWrap: 'balance',
+            }}
+          >
+            Procurement Built for{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>Design and</span>{' '}
+            Construction Teams
+          </h1>
+          <p
+            style={{
+              fontFamily: 'var(--sans)',
+              fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
+              color: 'var(--text-muted)',
+              maxWidth: '520px',
+              marginBottom: '2rem',
+              lineHeight: 1.65,
+            }}
+            className="mx-auto lg:mx-0"
+          >
+            Notch connects your specs, documents, vendors, and orders in one place, so projects stay on track.
+          </p>
+          <DemoButton />
+        </div>
 
-          <div className="reveal relative w-full lg:flex-shrink-0 lg:w-[calc(52%+110px)]">
-            <div
-              className="pointer-events-none absolute inset-[-8%_-5%_-12%_5%] z-0 hidden lg:block"
-              style={{
-                background: 'radial-gradient(54% 56% at 64% 38%, rgba(224,165,107,.22), transparent 72%)',
-                filter: 'blur(48px)',
-              }}
-              aria-hidden="true"
-            />
-            <div className="relative z-[1] w-full">
+        <div className="px-6 lg:px-0 reveal relative w-full min-w-0">
+          <div
+            className="pointer-events-none absolute inset-[-8%_0_-12%_5%] z-0 hidden lg:block"
+            style={{
+              background: 'radial-gradient(54% 56% at 72% 38%, rgba(224,165,107,.22), transparent 72%)',
+              filter: 'blur(48px)',
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative z-[1] w-full">
+            <div className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none">
+              <img
+                src="/hero-product-screenshot.png"
+                alt="Notch products table showing Downtown PA Hotel bidding workflow"
+                className="block w-full h-auto max-h-[60vh] object-contain object-left-top"
+              />
               <div
-                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none"
-              >
-                <img
-                  src="/hero-product-screenshot.png"
-                  alt="Notch products table showing Downtown PA Hotel bidding workflow"
-                  className="block w-full h-auto max-h-[60vh] object-contain object-left-top"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 hidden lg:block"
-                  style={{
-                    background: `
-                      linear-gradient(to right, transparent 0%, transparent 72%, rgba(11,11,13,.10) 84%, rgba(11,11,13,.35) 92%, rgba(11,11,13,.72) 97%, #0B0B0D 100%),
-                      linear-gradient(to bottom, transparent 0%, transparent 76%, rgba(11,11,13,.08) 86%, rgba(11,11,13,.30) 93%, rgba(11,11,13,.65) 98%, #0B0B0D 100%)
-                    `,
-                  }}
-                  aria-hidden="true"
-                />
-                <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0D] to-transparent lg:hidden"
-                  aria-hidden="true"
-                />
-              </div>
+                className="pointer-events-none absolute inset-0 hidden lg:block"
+                style={{
+                  background:
+                    'linear-gradient(to bottom, transparent 0%, transparent 76%, rgba(11,11,13,.08) 86%, rgba(11,11,13,.30) 93%, rgba(11,11,13,.65) 98%, #0B0B0D 100%)',
+                }}
+                aria-hidden="true"
+              />
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0B0B0D] to-transparent lg:hidden"
+                aria-hidden="true"
+              />
             </div>
           </div>
         </div>
