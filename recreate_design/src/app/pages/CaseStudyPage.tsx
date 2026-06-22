@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
+import { useRef } from 'react';
 import { DemoButton, TextLink } from '../components/Layout';
+import { useCountUp } from '../hooks/useCountUp';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const challengeCards = [
@@ -86,6 +88,8 @@ const keyOutcomes = [
   'System controls aligned with state compliance requirements',
 ];
 
+const staggerDelays = ['', 'rd1', 'rd2', 'rd3', 'rd4', 'rd5'];
+
 export default function CaseStudyPage() {
   useScrollReveal();
 
@@ -132,16 +136,6 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
-      <section
-        className="py-8 px-6 lg:px-12"
-        style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
-      >
-        <div className="max-w-[820px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 reveal">
-          <StatCell value="75%" label="reduction in FF&E bid processing time" />
-          <StatCell value="60+" label="hours saved on large projects (estimated)" />
-        </div>
-      </section>
-
       <ContentSection title="Overview">
         <p>
           A statewide public university system in Texas manages FF&E procurement across dozens of campus projects each year.
@@ -165,8 +159,8 @@ export default function CaseStudyPage() {
               key={card.title}
               className="p-6 rounded-2xl h-full"
               style={{
-                background: 'rgba(255,255,255,.03)',
-                border: '1px solid rgba(255,255,255,.08)',
+                background: 'rgba(130, 145, 165, 0.06)',
+                border: '1px solid rgba(130, 145, 165, 0.14)',
               }}
             >
               <h3
@@ -200,26 +194,7 @@ export default function CaseStudyPage() {
         </div>
       </ContentSection>
 
-      <ResultsSection />
-
-      <ContentSection title="Key Outcomes" alt>
-        <ul className="flex flex-col gap-4">
-          {keyOutcomes.map((outcome) => (
-            <li key={outcome} className="flex items-start gap-3">
-              <span
-                className="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[11px]"
-                style={{ background: 'rgba(224,165,107,.15)', color: 'var(--accent)' }}
-                aria-hidden="true"
-              >
-                ✓
-              </span>
-              <span style={{ fontFamily: 'var(--sans)', fontSize: '1rem', lineHeight: 1.6, color: 'var(--text)' }}>
-                {outcome}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </ContentSection>
+      <CombinedResultsSection />
 
       <section
         className="py-20 px-6 lg:px-12 text-center"
@@ -229,84 +204,121 @@ export default function CaseStudyPage() {
           className="reveal"
           style={{
             fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+            fontSize: 'clamp(1.75rem, 3vw, 2rem)',
             fontWeight: 400,
             letterSpacing: '-0.02em',
-            marginBottom: '1.5rem',
+            marginBottom: '0',
             color: 'var(--headline)',
           }}
         >
           See what Notch can do for your team
         </h2>
+        <div className="section-accent-rule mx-auto mb-8" aria-hidden="true" />
         <DemoButton className="reveal" />
       </section>
     </>
   );
 }
 
-function ResultsSection() {
+function CombinedResultsSection() {
+  const resultsRef = useRef<HTMLElement>(null);
+  const percentCount = useCountUp(75, { suffix: '%', triggerRef: resultsRef });
+  const hoursCount = useCountUp(60, { suffix: '+', triggerRef: resultsRef });
+
   return (
     <section
-      className="py-16 px-6 lg:px-12 reveal"
-      style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
+      ref={resultsRef}
+      className="py-20 px-6 lg:px-12"
+      style={{
+        background: 'radial-gradient(130% 85% at 50% 0%, rgba(224,165,107,.11), #0B0B0D 56%)',
+        borderTop: '1px solid var(--border)',
+      }}
     >
       <div className="max-w-[820px] mx-auto">
-        <h2
-          className="mb-6 text-left"
-          style={{
-            fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-            fontWeight: 400,
-            letterSpacing: '-0.02em',
-            color: 'var(--headline)',
-          }}
-        >
-          Results
-        </h2>
         <p
-          className="mb-10 text-left max-w-[640px]"
-          style={{
-            fontFamily: 'var(--sans)',
-            fontSize: '1rem',
-            lineHeight: 1.7,
-            color: 'var(--text-muted)',
-          }}
+          className="uppercase tracking-[0.1em] text-[0.75rem] font-semibold mb-4"
+          style={{ color: 'var(--accent)' }}
         >
-          After adopting Notch, the team reported a 75% reduction in FF&E bid processing time and an estimated 60+ hours saved
-          on large projects, freeing staff to focus on vendor relationships and project delivery.
+          RESULTS
         </p>
 
-        <div className="max-w-[640px] mx-auto text-center">
-          <blockquote
-            className="rounded-2xl p-8 md:p-10 text-left md:text-center"
+        <p
+          className="mb-10 max-w-[680px]"
+          style={{
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
+            lineHeight: 1.55,
+            color: 'var(--text)',
+          }}
+        >
+          After adopting Notch, the team reported a{' '}
+          <span style={{ color: 'var(--accent)', fontWeight: 600 }}>{percentCount.display}</span> reduction in FF&amp;E bid
+          processing time and an estimated{' '}
+          <span style={{ color: 'var(--accent)', fontWeight: 600 }}>{hoursCount.display}</span> hours saved on large
+          projects, freeing staff to focus on vendor relationships and project delivery.
+        </p>
+
+        <blockquote
+          className="quote-reveal rounded-2xl p-8 md:p-10 text-left md:text-center mb-12"
+          style={{
+            border: '1px solid rgba(224,165,107,.25)',
+            background: 'rgba(224,165,107,.05)',
+          }}
+        >
+          <p
             style={{
-              border: '1px solid rgba(224,165,107,.25)',
-              background: 'rgba(224,165,107,.05)',
+              fontFamily: 'var(--serif)',
+              fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
+              fontStyle: 'italic',
+              lineHeight: 1.75,
+              color: 'var(--text)',
+              marginBottom: '1.25rem',
             }}
           >
-            <p
+            &ldquo;Notch transformed the way we manage FF&amp;E bidding&hellip; a single source of truth for our bids. Intuitive for both our team and our vendors, and it has saved us countless hours.&rdquo;
+          </p>
+          <cite
+            style={{
+              fontFamily: 'var(--sans)',
+              fontSize: '0.9375rem',
+              fontStyle: 'normal',
+              color: 'var(--text-muted)',
+            }}
+          >
+            Interiors Project Manager, Statewide Public University System
+          </cite>
+        </blockquote>
+
+        <p
+          className="uppercase tracking-[0.1em] text-[0.75rem] font-semibold mb-4"
+          style={{ color: 'var(--accent)' }}
+        >
+          WHAT CHANGED
+        </p>
+        <div className="section-accent-rule mb-6" aria-hidden="true" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {keyOutcomes.map((outcome, i) => (
+            <article
+              key={outcome}
+              className={`reveal-stagger ${staggerDelays[i + 1]} p-5 rounded-2xl flex items-start gap-3 ${i === 4 ? 'md:col-span-2' : ''}`}
               style={{
-                fontFamily: 'var(--serif)',
-                fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
-                fontStyle: 'italic',
-                lineHeight: 1.75,
-                color: 'var(--text)',
-                marginBottom: '1.25rem',
+                background: 'rgba(255,255,255,.04)',
+                border: '1px solid rgba(255,255,255,.08)',
               }}
             >
-              &ldquo;Notch transformed the way we manage FF&amp;E bidding&hellip; a single source of truth for our bids. Intuitive for both our team and our vendors, and it has saved us countless hours.&rdquo;
-            </p>
-            <cite
-              style={{
-                fontFamily: 'var(--sans)',
-                fontSize: '0.9375rem',
-                fontStyle: 'normal',
-                color: 'var(--text-muted)',
-              }}
-            >
-              Interiors Project Manager, Statewide Public University System
-            </cite>
-          </blockquote>
+              <span
+                className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-semibold"
+                style={{ background: 'rgba(224,165,107,.18)', color: 'var(--accent)' }}
+                aria-hidden="true"
+              >
+                ✓
+              </span>
+              <span style={{ fontFamily: 'var(--sans)', fontSize: '1rem', lineHeight: 1.55, color: 'var(--text)' }}>
+                {outcome}
+              </span>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -358,34 +370,6 @@ function SolutionCard({
   );
 }
 
-function StatCell({ value, label }: { value: string; label: string }) {
-  return (
-    <div
-      className="p-8 rounded-2xl text-center"
-      style={{
-        background: 'rgba(255,255,255,.03)',
-        border: '1px solid rgba(255,255,255,.08)',
-      }}
-    >
-      <div
-        style={{
-          fontFamily: 'var(--serif)',
-          fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
-          fontWeight: 600,
-          lineHeight: 1,
-          color: 'var(--accent)',
-          marginBottom: '0.75rem',
-        }}
-      >
-        {value}
-      </div>
-      <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.5, color: 'var(--text-muted)' }}>
-        {label}
-      </p>
-    </div>
-  );
-}
-
 function ContentSection({
   title,
   children,
@@ -405,17 +389,19 @@ function ContentSection({
     >
       <div className="max-w-[820px] mx-auto">
         <h2
-          className="mb-6 text-left"
+          className="text-left"
           style={{
             fontFamily: 'var(--serif)',
             fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
             fontWeight: 400,
             letterSpacing: '-0.02em',
             color: 'var(--headline)',
+            marginBottom: 0,
           }}
         >
           {title}
         </h2>
+        <div className="section-accent-rule" aria-hidden="true" />
         <div
           style={{
             fontFamily: 'var(--sans)',

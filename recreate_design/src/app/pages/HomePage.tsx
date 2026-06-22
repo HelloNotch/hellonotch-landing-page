@@ -30,9 +30,9 @@ function HeroSection() {
               className="hero-headline"
               style={{
                 fontFamily: 'var(--serif)',
-                fontSize: 'clamp(2.5rem, 5vw, 4.25rem)',
+                fontSize: 'clamp(2.25rem, 4vw, 3.125rem)',
                 fontWeight: 600,
-                lineHeight: 1.06,
+                lineHeight: 1.08,
                 letterSpacing: '-0.025em',
                 color: 'var(--headline)',
                 marginBottom: '1.25rem',
@@ -62,7 +62,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="reveal relative w-full lg:w-[50%] xl:w-[52%] lg:flex-shrink-0 lg:mr-0 xl:mr-[-180px]">
+          <div className="reveal relative w-full lg:flex-shrink-0 lg:w-[calc(52%+110px)]">
             <div
               className="pointer-events-none absolute inset-[-8%_-5%_-12%_5%] z-0 hidden lg:block"
               style={{
@@ -73,12 +73,12 @@ function HeroSection() {
             />
             <div className="relative z-[1] w-full">
               <div
-                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none min-h-[220px] sm:min-h-[260px] lg:min-h-[360px] xl:min-h-[400px]"
+                className="relative overflow-hidden rounded-2xl lg:rounded-l-2xl lg:rounded-r-none max-h-[60vh] min-h-[200px] sm:min-h-[240px]"
               >
                 <img
                   src="/hero-product-screenshot.png"
                   alt="Notch products table showing Downtown PA Hotel bidding workflow"
-                  className="absolute inset-0 block h-full w-full object-cover object-left-top scale-[1.28] lg:scale-[1.35] xl:scale-[1.4] origin-top-left"
+                  className="absolute inset-0 block h-full w-full max-h-[60vh] object-cover object-left-top scale-[1.12] lg:scale-[1.18] origin-top-left"
                 />
                 <div
                   className="pointer-events-none absolute inset-0 hidden lg:block"
@@ -185,29 +185,29 @@ function ProblemSection() {
       className="py-20 px-6 lg:px-12 reveal"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <div className="max-w-[640px]">
+      <div className="max-w-[720px] mx-auto text-center">
         <p
           style={{
             fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.15rem, 1.5vw, 1.3rem)',
+            fontSize: 'clamp(1.5rem, 2vw, 1.75rem)',
             fontWeight: 400,
-            lineHeight: 1.75,
+            lineHeight: 1.5,
             color: 'var(--text)',
           }}
         >
           Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
         </p>
         <p
-          className="mt-4"
+          className="mt-5"
           style={{
             fontFamily: 'var(--sans)',
-            fontSize: '1rem',
+            fontSize: '1.0625rem',
             lineHeight: 1.7,
             color: 'var(--text-muted)',
           }}
         >
           Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work.{' '}
-          <span style={{ color: 'var(--headline)', fontWeight: 500 }}>Notch changes that.</span>
+          <strong style={{ color: 'var(--headline)', fontWeight: 600 }}>Notch changes that.</strong>
         </p>
       </div>
     </section>
@@ -271,16 +271,17 @@ function BenefitsSection() {
         className="reveal"
         style={{
           fontFamily: 'var(--serif)',
-          fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+          fontSize: 'clamp(1.75rem, 3vw, 2rem)',
           fontWeight: 400,
           letterSpacing: '-0.02em',
           textAlign: 'center',
-          marginBottom: '3rem',
+          marginBottom: '0',
           color: 'var(--headline)',
         }}
       >
         Built for the Way Procurement Projects Actually Work
       </h2>
+      <div className="section-accent-rule mx-auto mb-12" aria-hidden="true" />
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {benefits.map((benefit, i) => (
           <article
@@ -351,16 +352,17 @@ function SocialProofSection() {
         className="reveal"
         style={{
           fontFamily: 'var(--serif)',
-          fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+          fontSize: 'clamp(1.75rem, 3vw, 2rem)',
           fontWeight: 400,
           letterSpacing: '-0.02em',
           textAlign: 'center',
-          marginBottom: '3rem',
+          marginBottom: '0',
           color: 'var(--headline)',
         }}
       >
         Trusted by the Teams Behind Great Spaces
       </h2>
+      <div className="section-accent-rule mx-auto mb-12" aria-hidden="true" />
 
       <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-10 reveal">
         {logos.map((logo) => (

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export function useScrollReveal() {
   useEffect(() => {
     // Add animation class after paint so elements start visible then animate on scroll
-    const reveals = document.querySelectorAll('.reveal');
+    const reveals = document.querySelectorAll('.reveal, .reveal-stagger, .quote-reveal');
     
     reveals.forEach((el) => {
       el.classList.add('will-animate');

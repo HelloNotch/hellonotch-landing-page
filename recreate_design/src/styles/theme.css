@@ -259,7 +259,63 @@
 }
 
 .rd2 {
-  transition-delay: 0.19s;
+  transition-delay: 0.17s;
+}
+
+.rd3 {
+  transition-delay: 0.25s;
+}
+
+.rd4 {
+  transition-delay: 0.33s;
+}
+
+.rd5 {
+  transition-delay: 0.41s;
+}
+
+.reveal-stagger.will-animate {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger.will-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-reveal.will-animate {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.quote-reveal.will-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-accent-rule {
+  width: 24px;
+  height: 2px;
+  background: #e0a56b;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal.will-animate,
+  .reveal-stagger.will-animate,
+  .quote-reveal.will-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Calendly popup above fixed nav (z-[999]) and cookie banner */
