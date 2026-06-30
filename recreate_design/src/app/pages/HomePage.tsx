@@ -28,32 +28,14 @@ function HeroSection() {
           className="px-6 lg:pl-[max(1.5rem,calc((100vw-1200px)/2+1.5rem))] lg:pr-6 text-center lg:text-left reveal"
         >
           <h1
-            className="hero-headline"
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(2.25rem, 4vw, 3.125rem)',
-              fontWeight: 600,
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              color: 'var(--headline)',
-              marginBottom: '1.25rem',
-              textWrap: 'balance',
-            }}
+            className="type-hero-headline mb-5 text-balance"
           >
             Procurement Built for{' '}
             <span style={{ whiteSpace: 'nowrap' }}>Design and</span>{' '}
             Construction Teams
           </h1>
           <p
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
-              color: 'var(--text-muted)',
-              maxWidth: '520px',
-              marginBottom: '2rem',
-              lineHeight: 1.65,
-            }}
-            className="mx-auto lg:mx-0"
+            className="type-lead max-w-[520px] mb-8 mx-auto lg:mx-0"
           >
             Notch connects your specs, documents, vendors, and orders in one place, so projects stay on track.
           </p>
@@ -113,54 +95,26 @@ function CaseStudyCardSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-start">
             <div>
-              <div
-                style={{
-                  fontFamily: 'var(--serif)',
-                  fontSize: 'clamp(3rem, 6vw, 4.5rem)',
-                  fontWeight: 600,
-                  lineHeight: 1,
-                  letterSpacing: '-0.03em',
-                  color: 'var(--accent)',
-                  marginBottom: '0.75rem',
-                }}
-              >
+              <div className="type-display-number mb-3">
                 75%
               </div>
               <p
-                style={{
-                  fontFamily: 'var(--sans)',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  color: 'var(--headline)',
-                  marginBottom: '0.35rem',
-                }}
+                className="type-section-heading mb-1.5"
+                style={{ fontSize: '17px', lineHeight: 1.3 }}
               >
                 less time spent bidding
               </p>
-              <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', color: 'var(--text-muted)' }}>
+              <p className="type-body" style={{ fontSize: '15px' }}>
                 60+ hours saved on large projects
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p
-                style={{
-                  fontFamily: 'var(--sans)',
-                  fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
-                  lineHeight: 1.65,
-                  color: 'var(--text)',
-                  margin: 0,
-                }}
-              >
+              <p className="type-body m-0">
                 Learn how a large public university system cut their bidding time by over 75%, saving more than 60 hours on large projects after moving to Notch.
               </p>
               <span
-                className="transition-colors duration-200 group-hover:text-[var(--accent)]"
-                style={{
-                  fontFamily: 'var(--sans)',
-                  fontSize: '0.9375rem',
-                  fontWeight: 600,
-                  color: 'var(--accent)',
-                }}
+                className="type-body font-semibold transition-colors duration-200 group-hover:text-[var(--accent)]"
+                style={{ color: 'var(--accent)' }}
               >
                 Read the case study →
               </span>
@@ -180,30 +134,12 @@ function ProblemSection() {
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="w-full max-w-[720px] mx-auto text-center">
-        <p
-          style={{
-            fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.5rem, 2vw, 1.75rem)',
-            fontWeight: 400,
-            lineHeight: 1.5,
-            color: 'var(--text)',
-            textAlign: 'center',
-          }}
-        >
-          Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
-        </p>
-        <p
-          className="mt-5"
-          style={{
-            fontFamily: 'var(--sans)',
-            fontSize: '1.0625rem',
-            lineHeight: 1.7,
-            color: 'var(--text-muted)',
-            textAlign: 'center',
-          }}
-        >
-          Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work. Notch changes that.
-        </p>
+          <p className="type-display-sentence text-center">
+            Every FF&E procurement project moves through a long chain of hands: designers, buyers, vendors, logistics, warehousing, installers.
+          </p>
+          <p className="type-lead mt-5 text-center">
+            Most teams manage that chain across email threads, shared folders, and manual processes that were not built for this work. Notch changes that.
+          </p>
         </div>
       </div>
     </section>
@@ -263,18 +199,7 @@ function BenefitsSection() {
       className="py-20 px-6 lg:px-12"
       style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
     >
-      <h2
-        className="reveal"
-        style={{
-          fontFamily: 'var(--serif)',
-          fontSize: 'clamp(1.75rem, 3vw, 2rem)',
-          fontWeight: 400,
-          letterSpacing: '-0.02em',
-          textAlign: 'center',
-          marginBottom: '0',
-          color: 'var(--headline)',
-        }}
-      >
+      <h2 className="type-section-heading reveal text-center mb-0">
         Built for the Way Procurement Projects Actually Work
       </h2>
       <div className="section-accent-rule mx-auto mb-12" aria-hidden="true" />
@@ -298,25 +223,10 @@ function BenefitsSection() {
             >
               {benefit.icon}
             </div>
-            <h3
-              style={{
-                fontFamily: 'var(--serif)',
-                fontSize: '1.2rem',
-                fontWeight: 400,
-                marginBottom: '.75rem',
-                color: 'var(--headline)',
-              }}
-            >
+            <h3 className="type-section-heading mb-3" style={{ fontSize: '20px', lineHeight: 1.2 }}>
               {benefit.title}
             </h3>
-            <p
-              style={{
-                fontFamily: 'var(--sans)',
-                fontSize: '.9375rem',
-                lineHeight: 1.6,
-                color: 'var(--text-muted)',
-              }}
-            >
+            <p className="type-body">
               {benefit.text}
             </p>
           </article>
@@ -344,18 +254,7 @@ function SocialProofSection() {
       className="py-20 px-6 lg:px-12"
       style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
     >
-      <h2
-        className="reveal"
-        style={{
-          fontFamily: 'var(--serif)',
-          fontSize: 'clamp(1.75rem, 3vw, 2rem)',
-          fontWeight: 400,
-          letterSpacing: '-0.02em',
-          textAlign: 'center',
-          marginBottom: '0',
-          color: 'var(--headline)',
-        }}
-      >
+      <h2 className="type-section-heading reveal text-center mb-0">
         Trusted by the Teams Behind Great Spaces
       </h2>
       <div className="section-accent-rule mx-auto mb-12" aria-hidden="true" />
@@ -390,28 +289,10 @@ function FinalCTASection() {
       className="py-20 px-6 lg:px-12 text-center"
       style={{ background: '#0E0E11', borderTop: '1px solid var(--border)' }}
     >
-      <h2
-        className="reveal"
-        style={{
-          fontFamily: 'var(--serif)',
-          fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
-          fontWeight: 400,
-          letterSpacing: '-0.02em',
-          marginBottom: '1rem',
-          color: 'var(--headline)',
-        }}
-      >
+      <h2 className="type-cta-heading reveal mb-4">
         See It In Action
       </h2>
-      <p
-        className="reveal max-w-[560px] mx-auto mb-8"
-        style={{
-          fontFamily: 'var(--sans)',
-          fontSize: 'clamp(1rem, 1.25vw, 1.125rem)',
-          color: 'var(--text-muted)',
-          lineHeight: 1.6,
-        }}
-      >
+      <p className="type-lead reveal max-w-[560px] mx-auto mb-8">
         Book a walkthrough with our team and see how Notch fits your procurement workflow from spec import through bid-out.
       </p>
       <DemoButton className="reveal" />

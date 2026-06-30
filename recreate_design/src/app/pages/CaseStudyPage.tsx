@@ -103,34 +103,13 @@ export default function CaseStudyPage() {
           <TextLink to="/" className="mb-8">
             ← Back to home
           </TextLink>
-          <p
-            className="uppercase tracking-[0.1em] text-[0.75rem] font-semibold mb-4"
-            style={{ color: 'var(--accent)' }}
-          >
+          <p className="type-eyebrow mb-4">
             Case Study
           </p>
-          <h1
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
-              fontWeight: 600,
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-              color: 'var(--headline)',
-              marginBottom: '1.25rem',
-              textWrap: 'balance',
-            }}
-          >
+          <h1 className="type-page-headline mb-5 text-balance">
             Statewide public university system streamlines FF&amp;E bidding with Notch
           </h1>
-          <p
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: 'clamp(1rem, 1.5vw, 1.15rem)',
-              lineHeight: 1.65,
-              color: 'var(--text-muted)',
-            }}
-          >
+          <p className="type-lead">
             How a Texas higher-ed system replaced fragmented tools with a single procurement platform and cut bid processing time by 75%.
           </p>
         </div>
@@ -163,17 +142,10 @@ export default function CaseStudyPage() {
                 border: '1px solid rgba(130, 145, 165, 0.14)',
               }}
             >
-              <h3
-                className="mb-2"
-                style={{
-                  fontFamily: 'var(--serif)',
-                  fontSize: '1.125rem',
-                  color: 'var(--headline)',
-                }}
-              >
+              <h3 className="type-section-heading mb-2" style={{ fontSize: '20px', lineHeight: 1.2 }}>
                 {card.title}
               </h3>
-              <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
+              <p className="type-body">
                 {card.text}
               </p>
             </article>
@@ -200,17 +172,7 @@ export default function CaseStudyPage() {
         className="py-20 px-6 lg:px-12 text-center"
         style={{ background: '#0B0B0D', borderTop: '1px solid var(--border)' }}
       >
-        <h2
-          className="reveal"
-          style={{
-            fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.75rem, 3vw, 2rem)',
-            fontWeight: 400,
-            letterSpacing: '-0.02em',
-            marginBottom: '0',
-            color: 'var(--headline)',
-          }}
-        >
+        <h2 className="type-cta-heading reveal mb-0">
           See what Notch can do for your team
         </h2>
         <div className="section-accent-rule mx-auto mb-8" aria-hidden="true" />
@@ -235,26 +197,15 @@ function CombinedResultsSection() {
       }}
     >
       <div className="max-w-[820px] mx-auto">
-        <p
-          className="uppercase tracking-[0.1em] text-[0.75rem] font-semibold mb-4"
-          style={{ color: 'var(--accent)' }}
-        >
-          RESULTS
+        <p className="type-eyebrow mb-4">
+          Results
         </p>
 
-        <p
-          className="mb-10 max-w-[680px]"
-          style={{
-            fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
-            lineHeight: 1.55,
-            color: 'var(--text)',
-          }}
-        >
+        <p className="type-display-sentence mb-10 max-w-[680px]" style={{ fontSize: 'clamp(24px, 3vw, 32px)' }}>
           After adopting Notch, the team reported a{' '}
-          <span style={{ color: 'var(--accent)', fontWeight: 600 }}>{percentCount.display}</span> reduction in FF&amp;E bid
+          <span style={{ color: 'var(--accent)' }}>{percentCount.display}</span> reduction in FF&amp;E bid
           processing time and an estimated{' '}
-          <span style={{ color: 'var(--accent)', fontWeight: 600 }}>{hoursCount.display}</span> hours saved on large
+          <span style={{ color: 'var(--accent)' }}>{hoursCount.display}</span> hours saved on large
           projects, freeing staff to focus on vendor relationships and project delivery.
         </p>
 
@@ -265,35 +216,16 @@ function CombinedResultsSection() {
             background: 'rgba(224,165,107,.05)',
           }}
         >
-          <p
-            style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
-              fontStyle: 'italic',
-              lineHeight: 1.75,
-              color: 'var(--text)',
-              marginBottom: '1.25rem',
-            }}
-          >
+          <p className="type-body mb-5" style={{ fontSize: '18.5px', lineHeight: 1.55, color: 'var(--section-heading)' }}>
             &ldquo;Notch transformed the way we manage FF&amp;E bidding&hellip; a single source of truth for our bids. Intuitive for both our team and our vendors, and it has saved us countless hours.&rdquo;
           </p>
-          <cite
-            style={{
-              fontFamily: 'var(--sans)',
-              fontSize: '0.9375rem',
-              fontStyle: 'normal',
-              color: 'var(--text-muted)',
-            }}
-          >
+          <cite className="type-body not-italic" style={{ color: 'var(--text-muted)' }}>
             Interiors Project Manager, Statewide Public University System
           </cite>
         </blockquote>
 
-        <p
-          className="uppercase tracking-[0.1em] text-[0.75rem] font-semibold mb-4"
-          style={{ color: 'var(--accent)' }}
-        >
-          WHAT CHANGED
+        <p className="type-eyebrow mb-4">
+          What Changed
         </p>
         <div className="section-accent-rule mb-6" aria-hidden="true" />
 
@@ -314,7 +246,7 @@ function CombinedResultsSection() {
               >
                 ✓
               </span>
-              <span style={{ fontFamily: 'var(--sans)', fontSize: '1rem', lineHeight: 1.55, color: 'var(--text)' }}>
+              <span className="type-body">
                 {outcome}
               </span>
             </article>
@@ -353,17 +285,10 @@ function SolutionCard({
       >
         {icon}
       </div>
-      <h3
-        className="mb-2"
-        style={{
-          fontFamily: 'var(--serif)',
-          fontSize: '1.125rem',
-          color: 'var(--headline)',
-        }}
-      >
+      <h3 className="type-section-heading mb-2" style={{ fontSize: '20px', lineHeight: 1.2 }}>
         {title}
       </h3>
-      <p style={{ fontFamily: 'var(--sans)', fontSize: '0.9375rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
+      <p className="type-body">
         {text}
       </p>
     </article>
@@ -388,28 +313,11 @@ function ContentSection({
       }}
     >
       <div className="max-w-[820px] mx-auto">
-        <h2
-          className="text-left"
-          style={{
-            fontFamily: 'var(--serif)',
-            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-            fontWeight: 400,
-            letterSpacing: '-0.02em',
-            color: 'var(--headline)',
-            marginBottom: 0,
-          }}
-        >
+        <h2 className="type-section-heading text-left mb-0">
           {title}
         </h2>
         <div className="section-accent-rule" aria-hidden="true" />
-        <div
-          style={{
-            fontFamily: 'var(--sans)',
-            fontSize: '1rem',
-            lineHeight: 1.7,
-            color: 'var(--text-muted)',
-          }}
-        >
+        <div className="type-body">
           {children}
         </div>
       </div>
