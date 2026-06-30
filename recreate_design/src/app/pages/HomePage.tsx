@@ -27,6 +27,10 @@ function HeroSection() {
         <div
           className="px-6 lg:pl-[max(1.5rem,calc((100vw-1200px)/2+1.5rem))] lg:pr-6 text-center lg:text-left reveal"
         >
+          <div className="status-pill mb-5 mx-auto lg:mx-0 w-fit">
+            <span className="status-pill__dot" aria-hidden="true" />
+            Multi-Vendor Bid · Live
+          </div>
           <h1
             className="type-hero-headline mb-5 text-balance"
           >
