@@ -71,10 +71,9 @@ export function Layout({ children }: { children: ReactNode }) {
             </p>
             <button
               onClick={handleAcceptCookies}
-              className="border-none rounded-lg px-5 py-2 text-[.85rem] font-semibold cursor-pointer whitespace-nowrap"
+              className="type-button-label border-none rounded-lg px-5 py-2 cursor-pointer whitespace-nowrap"
               style={{
                 background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
-                color: '#000',
               }}
             >
               Accept
@@ -123,14 +122,14 @@ export function DemoButton({
   size?: 'default' | 'sm';
 }) {
   const sizeClasses = size === 'sm'
-    ? 'px-4 py-2 text-[14px]'
-    : 'px-7 py-[14px] text-[15px]';
+    ? 'px-4 py-2 type-button-label text-[14px]'
+    : 'px-7 py-[14px] type-button-label';
 
   return (
     <button
       type="button"
       onClick={() => void openCalendlyPopup()}
-      className={`inline-flex items-center justify-center font-semibold text-[#1A1A1A] border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px hover:brightness-105 ${sizeClasses} ${className}`}
+      className={`inline-flex items-center justify-center border-none rounded-[10px] cursor-pointer transition-all duration-200 hover:-translate-y-px hover:brightness-105 ${sizeClasses} ${className}`}
       style={{
         background: 'linear-gradient(135deg, var(--cta-start), var(--cta-end))',
         boxShadow: '0 4px 20px rgba(214,157,118,0)',
