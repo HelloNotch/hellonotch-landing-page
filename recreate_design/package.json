@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite"
+    "build": "vite build && node scripts/postbuild.mjs",
+    "dev": "vite",
+    "publish:root": "node scripts/publish-root.mjs"
   },
   "dependencies": {
     "react": "18.3.1",

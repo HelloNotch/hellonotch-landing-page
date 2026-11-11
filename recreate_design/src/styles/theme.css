@@ -1,21 +1,29 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --sans: 'Inter', system-ui, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, monospace;
-  --accent: #E0A56B;
+  --accent: #9A4F06;
+  --peach: #FFBF8F;
+  --peach-wash: #FFF7F0;
+  --peach-100: #FBE6D5;
+  --peach-border: #F5CEAD;
+  --peach-deep: #7A3D00;
+  --border-strong: #D6D3D1;
+  --stone: #F5F4F2;
+  --ink: #1C1917;
   --cta-start: #E6B48E;
   --cta-end: #D09D76;
-  --bg: #0B0B0D;
-  --bg-alt: #0E0E11;
-  --bg-card: #1A1A1A;
-  --text: #C2BDB4;
-  --text-muted: #A8A39A;
-  --headline: #F4F2EF;
-  --section-heading: #EDE9E2;
-  --border: #222228;
-  --gray-mid: #A8A8AE;
-  --gray-dark: #8A8A92;
+  --bg: #FFFFFF;
+  --bg-alt: #FAFAF9;
+  --bg-card: #FFFFFF;
+  --text: #44403C;
+  --text-muted: #57534E;
+  --headline: #1C1917;
+  --section-heading: #1C1917;
+  --border: #E7E5E4;
+  --gray-mid: #57534E;
+  --gray-dark: #78716C;
   --success: #77FB74;
   --max-w: 1200px;
   
@@ -305,7 +313,7 @@
 .section-accent-rule {
   width: 24px;
   height: 2px;
-  background: #e0a56b;
+  background: #FFBF8F;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -317,7 +325,7 @@
   font-size: 54px;
   line-height: 1.03;
   letter-spacing: -0.035em;
-  color: #F4F2EF;
+  color: #1C1917;
 }
 
 .type-page-headline {
@@ -326,7 +334,7 @@
   font-size: 52px;
   line-height: 1.05;
   letter-spacing: -0.035em;
-  color: #F4F2EF;
+  color: #1C1917;
 }
 
 .type-cta-heading {
@@ -335,7 +343,7 @@
   font-size: 36px;
   line-height: 1.1;
   letter-spacing: -0.035em;
-  color: #F4F2EF;
+  color: #1C1917;
 }
 
 .type-display-number {
@@ -344,7 +352,7 @@
   font-size: clamp(58px, 6vw, 72px);
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: #E0A56B;
+  color: #1C1917;
 }
 
 .type-display-sentence {
@@ -353,7 +361,7 @@
   font-size: 32px;
   line-height: 1.25;
   letter-spacing: -0.025em;
-  color: #EDE9E2;
+  color: #1C1917;
 }
 
 .type-section-heading {
@@ -362,7 +370,7 @@
   font-size: 25px;
   line-height: 1.15;
   letter-spacing: -0.025em;
-  color: #EDE9E2;
+  color: #1C1917;
 }
 
 .type-lead {
@@ -370,7 +378,7 @@
   font-weight: 400;
   font-size: 18.5px;
   line-height: 1.55;
-  color: #A8A39A;
+  color: #44403C;
 }
 
 .type-body {
@@ -378,14 +386,14 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 1.7;
-  color: #C2BDB4;
+  color: #44403C;
 }
 
 .type-button-label {
   font-family: var(--sans);
   font-weight: 600;
   font-size: 15px;
-  color: #2A1B0E;
+  color: #1C1917;
 }
 
 .type-eyebrow {
@@ -394,14 +402,14 @@
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #E0A56B;
+  color: #9A4F06;
 }
 
 .type-list-index {
   font-family: var(--mono);
   font-weight: 600;
   font-size: 12px;
-  color: #E0A56B;
+  color: #9A4F06;
 }
 
 .status-pill {

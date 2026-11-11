@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "npm run dev --prefix recreate_design",
     "build": "npm run build --prefix recreate_design",
-    "install:app": "npm install --prefix recreate_design"
+    "install:app": "npm install --prefix recreate_design",
+    "publish:root": "npm run build --prefix recreate_design && npm run publish:root --prefix recreate_design"
   }
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function useScrollReveal() {
+export function useScrollReveal(key?: unknown) {
   useEffect(() => {
     // Add animation class after paint so elements start visible then animate on scroll
     const reveals = document.querySelectorAll('.reveal, .reveal-stagger, .quote-reveal');
@@ -37,5 +37,5 @@ export function useScrollReveal() {
     return () => {
       obs.disconnect();
     };
-  }, []);
+  }, [key]);
 }
