@@ -54,6 +54,8 @@ export type ListPanel = {
   title: string;
   /** label, detail, optional status chip */
   rows: [string, string, string?][];
+  /** label for the first column, shown above the rows when they carry a status */
+  head?: string;
   note?: { text: string; action?: string; tone?: 'peach' | 'caution' };
 };
 
@@ -214,6 +216,7 @@ export const buyers: Buyer[] = [
         panel: {
           kind: 'list',
           title: 'Orders',
+          head: 'Vendor',
           rows: [
             ['Northline, casegoods', '', 'Acknowledged'],
             ['Harbor Contract, seating', '', 'In transit'],
@@ -316,6 +319,7 @@ export const buyers: Buyer[] = [
         panel: {
           kind: 'list',
           title: 'Export for your ERP',
+          head: 'File',
           rows: [
             ['Awarded labor, by cost code', '16 lines', 'Ready'],
             ['Awarded materials and fixtures', '26 items', 'Needs review'],
@@ -420,6 +424,7 @@ export const buyers: Buyer[] = [
         panel: {
           kind: 'list',
           title: 'Bids',
+          head: 'Bid',
           rows: [
             ['Glazing', '4 lines, 5 invited', 'Review'],
             ['Misc. metals', '3 lines, 4 invited', 'Open'],
@@ -524,6 +529,7 @@ export const buyers: Buyer[] = [
         panel: {
           kind: 'list',
           title: 'Bid activity',
+          head: 'Activity',
           rows: [
             ['Bid published', '6 vendors invited', 'Sent'],
             ['Addendum 1', 'All 6 vendors', 'Sent'],

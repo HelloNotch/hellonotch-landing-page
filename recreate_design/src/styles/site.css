@@ -789,6 +789,17 @@ button:focus-visible {
   align-items: center;
 }
 
+.n-list__head {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--stone);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .n-list__end {
   display: inline-flex;
   align-items: center;

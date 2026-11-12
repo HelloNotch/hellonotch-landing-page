@@ -212,6 +212,12 @@ function ListCard({ panel }: { panel: ListPanel }) {
     <div className="n-window n-window--flat" role="img" aria-label={`Example: ${panel.title}`}>
       <div aria-hidden="true">
         <div className="n-list__title">{panel.title}</div>
+        {panel.rows.some((r) => r[2]) && (
+          <div className="n-list__head">
+            <span>{panel.head ?? 'Name'}</span>
+            <span>Status</span>
+          </div>
+        )}
         {panel.rows.map(([a, b, status]) => (
           <div key={a} className="n-list__row">
             <span>{a}</span>
