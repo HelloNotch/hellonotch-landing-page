@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const HOME_TITLE = 'Notch | Modern procurement tools for the teams that build and furnish spaces';
+export const HOME_TITLE = 'Notch | Modern procurement tools for teams that build and furnish spaces';
 export const HOME_DESCRIPTION =
   'Notch turns spec books and plan sets into quote requests, puts vendor pricing side by side, and keeps every order on track through delivery.';
 

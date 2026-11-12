@@ -11,7 +11,7 @@ const SITE = 'https://www.hellonotch.com';
 const ROUTES = [
   {
     path: '/for/design-and-purchasing',
-    title: 'Notch for design and purchasing teams | Notch',
+    title: 'Notch for design and purchasing | Notch',
     description:
       'Import the spec book, send quote requests to every vendor at once, compare pricing side by side and track orders through delivery.',
   },

@@ -32,7 +32,7 @@ function HeroSection() {
     <section className="n-hero">
       <div className="n-wrap n-hero__inner">
         <div className="n-hero__top reveal">
-          <h1 className="n-h1">Modern procurement tools for the teams that build and furnish spaces.</h1>
+          <h1 className="n-h1">Modern procurement tools for teams that build and furnish spaces.</h1>
           <div className="n-hero__side">
             <p className="n-lead">
               Notch turns spec books and plan sets into quote requests, puts vendor pricing side by side, and keeps

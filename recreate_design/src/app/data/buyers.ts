@@ -124,16 +124,16 @@ export const buyers: Buyer[] = [
   {
     slug: 'design-and-purchasing',
     tab: 'Design and purchasing',
-    name: 'Design and purchasing teams',
+    name: 'Design and purchasing',
     navBlurb: 'FF&E and OS&E for hotels, multifamily and branded spaces',
     card: {
       kicker: 'Spec book to purchase order',
       text: 'Notch helps design and purchasing teams turn a spec book into quote requests, compare vendor pricing line by line, and track every order through delivery.',
     },
-    metaTitle: 'Notch for design and purchasing teams',
+    metaTitle: 'Notch for design and purchasing',
     metaDescription:
       'Import a spec book, send quote requests to every vendor at once, compare pricing side by side and track orders through delivery.',
-    eyebrow: 'Notch for design and purchasing teams',
+    eyebrow: 'Notch for design and purchasing',
     headline: 'Turn spec books into quote requests without manual data entry.',
     lead: 'Notch gives FF&E and OS&E purchasing teams one place to import specs, send quote requests to every vendor at once, compare pricing and track orders through delivery.',
     table: {
