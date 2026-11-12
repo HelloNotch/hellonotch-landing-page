@@ -119,7 +119,7 @@ export const buyers: Buyer[] = [
     },
     metaTitle: 'Notch for design and purchasing teams',
     metaDescription:
-      'Import the spec book, send quote requests to every vendor at once, compare pricing side by side and track orders through delivery.',
+      'Import a spec book, send quote requests to every vendor at once, compare pricing side by side and track orders through delivery.',
     eyebrow: 'Notch for design and purchasing teams',
     headline: 'Turn spec books into quote requests without manual data entry.',
     lead: 'Notch gives FF&E and OS&E purchasing teams one place to import specs, send quote requests to every vendor at once, compare pricing and track orders through delivery.',
@@ -160,7 +160,7 @@ export const buyers: Buyer[] = [
     ],
     features: [
       {
-        title: 'Import the spec book.',
+        title: 'Import a spec book.',
         text: 'Drop in the PDF. Notch sorts the pages, shows you what it plans to import, and has you check three samples before it reads the rest.',
         panel: {
           kind: 'list',
