@@ -253,16 +253,16 @@ export const buyers: Buyer[] = [
     pointsTitle: 'Set up the way homebuilders buy.',
     points: [
       {
-        title: 'Plans and options',
-        text: 'Each trade quotes the base house and every option, like an extra bath or a media room, as its own number. You see what each option costs before you price it to a buyer.',
+        title: 'Organized the way you build',
+        text: 'Set up pricing by plan, by community or by job. If you offer options or upgrades, each one can be quoted on its own.',
       },
       {
-        title: 'Finish levels',
-        text: 'Choose the fixtures for each finish level once. Notch applies them to every plan with the right counts, so you are not rebuilding the list for each house.',
+        title: 'Standard selections',
+        text: 'Keep your standard fixtures and finishes in one catalog and reuse them across plans, so you are not rebuilding the list for every house.',
       },
       {
         title: 'Trades and suppliers',
-        text: 'Labor goes to your trades by cost code. Fixtures and materials go to suppliers. Both answer in the same place.',
+        text: 'Send labor to your trades and materials to your suppliers. Everyone quotes in the same place, on the same information.',
       },
     ],
     features: [
