@@ -121,7 +121,7 @@ export const buyers: Buyer[] = [
     metaDescription:
       'Import the spec book, send quote requests to every vendor at once, compare pricing side by side and track orders through delivery.',
     eyebrow: 'Notch for design and purchasing teams',
-    headline: 'Turn the spec book into quote requests without retyping it.',
+    headline: 'Turn spec books into quote requests without manual data entry.',
     lead: 'Notch gives FF&E and OS&E purchasing teams one place to import specs, send quote requests to every vendor at once, compare pricing and track orders through delivery.',
     table: {
       project: 'Downtown PA Hotel',
