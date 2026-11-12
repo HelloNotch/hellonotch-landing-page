@@ -213,14 +213,14 @@ export const buyers: Buyer[] = [
     navBlurb: 'Plans, options and finish levels for production builders',
     card: {
       kicker: 'Plan set to awarded pricing',
-      text: 'Notch helps homebuilders price every plan, option and finish level with their trades and suppliers, then send awarded prices to their purchasing system.',
+      text: 'Notch helps homebuilders price every plan, option and finish level with their trades and suppliers, then send awarded prices to their ERP or accounting system.',
     },
     metaTitle: 'Notch for homebuilders',
     metaDescription:
-      'Send plans to trades and suppliers, compare what comes back option by option, and hand awarded prices to your purchasing system.',
+      'Send plans to trades and suppliers, compare what comes back option by option, and hand awarded prices to your ERP or accounting system.',
     eyebrow: 'Notch for homebuilders',
     headline: 'Price every plan, option and finish level in one place.',
-    lead: 'Notch gives your purchasing team one place to send plans to trades and suppliers, compare what comes back, and hand awarded prices to the system that runs your jobs.',
+    lead: 'Notch gives your purchasing team one place to send plans to trades and suppliers, compare what comes back, and hand awarded prices to your ERP or accounting system.',
     table: {
       project: 'Plan 5414',
       badge: 'Grouped by option',
@@ -301,11 +301,11 @@ export const buyers: Buyer[] = [
         },
       },
       {
-        title: 'Hand awarded prices to your purchasing system.',
-        text: 'Export awarded labor by option and cost code, and the fixture takeoff for each finish level, in the upload format your system expects.',
+        title: 'Hand awarded prices to your ERP.',
+        text: 'Export awarded labor by option and cost code, and the fixture takeoff for each finish level, in the upload format your ERP or accounting system expects.',
         panel: {
           kind: 'list',
-          title: 'Export for your purchasing system',
+          title: 'Export for your ERP',
           rows: [
             ['Base contract, by option and cost code', '16 lines'],
             ['Takeoff, Classic', '26 items'],
