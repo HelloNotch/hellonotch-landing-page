@@ -43,7 +43,7 @@ export type LevelPanel = {
   vendors: string[];
   picked: number;
   /** null = no price submitted, string 'No bid' etc. shown muted */
-  lines: { tag?: string; name: string; prices: (string | null)[]; low: number }[];
+  lines: { tag?: string; qty?: string; name: string; prices: (string | null)[]; low: number; outlier?: number }[];
   totals: string[];
 };
 
@@ -96,11 +96,11 @@ const hotelLevel: LevelPanel = {
   vendors: ['Harbor Contract', 'Northline', 'Kestrel and Co.'],
   picked: 1,
   lines: [
-    { tag: 'K-200', name: 'King headboard', prices: ['$1,480', '$1,395', '$1,540'], low: 1 },
-    { tag: 'K-201', name: 'King nightstands, pair', prices: ['$920', '$905', '$870'], low: 2 },
-    { tag: 'K-211', name: 'Accessible king platform bed', prices: ['$2,210', '$2,040', null], low: 1 },
-    { tag: 'X-202', name: 'Cocktail table', prices: ['$640', '$665', '$710'], low: 0 },
-    { tag: 'Q-200', name: 'Queen headboards, pair', prices: ['$2,380', '$2,190', '$2,450'], low: 1 },
+    { tag: 'K-200', qty: '120', name: 'King headboard', prices: ['$1,480', '$1,395', '$1,540'], low: 1 },
+    { tag: 'K-201', qty: '120', name: 'King nightstands, pair', prices: ['$920', '$905', '$870'], low: 2 },
+    { tag: 'K-211', qty: '8', name: 'Accessible king platform bed', prices: ['$2,210', '$2,040', null], low: 1 },
+    { tag: 'X-202', qty: '64', name: 'Cocktail table', prices: ['$640', '$665', '$710'], low: 0 },
+    { tag: 'Q-200', qty: '56', name: 'Queen headboards, pair', prices: ['$2,380', '$2,190', '$2,450'], low: 1 },
   ],
   totals: ['$7,630', '$7,195', 'Partial, 4 of 5'],
 };
@@ -501,10 +501,10 @@ export const buyers: Buyer[] = [
           vendors: ['Campus Interiors', 'Meridian Contract', 'Fieldhouse Supply'],
           picked: 0,
           lines: [
-            { tag: 'CH-101', name: 'Task chair, classroom', prices: ['$318', '$342', '$329'], low: 0 },
-            { tag: 'TB-204', name: 'Seminar table, flip top', prices: ['$890', '$845', '$910'], low: 1 },
-            { tag: 'MK-402', name: 'Mobile markerboard', prices: ['$412', '$455', null], low: 0 },
-            { tag: 'LB-310', name: 'Lab stool, height adjustable', prices: ['$264', '$281', '$259'], low: 2 },
+            { tag: 'CH-101', qty: '240', name: 'Task chair, classroom', prices: ['$318', '$342', '$329'], low: 0 },
+            { tag: 'TB-204', qty: '48', name: 'Seminar table, flip top', prices: ['$890', '$845', '$910'], low: 1 },
+            { tag: 'MK-402', qty: '36', name: 'Mobile markerboard', prices: ['$412', '$455', null], low: 0 },
+            { tag: 'LB-310', qty: '60', name: 'Lab stool, height adjustable', prices: ['$264', '$281', '$259'], low: 2 },
           ],
           totals: ['$143,592', '$150,396', 'Partial, 3 of 4'],
         },

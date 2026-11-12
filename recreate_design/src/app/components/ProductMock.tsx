@@ -92,60 +92,113 @@ export function ProductWindow({
   );
 }
 
+function money(v: string | null | undefined) {
+  return v && v.startsWith('$') ? Number(v.replace(/[$,]/g, '')) : null;
+}
+
 function LevelGrid({ panel }: { panel: LevelPanel }) {
-  const cols = `minmax(170px, 1.5fr) repeat(${panel.vendors.length}, minmax(112px, 1fr))`;
-  const cell = (i: number, extra = '') => `${i === panel.picked ? 'is-picked' : ''} ${extra}`.trim();
-  const isPrice = (v: string | null) => Boolean(v && v.startsWith('$'));
+  const cols = `minmax(206px, 1.5fr) repeat(${panel.vendors.length}, minmax(116px, 1fr))`;
+  const cell = (i: number, extra = '') => `n-level__cell ${i === panel.picked ? 'is-picked' : ''} ${extra}`.trim();
+  const totals = panel.totals.map(money);
+  const full = totals.filter((t): t is number => t !== null);
+  const lowTotal = full.length > 1 ? Math.min(...full) : null;
+  const hasTags = panel.lines.some((l) => l.tag);
+  const hasQty = panel.lines.some((l) => l.qty);
 
   return (
     <div className="n-window n-window--flat" role="img" aria-label={`Example: ${panel.title}, ${panel.sub}`}>
       <div className="n-window__bar" aria-hidden="true">
-        <span style={{ fontWeight: 600 }}>{panel.title}</span>
-        <span className="is-faint" style={{ fontWeight: 400, fontSize: 13 }}>
-          {panel.sub}
-        </span>
+        <span className="is-faint">Bids</span>
+        <span className="is-sep">/</span>
+        <span>{panel.sub.split(',')[0]}</span>
+        <span className="n-pill">Leveling</span>
+        <span className="is-right">{panel.sub.split(',').slice(1).join(',').trim()}</span>
       </div>
       <div className="n-scroll" aria-hidden="true">
         <div className="n-level">
-          <div className="n-level__row n-level__row--head" style={{ gridTemplateColumns: cols }}>
-            <span>{panel.lineLabel}</span>
-            {panel.vendors.map((v, i) => (
-              <span key={v} className={cell(i)}>
-                {v}
+          <div className="n-level__row n-level__row--vendors" style={{ gridTemplateColumns: cols }}>
+            <div className="n-level__key">
+              <span className="n-level__label">Key</span>
+              <span>
+                <i className="n-mark n-mark--low" />
+                Lowest price
               </span>
+              <span>
+                <i className="n-mark n-mark--outlier" />
+                Outlier
+              </span>
+              <span>
+                <i className="n-mark n-mark--sub" />
+                Substitution
+              </span>
+              <span>
+                <i className="n-mark n-mark--none" />
+                No bid
+              </span>
+            </div>
+            {panel.vendors.map((v, i) => (
+              <div key={v} className={cell(i, 'n-level__vendor')}>
+                <strong>{v}</strong>
+                <span className="n-level__meta">
+                  Lowest on {panel.lines.filter((l) => l.low === i && money(l.prices[i]) !== null).length} of{' '}
+                  {panel.lines.length} lines
+                </span>
+                <span className="n-level__view">View bid</span>
+                {i === panel.picked && <span className="n-level__selected">Selected</span>}
+              </div>
+            ))}
+          </div>
+          <div className="n-level__row n-level__row--cols" style={{ gridTemplateColumns: cols }}>
+            <div className={`n-level__item${hasTags ? '' : ' n-level__item--notag'}`}>
+              {hasTags && <span>Tag</span>}
+              <span>{panel.lineLabel === 'Product' ? 'Item name' : panel.lineLabel}</span>
+              {hasQty && <span>Qty</span>}
+            </div>
+            {panel.vendors.map((v, i) => (
+              <div key={v} className={cell(i)} />
             ))}
           </div>
           {panel.lines.map((line) => (
             <div key={line.name} className="n-level__row" style={{ gridTemplateColumns: cols }}>
-              <span className="n-level__line">
-                {line.tag && <span className="n-tag">{line.tag}</span>}
+              <div className={`n-level__item${hasTags ? '' : ' n-level__item--notag'}`}>
+                {hasTags && <span className="n-chip">{line.tag}</span>}
                 <span>{line.name}</span>
-              </span>
-              {line.prices.map((p, i) => (
-                <span key={i} className={cell(i, !isPrice(p) ? 'is-none' : i === line.low ? 'is-low' : '')}>
-                  {p ?? '–'}
-                </span>
-              ))}
+                {hasQty && <span className="n-level__qty">{line.qty}</span>}
+              </div>
+              {line.prices.map((p, i) => {
+                const priced = money(p) !== null;
+                const low = priced && i === line.low;
+                return (
+                  <div key={i} className={cell(i, !priced ? 'is-none' : low ? 'is-low' : '')}>
+                    <span>{priced ? p : '–'}</span>
+                    {low && <i className="n-mark n-mark--low" />}
+                    {priced && line.outlier === i && <i className="n-mark n-mark--outlier" />}
+                  </div>
+                );
+              })}
             </div>
           ))}
           <div className="n-level__row n-level__row--total" style={{ gridTemplateColumns: cols }}>
-            <span>Total</span>
-            {panel.totals.map((t, i) => (
-              <span key={i} className={cell(i, !isPrice(t) ? 'is-none' : '')}>
-                {t}
-              </span>
-            ))}
+            <div className="n-level__item n-level__item--notag">
+              <span>Total (all-in)</span>
+            </div>
+            {panel.totals.map((t, i) => {
+              const n = totals[i];
+              const low = n !== null && n === lowTotal;
+              return (
+                <div key={i} className={cell(i, n === null ? 'is-none' : low ? 'is-low' : '')}>
+                  <span>{t}</span>
+                  {low && <i className="n-mark n-mark--low" />}
+                  {n !== null && lowTotal !== null && !low && (
+                    <span className="n-level__delta">
+                      +${(n - lowTotal).toLocaleString('en-US')} · +{Math.round(((n - lowTotal) / lowTotal) * 100)}%
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
-      </div>
-      <div className="n-legend" aria-hidden="true">
-        <span>
-          <b>Bold green</b> is the lowest price on the line
-        </span>
-        <span>
-          <i />
-          Selected vendor
-        </span>
       </div>
     </div>
   );
