@@ -198,6 +198,8 @@ export const buyers: Buyer[] = [
             ['Harbor Contract, seating', '', 'In transit'],
             ['Kestrel and Co., lighting', '', 'Partial delivery'],
             ['Alder Textiles, drapery', '', 'Received'],
+            ['Fieldstone, upholstery', '', 'In transit'],
+            ['Summit Supply, artwork and mirrors', '', 'Received'],
           ],
         },
       },

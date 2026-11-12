@@ -111,12 +111,14 @@ const quotePanel: Panel = {
   kind: 'list',
   title: 'Guestroom casegoods, quote request',
   rows: [
-    ['Harbor Contract', '5 of 5 lines', 'Submitted'],
-    ['Northline', '5 of 5 lines', 'Submitted'],
-    ['Kestrel and Co.', '4 of 5 lines', 'Open'],
+    ['Harbor Contract', '3 of 3 lines', 'Submitted'],
+    ['Northline', '3 of 3 lines', 'Submitted'],
+    ['Kestrel and Co.', '3 of 3 lines', 'Submitted'],
+    ['Fieldstone Casegoods', '2 of 3 lines', 'Open'],
+    ['Summit Hospitality Supply', '1 of 3 lines', 'Open'],
     ['Alder Millwork', 'Invited', 'Pending'],
   ],
-  note: { text: 'Spec change on K-211 sent to all 4 vendors.' },
+  note: { text: 'Spec change on K-211 sent to all 6 vendors.' },
 };
 
 const HOW_STEPS: { title: string; text: string; panel: Panel }[] = [
