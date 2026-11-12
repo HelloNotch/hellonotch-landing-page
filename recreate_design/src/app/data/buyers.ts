@@ -58,7 +58,7 @@ export type Panel = LevelPanel | ListPanel;
 
 export type Buyer = {
   slug: string;
-  /** Short label for the homepage switcher */
+  /** Short label used on the homepage cards */
   tab: string;
   name: string;
   navBlurb: string;

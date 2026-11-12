@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router';
 import { DemoButton } from '../components/Layout';
 import { PanelMock, ProductWindow } from '../components/ProductMock';
@@ -27,8 +26,7 @@ export default function HomePage() {
 }
 
 function HeroSection() {
-  const [slug, setSlug] = useState(buyers[0].slug);
-  const buyer = buyers.find((b) => b.slug === slug) ?? buyers[0];
+  const buyer = buyers[0];
 
   return (
     <section className="n-hero">
@@ -50,31 +48,7 @@ function HeroSection() {
         </div>
 
         <div className="reveal">
-          <div className="n-switch">
-            <span className="n-switch__label" id="switch-label">
-              See it for
-            </span>
-            <div className="n-switch__tabs" role="group" aria-labelledby="switch-label">
-              {buyers.map((b) => (
-                <button
-                  key={b.slug}
-                  type="button"
-                  className="n-tab"
-                  aria-pressed={b.slug === slug}
-                  onClick={() => setSlug(b.slug)}
-                >
-                  {b.tab}
-                </button>
-              ))}
-            </div>
-          </div>
-          <ProductWindow table={{ ...buyer.table, badge: undefined }} />
-          <p className="n-caption">
-            <span>Example data. {buyer.tableCaption}</span>
-            <Link to={`/for/${buyer.slug}`} className="n-link">
-              Notch for {buyer.name.toLowerCase()}
-            </Link>
-          </p>
+          <ProductWindow table={buyer.table} animate />
         </div>
       </div>
     </section>

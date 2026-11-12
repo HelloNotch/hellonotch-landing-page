@@ -1,7 +1,16 @@
 import { DOTS, type LevelPanel, type ListPanel, type Panel, type ProductTable } from '../data/buyers';
 
 /** Notch products table, drawn in HTML so it stays sharp and can change per buyer type. */
-export function ProductWindow({ table, flat = false }: { table: ProductTable; flat?: boolean }) {
+export function ProductWindow({
+  table,
+  flat = false,
+  animate = false,
+}: {
+  table: ProductTable;
+  flat?: boolean;
+  /** Plays the row selection once on load */
+  animate?: boolean;
+}) {
   const extra = table.columns.length - 4;
   const hasCheck = Boolean(table.selected);
   const cols = [
@@ -15,7 +24,7 @@ export function ProductWindow({ table, flat = false }: { table: ProductTable; fl
   let index = 0;
 
   return (
-    <div className={`n-window${flat ? ' n-window--flat' : ''}`} aria-label={`Example: ${table.project} products in Notch`} role="img">
+    <div className={`n-window${flat ? ' n-window--flat' : ''}${animate ? ' n-window--animate' : ''}`} aria-label={`Example: ${table.project} products in Notch`} role="img">
       <div className="n-window__bar" aria-hidden="true">
         <span className="is-faint">Projects</span>
         <span className="is-sep">/</span>
@@ -44,12 +53,13 @@ export function ProductWindow({ table, flat = false }: { table: ProductTable; fl
               )}
               {g.rows.map((row, ri) => {
                 const on = hasCheck && index < (table.selected ?? 0);
+                const order = index;
                 index += 1;
                 return (
                   <div
                     key={`${row.tag}-${ri}`}
                     className={`n-table__row${on ? ' is-selected' : ''}`}
-                    style={{ gridTemplateColumns: cols }}
+                    style={{ gridTemplateColumns: cols, ['--i' as string]: order }}
                   >
                     <span>{hasCheck && <span className="n-check" />}</span>
                     <span className="n-tag">{row.tag}</span>

@@ -346,53 +346,6 @@ button:focus-visible {
   gap: 8px 24px;
 }
 
-.n-switch {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 16px;
-  margin-bottom: 16px;
-}
-
-.n-switch__label {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.n-switch__tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.n-tab {
-  min-height: 44px;
-  padding: 0 16px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  background: #fff;
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-
-.n-tab:hover {
-  border-color: var(--ink);
-}
-
-.n-tab[aria-pressed='true'] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
-}
-
 .n-caption {
   display: flex;
   flex-wrap: wrap;
@@ -1142,4 +1095,48 @@ button:focus-visible {
 
 .n-cookie a {
   color: var(--accent);
+}
+
+/* Hero table: rows tick one by one, then the action bar arrives. Plays once. */
+@keyframes n-row-select {
+  from {
+    background: #fff;
+  }
+}
+
+@keyframes n-check-fill {
+  from {
+    background: #fff;
+    border-color: var(--border-strong);
+  }
+}
+
+@keyframes n-bar-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 14px);
+  }
+}
+
+.n-window--animate .n-table__row.is-selected {
+  animation: n-row-select 0.35s ease-out both;
+  animation-delay: calc(0.9s + var(--i) * 0.45s);
+}
+
+.n-window--animate .is-selected .n-check {
+  animation: n-check-fill 0.2s ease-out both;
+  animation-delay: calc(0.9s + var(--i) * 0.45s);
+}
+
+.n-window--animate .n-actionbar {
+  animation: n-bar-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 2.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .n-window--animate .n-table__row.is-selected,
+  .n-window--animate .is-selected .n-check,
+  .n-window--animate .n-actionbar {
+    animation: none;
+  }
 }
