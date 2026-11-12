@@ -254,11 +254,11 @@ export const buyers: Buyer[] = [
     points: [
       {
         title: 'Plans and options',
-        text: 'One project per plan. Each structural option is its own group of lines, so a trade prices the base house and every option separately.',
+        text: 'Each trade quotes the base house and every option, like an extra bath or a media room, as its own number. You see what each option costs before you price it to a buyer.',
       },
       {
         title: 'Finish levels',
-        text: 'Your series live in a catalog. Set the fixture for each level once, and every plan picks it up with the right count.',
+        text: 'Choose the fixtures for each finish level once. Notch applies them to every plan with the right counts, so you are not rebuilding the list for each house.',
       },
       {
         title: 'Trades and suppliers',
