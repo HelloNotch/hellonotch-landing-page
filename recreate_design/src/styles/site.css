@@ -309,23 +309,22 @@ button:focus-visible {
   gap: clamp(36px, 5vw, 56px);
 }
 
-.n-hero__top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 28px 64px;
-}
-
-.n-hero__top .n-h1 {
-  flex: 3 1 520px;
-}
-
-.n-hero__side {
-  flex: 2 1 340px;
+.n-hero__center {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
-  padding-bottom: 6px;
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.n-hero__center .n-lead {
+  max-width: 640px;
+}
+
+.n-hero__center .n-actions {
+  justify-content: center;
 }
 
 .n-hero__stack {
@@ -344,17 +343,6 @@ button:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px 24px;
-}
-
-.n-caption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 20px;
-  margin: 14px 0 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--text-muted);
 }
 
 /* Product window */

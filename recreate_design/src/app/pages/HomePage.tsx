@@ -31,19 +31,17 @@ function HeroSection() {
   return (
     <section className="n-hero">
       <div className="n-wrap n-hero__inner">
-        <div className="n-hero__top reveal">
+        <div className="n-hero__center reveal">
           <h1 className="n-h1">Modern procurement for the teams that build and furnish spaces.</h1>
-          <div className="n-hero__side">
-            <p className="n-lead">
-              Notch turns spec books and plan sets into quote requests, puts vendor pricing side by side, and keeps
-              every order on track through delivery.
-            </p>
-            <div className="n-actions">
-              <DemoButton />
-              <a href="#how" className="n-link">
-                See how it works
-              </a>
-            </div>
+          <p className="n-lead">
+            Notch turns spec books and plan sets into quote requests, puts vendor pricing side by side, and keeps every
+            order on track through delivery.
+          </p>
+          <div className="n-actions">
+            <DemoButton />
+            <a href="#how" className="n-link">
+              See how it works
+            </a>
           </div>
         </div>
 
@@ -59,11 +57,6 @@ function LogosSection() {
   const logos = [
     { src: '/Lightstone-logo-cmyk-red-LRG.png', alt: 'Lightstone Group', height: 20 },
     { src: '/Moxy_Hotels_logo.svg', alt: 'Moxy Hotels', height: 30 },
-    {
-      src: 'https://images.squarespace-cdn.com/content/v1/684c783fe4aa632916db4c47/e84d0f9e-a423-4a51-b93c-b788e1b5d6cb/Logo_AC_Master_RGB.png?format=1500w',
-      alt: 'AC Hotel',
-      height: 30,
-    },
     { src: '/waterloo-logo.png', alt: 'Waterloo', height: 13 },
     { src: '/sway-logo.png', alt: 'Sway', height: 24 },
   ];

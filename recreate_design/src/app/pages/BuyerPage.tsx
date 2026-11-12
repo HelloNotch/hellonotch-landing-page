@@ -32,7 +32,6 @@ export default function BuyerPage() {
           </div>
           <div className="reveal">
             <ProductWindow table={buyer.table} />
-            <p className="n-caption">Example data. {buyer.tableCaption}</p>
           </div>
         </div>
       </section>
