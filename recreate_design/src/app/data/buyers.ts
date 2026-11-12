@@ -455,7 +455,7 @@ export const buyers: Buyer[] = [
       'Run every furniture and equipment bid through one consistent, documented process, with every vendor on the same information and a clear record behind each award.',
     eyebrow: 'Notch for higher ed and public institutions',
     headline: 'Run every bid by the book, with the record to show for it.',
-    lead: 'Notch gives university and public sector procurement teams one consistent process for every bid: the same steps, the same information to every vendor, and a complete record of each decision. It also takes most of the manual work out of running one.',
+    lead: 'Notch gives university and public sector procurement teams one consistent process for every bid: the same steps, the same information to every vendor, and a complete record of each decision. It also cuts most of the manual work out of the bid process.',
     table: {
       project: 'Academic Sciences Building',
       count: '64 of 64 items',
