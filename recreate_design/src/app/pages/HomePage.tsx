@@ -19,7 +19,7 @@ export default function HomePage() {
       <HowSection />
       <ProofSection />
       <CtaBand
-        title="Start with a project you already have."
+        title="Get started with any project."
         text="Send us a spec book or a plan set and we will show you how Notch can transform your bid process."
       />
     </>
