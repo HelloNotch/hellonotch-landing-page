@@ -112,7 +112,6 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
         <span className="is-sep">/</span>
         <span>{panel.sub.split(',')[0]}</span>
         <span className="n-pill">Leveling</span>
-        <span className="is-right">{panel.sub.split(',').slice(1).join(',').trim()}</span>
       </div>
       <div className="n-scroll" aria-hidden="true">
         <div className="n-level">
@@ -121,10 +120,6 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
             {panel.vendors.map((v, i) => (
               <div key={v} className={cell(i, 'n-level__vendor')}>
                 <strong>{v}</strong>
-                <span className="n-level__meta">
-                  Lowest on {panel.lines.filter((l) => l.low === i && money(l.prices[i]) !== null).length} of{' '}
-                  {panel.lines.length} lines
-                </span>
                 <span className="n-level__view">View bid</span>
                 {i === panel.picked && <span className="n-level__selected">Selected</span>}
               </div>
