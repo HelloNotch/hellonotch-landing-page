@@ -31,17 +31,19 @@ function HeroSection() {
   return (
     <section className="n-hero">
       <div className="n-wrap n-hero__inner">
-        <div className="n-hero__center reveal">
-          <h1 className="n-h1">Modern procurement for the teams that build and furnish spaces.</h1>
-          <p className="n-lead">
-            Notch turns spec books and plan sets into quote requests, puts vendor pricing side by side, and keeps every
-            order on track through delivery.
-          </p>
-          <div className="n-actions">
-            <DemoButton />
-            <a href="#how" className="n-link">
-              See how it works
-            </a>
+        <div className="n-hero__top reveal">
+          <h1 className="n-h1">Modern procurement tools for the teams that build and furnish spaces.</h1>
+          <div className="n-hero__side">
+            <p className="n-lead">
+              Notch turns spec books and plan sets into quote requests, puts vendor pricing side by side, and keeps
+              every order on track through delivery.
+            </p>
+            <div className="n-actions">
+              <DemoButton />
+              <a href="#how" className="n-link">
+                See how it works
+              </a>
+            </div>
           </div>
         </div>
 

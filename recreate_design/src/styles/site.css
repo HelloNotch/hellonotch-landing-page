@@ -309,22 +309,23 @@ button:focus-visible {
   gap: clamp(36px, 5vw, 56px);
 }
 
-.n-hero__center {
+.n-hero__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 28px 64px;
+}
+
+.n-hero__top .n-h1 {
+  flex: 3 1 520px;
+}
+
+.n-hero__side {
+  flex: 2 1 340px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
-  max-width: 940px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.n-hero__center .n-lead {
-  max-width: 640px;
-}
-
-.n-hero__center .n-actions {
-  justify-content: center;
+  padding-bottom: 6px;
 }
 
 .n-hero__stack {
