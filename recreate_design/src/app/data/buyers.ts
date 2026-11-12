@@ -115,7 +115,7 @@ export const buyers: Buyer[] = [
     navBlurb: 'FF&E and OS&E for hotels, multifamily and branded spaces',
     card: {
       kicker: 'Spec book to purchase order',
-      text: 'Hotels, multifamily and branded spaces. Import the spec book, send quote requests to every vendor at once, and keep them current when specs change.',
+      text: 'Notch helps design and purchasing teams turn a spec book into quote requests, compare vendor pricing line by line, and track every order through delivery.',
     },
     metaTitle: 'Notch for design and purchasing teams',
     metaDescription:
@@ -207,7 +207,7 @@ export const buyers: Buyer[] = [
     navBlurb: 'Plans, options and finish levels for production builders',
     card: {
       kicker: 'Plan set to awarded pricing',
-      text: 'Price every plan, option and finish level. Trades and suppliers quote in one place, and awarded prices go back to your purchasing system.',
+      text: 'Notch helps homebuilders price every plan, option and finish level with their trades and suppliers, then send awarded prices to their purchasing system.',
     },
     metaTitle: 'Notch for homebuilders',
     metaDescription:
@@ -323,7 +323,7 @@ export const buyers: Buyer[] = [
     navBlurb: 'Scope by trade, subcontractor quotes and bid day',
     card: {
       kicker: 'Bid day without the scramble',
-      text: 'Break plans and specs into scope by trade, collect subcontractor and vendor quotes, and see what each one covers and leaves out.',
+      text: 'Notch helps general contractors break plans and specs into scope by trade, collect subcontractor quotes, and see what each one covers and leaves out.',
     },
     metaTitle: 'Notch for construction',
     metaDescription:
@@ -431,7 +431,7 @@ export const buyers: Buyer[] = [
     navBlurb: 'Competitive furniture and equipment bids with a clear record',
     card: {
       kicker: 'Fair, documented bidding',
-      text: 'Run competitive furniture and equipment bids with every vendor on the same information and a clear record behind each award.',
+      text: 'Notch helps universities and public institutions run competitive furniture and equipment bids, with every vendor on the same information and a clear record behind each award.',
     },
     metaTitle: 'Notch for higher ed and public institutions',
     metaDescription:
