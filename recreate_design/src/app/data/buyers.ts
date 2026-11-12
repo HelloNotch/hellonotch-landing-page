@@ -43,7 +43,9 @@ export type LevelPanel = {
   vendors: string[];
   picked: number;
   /** null = no price submitted, string 'No bid' etc. shown muted */
-  lines: { tag?: string; qty?: string; name: string; prices: (string | null)[]; low: number; outlier?: number }[];
+  lines: { tag?: string; qty?: string; name: string; prices: (string | null)[]; low: number; outlier?: number; sub?: number }[];
+  /** Open note card on one cell */
+  callout?: { line: number; vendor: number; status: string; note: string };
   totals: string[];
 };
 
@@ -107,11 +109,12 @@ const hotelLevel: LevelPanel = {
   lines: [
     { tag: 'K-200', qty: '120', name: 'King headboard', prices: ['$1,480', '$1,395', '$1,540'], low: 1 },
     { tag: 'K-201', qty: '120', name: 'King nightstands, pair', prices: ['$920', '$905', '$870'], low: 2 },
-    { tag: 'K-211', qty: '8', name: 'Accessible king platform bed', prices: ['$2,210', '$2,040', null], low: 1 },
+    { tag: 'K-211', qty: '8', name: 'Accessible king platform bed', prices: ['$2,210', '$2,040', '$2,120'], low: 1, sub: 2 },
     { tag: 'X-202', qty: '64', name: 'Cocktail table', prices: ['$640', '$665', '$710'], low: 0 },
     { tag: 'Q-200', qty: '56', name: 'Queen headboards, pair', prices: ['$2,380', '$2,190', '$2,450'], low: 1 },
   ],
-  totals: ['$7,630', '$7,195', 'Partial, 4 of 5'],
+  totals: ['$7,630', '$7,195', '$7,690'],
+  callout: { line: 2, vendor: 2, status: 'Substitution', note: 'Offering our 410 series bed. Same finish, ships 2 weeks sooner.' },
 };
 
 export const homeLevel = hotelLevel;

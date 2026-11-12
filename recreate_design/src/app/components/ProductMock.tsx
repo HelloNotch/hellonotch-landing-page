@@ -117,25 +117,7 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
       <div className="n-scroll" aria-hidden="true">
         <div className="n-level">
           <div className="n-level__row n-level__row--vendors" style={{ gridTemplateColumns: cols }}>
-            <div className="n-level__key">
-              <span className="n-level__label">Key</span>
-              <span>
-                <i className="n-mark n-mark--low" />
-                Lowest price
-              </span>
-              <span>
-                <i className="n-mark n-mark--outlier" />
-                Outlier
-              </span>
-              <span>
-                <i className="n-mark n-mark--sub" />
-                Substitution
-              </span>
-              <span>
-                <i className="n-mark n-mark--none" />
-                No bid
-              </span>
-            </div>
+            <div className="n-level__key" />
             {panel.vendors.map((v, i) => (
               <div key={v} className={cell(i, 'n-level__vendor')}>
                 <strong>{v}</strong>
@@ -158,7 +140,7 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
               <div key={v} className={cell(i)} />
             ))}
           </div>
-          {panel.lines.map((line) => (
+          {panel.lines.map((line, li) => (
             <div key={line.name} className="n-level__row" style={{ gridTemplateColumns: cols }}>
               <div className={`n-level__item${hasTags ? '' : ' n-level__item--notag'}`}>
                 {hasTags && <span className="n-chip">{line.tag}</span>}
@@ -173,6 +155,16 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
                     <span>{priced ? p : '–'}</span>
                     {low && <i className="n-mark n-mark--low" />}
                     {priced && line.outlier === i && <i className="n-mark n-mark--outlier" />}
+                    {priced && line.sub === i && <i className="n-mark n-mark--sub" />}
+                    {panel.callout && panel.callout.line === li && panel.callout.vendor === i && (
+                      <span className="n-level__note">
+                        <span className="n-level__status">
+                          <i className="n-mark n-mark--sub" />
+                          {panel.callout.status}
+                        </span>
+                        <span>{panel.callout.note}</span>
+                      </span>
+                    )}
                   </div>
                 );
               })}
