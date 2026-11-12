@@ -191,15 +191,28 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
   );
 }
 
+const STATUS_TONE: Record<string, string> = {
+  Open: 'green',
+  Received: 'green',
+  Review: 'peach',
+  'In transit': 'blue',
+  Acknowledged: 'peach',
+  'Partial delivery': 'amber',
+  Draft: 'neutral',
+};
+
 function ListCard({ panel }: { panel: ListPanel }) {
   return (
     <div className="n-window n-window--flat" role="img" aria-label={`Example: ${panel.title}`}>
       <div aria-hidden="true">
         <div className="n-list__title">{panel.title}</div>
-        {panel.rows.map(([a, b]) => (
+        {panel.rows.map(([a, b, status]) => (
           <div key={a} className="n-list__row">
             <span>{a}</span>
-            <span>{b}</span>
+            <span className="n-list__end">
+              {b && <span>{b}</span>}
+              {status && <span className={`n-status n-status--${STATUS_TONE[status] ?? 'neutral'}`}>{status}</span>}
+            </span>
           </div>
         ))}
         {panel.note && (

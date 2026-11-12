@@ -52,7 +52,8 @@ export type LevelPanel = {
 export type ListPanel = {
   kind: 'list';
   title: string;
-  rows: [string, string][];
+  /** label, detail, optional status chip */
+  rows: [string, string, string?][];
   note?: { text: string; action?: string; tone?: 'peach' | 'caution' };
 };
 
@@ -195,10 +196,10 @@ export const buyers: Buyer[] = [
           kind: 'list',
           title: 'Orders',
           rows: [
-            ['Northline, casegoods', 'Acknowledged'],
-            ['Harbor Contract, seating', 'In transit'],
-            ['Kestrel and Co., lighting', 'Partial delivery'],
-            ['Alder Textiles, drapery', 'Received'],
+            ['Northline, casegoods', '', 'Acknowledged'],
+            ['Harbor Contract, seating', '', 'In transit'],
+            ['Kestrel and Co., lighting', '', 'Partial delivery'],
+            ['Alder Textiles, drapery', '', 'Received'],
           ],
         },
       },
@@ -399,10 +400,10 @@ export const buyers: Buyer[] = [
           kind: 'list',
           title: 'Bids',
           rows: [
-            ['Glazing', '4 lines, 5 invited'],
-            ['Misc. metals', '3 lines, 4 invited'],
-            ['Ceilings', '2 lines, 3 invited'],
-            ['Signage', '1 line, 4 invited'],
+            ['Glazing', '4 lines, 5 invited', 'Review'],
+            ['Misc. metals', '3 lines, 4 invited', 'Open'],
+            ['Ceilings', '2 lines, 3 invited', 'Open'],
+            ['Signage', '1 line, 4 invited', 'Draft'],
           ],
           note: { text: 'Addendum 2 sent to all 16 bidders.' },
         },
