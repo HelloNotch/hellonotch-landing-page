@@ -317,14 +317,14 @@ export const buyers: Buyer[] = [
     navBlurb: 'Scope by trade, subcontractor quotes and bid day',
     card: {
       kicker: 'Bid day without the scramble',
-      text: 'Notch helps general contractors break plans and specs into scope by trade, collect subcontractor quotes, and see what each one covers and leaves out.',
+      text: 'Notch helps general contractors break plans and specs into scope by trade, collect quotes for labor and materials, and see what each one covers and leaves out.',
     },
     metaTitle: 'Notch for construction',
     metaDescription:
       'Break plans and specs into scope by trade, collect subcontractor and vendor quotes in one place, and see what each one covers and leaves out.',
     eyebrow: 'Notch for construction',
     headline: 'Bid day without the scramble.',
-    lead: 'Notch breaks plans and specs into scope by trade, collects subcontractor and vendor quotes in one place, and shows what each one covers and leaves out.',
+    lead: 'Notch breaks plans and specs into scope by trade, collects quotes for the work and the materials in one place, and shows what each one covers and leaves out.',
     table: {
       project: 'Municipal Services Building',
       count: '109 of 109 items',
@@ -357,8 +357,8 @@ export const buyers: Buyer[] = [
         text: 'Drawings, specs and addenda are attached to the quote request. When something changes, every invited bidder is notified.',
       },
       {
-        title: 'Owner purchases too',
-        text: 'Signage, furniture, equipment and other direct buys go out the same way as trade packages, in the same project.',
+        title: 'Labor and materials together',
+        text: 'A quote request can cover the work, the products, or both. Subcontractor scopes and direct buys like signage, furniture and equipment go out the same way, in the same project.',
       },
     ],
     features: [
