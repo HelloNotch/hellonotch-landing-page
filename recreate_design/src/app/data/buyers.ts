@@ -210,16 +210,16 @@ export const buyers: Buyer[] = [
     slug: 'homebuilders',
     tab: 'Homebuilders',
     name: 'Homebuilders',
-    navBlurb: 'Plans, options and finish levels for production builders',
+    navBlurb: 'Trade and supplier pricing for every plan you build',
     card: {
       kicker: 'Plan set to awarded pricing',
-      text: 'Notch helps homebuilders price every plan, option and finish level with their trades and suppliers, then send awarded prices to their ERP or accounting system.',
+      text: 'Notch helps homebuilders send plans to trades and suppliers, compare quotes side by side, and send awarded prices to their ERP or accounting system.',
     },
     metaTitle: 'Notch for homebuilders',
     metaDescription:
-      'Send plans to trades and suppliers, compare what comes back option by option, and hand awarded prices to your ERP or accounting system.',
+      'Send plans to trades and suppliers, compare quotes side by side, and hand awarded prices to your ERP or accounting system.',
     eyebrow: 'Notch for homebuilders',
-    headline: 'Price every plan, option and finish level in one place.',
+    headline: 'Price every plan with your trades and suppliers in one place.',
     lead: 'Notch gives your purchasing team one place to send plans to trades and suppliers, compare what comes back, and hand awarded prices to your ERP or accounting system.',
     table: {
       project: 'Plan 5414',
