@@ -25,7 +25,14 @@ export default function BuyerPage() {
             <p className="n-lead">{buyer.lead}</p>
             <div className="n-actions">
               <DemoButton />
-              <a href="#how" className="n-link">
+              <a
+                href="#how"
+                className="n-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('how')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+              >
                 See how it works
               </a>
             </div>
