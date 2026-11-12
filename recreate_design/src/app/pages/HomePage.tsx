@@ -86,7 +86,6 @@ function WhoSection() {
         <div className="n-cards">
           {buyers.map((b) => (
             <Link key={b.slug} to={`/for/${b.slug}`} className="n-card reveal">
-              <span className="n-card__kicker">{b.card.kicker}</span>
               <h3 className="n-card__title">{b.name}</h3>
               <p className="n-copy">{b.card.text}</p>
               <span className="n-card__more">Notch for {b.tab.toLowerCase()}</span>
