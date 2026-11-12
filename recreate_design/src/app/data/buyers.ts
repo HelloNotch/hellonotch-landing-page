@@ -250,7 +250,7 @@ export const buyers: Buyer[] = [
     },
     tableCaption:
       'One plan with its options. Labor is one line per option, fixtures carry a count and a product for each finish level.',
-    pointsTitle: 'Set up the way a production builder buys.',
+    pointsTitle: 'Set up the way homebuilders buy.',
     points: [
       {
         title: 'Plans and options',
