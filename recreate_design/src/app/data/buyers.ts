@@ -422,14 +422,14 @@ export const buyers: Buyer[] = [
     navBlurb: 'Competitive furniture and equipment bids with a clear record',
     card: {
       kicker: 'Fair, documented bidding',
-      text: 'Notch helps universities and public institutions run competitive furniture and equipment bids, with every vendor on the same information and a clear record behind each award.',
+      text: 'Notch helps universities and public institutions run every bid through one consistent, documented process, with every vendor on the same information and a clear record behind each award.',
     },
     metaTitle: 'Notch for higher ed and public institutions',
     metaDescription:
-      'Run competitive furniture and equipment bids with every vendor on the same information and a clear record behind each award.',
+      'Run every furniture and equipment bid through one consistent, documented process, with every vendor on the same information and a clear record behind each award.',
     eyebrow: 'Notch for higher ed and public institutions',
-    headline: 'Competitive bids with a clear record behind every award.',
-    lead: 'Notch gives university and public sector procurement teams one place to issue a bid, keep every vendor on the same information, and compare responses line by line.',
+    headline: 'Run every bid by the book, with the record to show for it.',
+    lead: 'Notch gives university and public sector procurement teams one consistent process for every bid: the same steps, the same information to every vendor, and a complete record of each decision. It also takes most of the manual work out of running one.',
     table: {
       project: 'Academic Sciences Building',
       count: '64 of 64 items',
@@ -450,19 +450,19 @@ export const buyers: Buyer[] = [
       ],
     },
     tableCaption: 'A furniture package for a new academic building, organized by area for a competitive bid.',
-    pointsTitle: 'Set up for public procurement.',
+    pointsTitle: 'Built for procurement that has to hold up to review.',
     points: [
       {
         title: 'Every vendor, same information',
-        text: 'Spec changes and addenda reach every invited vendor at the same time, through the same portal.',
+        text: 'Spec changes, addenda and answers reach every invited vendor at the same time, through the same portal.',
       },
       {
-        title: 'Substitutions in the open',
-        text: 'A vendor can propose a substitution on a line. You see it next to the specified product, not buried in an attachment.',
+        title: 'The same steps on every bid',
+        text: 'Every bid moves through the same stages, from invitation to award, with one deadline for every vendor. Nothing gets skipped when the team is busy.',
       },
       {
-        title: 'A record of the award',
-        text: 'Invitations, responses and awards are recorded with who did what and when, ready for the file.',
+        title: 'A record of every decision',
+        text: 'Invitations, responses, substitutions and awards are recorded with who did what and when, ready when someone asks how an award was made.',
       },
     ],
     features: [
@@ -470,15 +470,12 @@ export const buyers: Buyer[] = [
         title: 'Build the bid from the spec package.',
         text: 'Drop in the designer’s spec package. Notch reads it page by page and builds the product list, with the source page behind every line.',
         panel: {
-          kind: 'list',
-          title: 'Import plan',
-          rows: [
-            ['Product spec pages', 'Import as products'],
-            ['Furniture plans', 'Save to project documents'],
-            ['General conditions', 'Save to project documents'],
-            ['Cover and index', 'Skip'],
-          ],
-          note: { text: 'Sample 1 of 3. CH-101 Task chair, qty 240.', action: 'This page is right' },
+          kind: 'import',
+          title: 'New import',
+          file: 'Science Hall classroom furniture spec package.pdf',
+          meta: '96 pages',
+          steps: ['Scanning your spec package', 'Reading spec pages', 'Extracting product details'],
+          done: '24 products imported, each linked to its source page.',
         },
       },
       {
