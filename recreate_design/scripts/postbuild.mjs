@@ -19,7 +19,7 @@ const ROUTES = [
     path: '/for/homebuilders',
     title: 'Notch for homebuilders | Notch',
     description:
-      'Send plans to trades and suppliers, compare what comes back option by option, and hand awarded prices to your purchasing system.',
+      'Send plans to trades and suppliers, compare what comes back option by option, and export awarded prices to your ERP or accounting system.',
   },
   {
     path: '/for/construction',

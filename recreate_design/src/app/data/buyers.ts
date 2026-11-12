@@ -245,10 +245,10 @@ export const buyers: Buyer[] = [
     },
     metaTitle: 'Notch for homebuilders',
     metaDescription:
-      'Send plans to trades and suppliers, compare quotes side by side, and hand awarded prices to your ERP or accounting system.',
+      'Send plans to trades and suppliers, compare quotes side by side, and export awarded prices to your ERP or accounting system.',
     eyebrow: 'Notch for homebuilders',
     headline: 'Price every plan with your trades and suppliers in one place.',
-    lead: 'Notch gives your purchasing team one place to send plans to trades and suppliers, compare what comes back, and hand awarded prices to your ERP or accounting system.',
+    lead: 'Notch gives your purchasing team one place to send plans to trades and suppliers, compare what comes back, and export awarded prices to your ERP or accounting system.',
     table: {
       project: 'Plan 2450',
       count: '6 of 6 items',
@@ -314,7 +314,7 @@ export const buyers: Buyer[] = [
         },
       },
       {
-        title: 'Hand awarded prices to your ERP.',
+        title: 'Export awarded prices to your ERP.',
         text: 'Export awarded prices by cost code in the upload format your ERP or accounting system expects, so nobody keys them in twice.',
         panel: {
           kind: 'list',
