@@ -18,8 +18,8 @@ export default function HomePage() {
       <HowSection />
       <ProofSection />
       <CtaBand
-        title="See it on your own project."
-        text="Send us a spec book or a plan set and we will walk you through the quote request Notch builds from it."
+        title="Start with a project you already have."
+        text="Send us a spec book or a plan set and we will show you how Notch can transform your bid process."
       />
     </>
   );
@@ -109,11 +109,11 @@ function HowSection() {
     },
     {
       title: 'Side by side comparison',
-      text: 'Review pricing in a leveled view that shows the low number on each line and the lines nobody priced.',
+      text: 'Review pricing in a leveled view that shows the low number on each line, plus any comments or substitutions.',
     },
     {
       title: 'Award, order and track',
-      text: 'Award by line or by vendor, issue orders, and follow each one from acknowledged to received.',
+      text: 'Award by each line, issue purchase orders and track shipments from the warehouse to installation.',
     },
   ];
 
