@@ -1,4 +1,4 @@
-import { DOTS, type LevelPanel, type ListPanel, type Panel, type ProductTable } from '../data/buyers';
+import { DOTS, type ImportPanel, type LevelPanel, type ListPanel, type Panel, type ProductTable } from '../data/buyers';
 
 /** Notch products table, drawn in HTML so it stays sharp and can change per buyer type. */
 export function ProductWindow({
@@ -226,6 +226,38 @@ function ListCard({ panel }: { panel: ListPanel }) {
   );
 }
 
+/** Import progress: file, steps ticking off, then a success line. Plays once when scrolled into view. */
+function ImportCard({ panel }: { panel: ImportPanel }) {
+  return (
+    <div className="n-window n-window--flat n-import" role="img" aria-label={`Example: ${panel.file}. ${panel.done}`}>
+      <div aria-hidden="true">
+        <div className="n-list__title">{panel.title}</div>
+        <div className="n-import__file">
+          <span className="n-import__icon">PDF</span>
+          <span className="n-import__name">
+            <strong>{panel.file}</strong>
+            <span>{panel.meta}</span>
+          </span>
+          <span className="n-import__bar">
+            <i />
+          </span>
+        </div>
+        {panel.steps.map((step, i) => (
+          <div key={step} className="n-import__step" style={{ ['--i' as string]: i }}>
+            <i className="n-import__tick" />
+            <span>{step}</span>
+          </div>
+        ))}
+        <div className="n-import__done" style={{ ['--i' as string]: panel.steps.length }}>
+          <i className="n-import__tick" />
+          <span>{panel.done}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function PanelMock({ panel }: { panel: Panel }) {
+  if (panel.kind === 'import') return <ImportCard panel={panel} />;
   return panel.kind === 'level' ? <LevelGrid panel={panel} /> : <ListCard panel={panel} />;
 }

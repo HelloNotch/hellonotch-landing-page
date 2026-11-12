@@ -800,6 +800,194 @@ button:focus-visible {
   font-weight: 600;
 }
 
+/* Import progress panel */
+.n-import__file {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.n-import__icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 46px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--stone);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.n-import__name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.n-import__name strong {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.n-import__name span {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.n-import__bar {
+  grid-column: 1 / -1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--stone);
+  overflow: hidden;
+}
+
+.n-import__bar i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #ffbf8f, #f0a870);
+  transform-origin: left;
+}
+
+.n-import__step,
+.n-import__done {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.n-import__done {
+  border-bottom: none;
+  background: #e8eeea;
+  font-weight: 600;
+  color: #2e4f3e;
+}
+
+.n-import__tick {
+  position: relative;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2e4f3e;
+}
+
+.n-import__tick::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 3.5px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@keyframes n-import-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes n-import-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes n-import-tick {
+  from {
+    background: var(--stone);
+    box-shadow: inset 0 0 0 2px var(--border);
+  }
+  to {
+    background: #2e4f3e;
+    box-shadow: none;
+  }
+}
+
+@keyframes n-import-mark {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Runs only when the scroll reveal is active; otherwise the finished state shows. */
+.reveal.will-animate .n-import__bar i {
+  transform: scaleX(0);
+}
+
+.reveal.will-animate .n-import__step,
+.reveal.will-animate .n-import__done {
+  opacity: 0;
+}
+
+.reveal.will-animate.visible .n-import__bar i {
+  animation: n-import-fill 3.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+.reveal.will-animate.visible .n-import__step,
+.reveal.will-animate.visible .n-import__done {
+  animation: n-import-in 0.4s ease-out both;
+  animation-delay: calc(0.7s + var(--i) * 1s);
+}
+
+.reveal.will-animate.visible .n-import__step .n-import__tick {
+  animation: n-import-tick 0.25s ease-out both;
+  animation-delay: calc(1.5s + var(--i) * 1s);
+}
+
+.reveal.will-animate.visible .n-import__step .n-import__tick::after {
+  animation: n-import-mark 0.2s ease-out both;
+  animation-delay: calc(1.5s + var(--i) * 1s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal.will-animate .n-import__bar i,
+  .reveal.will-animate .n-import__step,
+  .reveal.will-animate .n-import__done {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+
+  .reveal.will-animate .n-import__tick,
+  .reveal.will-animate .n-import__tick::after {
+    animation: none !important;
+  }
+}
+
 /* Logos */
 .n-logos {
   padding: 32px clamp(20px, 5vw, 40px);

@@ -54,7 +54,16 @@ export type ListPanel = {
   note?: { text: string; action?: string; tone?: 'peach' | 'caution' };
 };
 
-export type Panel = LevelPanel | ListPanel;
+export type ImportPanel = {
+  kind: 'import';
+  title: string;
+  file: string;
+  meta: string;
+  steps: string[];
+  done: string;
+};
+
+export type Panel = LevelPanel | ListPanel | ImportPanel;
 
 export type Buyer = {
   slug: string;
@@ -163,15 +172,12 @@ export const buyers: Buyer[] = [
         title: 'Import a spec book.',
         text: 'Drop in the PDF. Notch sorts the pages, shows you what it plans to import, and has you check three samples before it reads the rest.',
         panel: {
-          kind: 'list',
-          title: 'Import plan',
-          rows: [
-            ['Product spec pages', 'Import as products'],
-            ['Finish schedule', 'Import as products'],
-            ['General notes', 'Save to project documents'],
-            ['Cover and index', 'Skip'],
-          ],
-          note: { text: 'Sample 1 of 3. K-200 King headboard, qty 1.', action: 'This page is right' },
+          kind: 'import',
+          title: 'New import',
+          file: 'Downtown PA Hotel FF&E spec book.pdf',
+          meta: '212 pages',
+          steps: ['Scanning your spec book', 'Reading spec pages', 'Extracting product details'],
+          done: '18 products imported, each linked to its source page.',
         },
       },
       {
