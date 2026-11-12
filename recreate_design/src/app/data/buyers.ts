@@ -118,6 +118,27 @@ const hotelLevel: LevelPanel = {
 
 export const homeLevel = hotelLevel;
 
+/** Products table with rows selected and the bulk action bar showing, for the homepage steps. */
+export const homeSelectTable: ProductTable = {
+  project: 'Downtown PA Hotel',
+  count: '18 of 18 items',
+  columns: ['Tag', 'Qty', 'Category', 'Product name'],
+  selected: 3,
+  selectedLabel: '3 products selected',
+  groups: [
+    {
+      rows: [
+        r('K-200 CUST', '1 EA', 'Furniture', 'amber', 'King headboard'),
+        r('K-201 CUST', '1 PR', 'Furniture', 'amber', 'King nightstands, wall mounted'),
+        r('K-211-ACC', '1 EA', 'Furniture', 'amber', 'Accessible king platform bed'),
+        r('X-202 CUST', '1 EA', 'Furniture', 'amber', 'Cocktail table, 41 in. wide'),
+        r('L-105', '2 EA', 'Lighting', 'violet', 'Bedside sconce with reading light'),
+        r('F-301', '14 YD', 'Textiles', 'pink', 'Drapery fabric, blackout lined'),
+      ],
+    },
+  ],
+};
+
 export const buyers: Buyer[] = [
   {
     slug: 'design-and-purchasing',

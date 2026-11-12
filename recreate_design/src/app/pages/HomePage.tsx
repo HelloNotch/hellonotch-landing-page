@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { DemoButton } from '../components/Layout';
 import { PanelMock, ProductWindow } from '../components/ProductMock';
 import { CtaBand, ProofSection } from '../components/Sections';
-import { buyers, homeLevel, type Panel } from '../data/buyers';
+import { buyers, homeLevel, homeSelectTable, type Panel, type ProductTable } from '../data/buyers';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -107,21 +107,7 @@ function WhoSection() {
   );
 }
 
-const quotePanel: Panel = {
-  kind: 'list',
-  title: 'Guestroom casegoods, quote request',
-  rows: [
-    ['Harbor Contract', '3 of 3 lines', 'Submitted'],
-    ['Northline', '3 of 3 lines', 'Submitted'],
-    ['Kestrel and Co.', '3 of 3 lines', 'Submitted'],
-    ['Fieldstone Casegoods', '2 of 3 lines', 'Open'],
-    ['Summit Hospitality Supply', '1 of 3 lines', 'Open'],
-    ['Alder Millwork', 'Invited', 'Pending'],
-  ],
-  note: { text: 'Spec change on K-211 sent to all 6 vendors.' },
-};
-
-const HOW_STEPS: { title: string; text: string; panel: Panel }[] = [
+const HOW_STEPS: { title: string; text: string; panel?: Panel; table?: ProductTable }[] = [
   {
     title: 'Import in minutes, not days',
     text: 'Drop in a spec book or plan set. Notch reads it page by page and builds the product list, with the source page behind every line.',
@@ -130,7 +116,7 @@ const HOW_STEPS: { title: string; text: string; panel: Panel }[] = [
   {
     title: 'Quote requests out to every vendor at once',
     text: 'Vendors price line by line in their own portal. When specs change, every vendor is notified automatically.',
-    panel: quotePanel,
+    table: homeSelectTable,
   },
   {
     title: 'Side by side comparison',
@@ -183,7 +169,11 @@ function HowSection() {
               <span className="n-num">0{active + 1}</span>
               {HOW_STEPS[active].title}
             </p>
-            <PanelMock panel={HOW_STEPS[active].panel} />
+            {HOW_STEPS[active].table ? (
+              <ProductWindow table={HOW_STEPS[active].table!} flat />
+            ) : (
+              <PanelMock panel={HOW_STEPS[active].panel!} />
+            )}
           </div>
         </div>
       </div>
