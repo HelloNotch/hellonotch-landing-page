@@ -1,8 +1,9 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { DemoButton } from '../components/Layout';
 import { PanelMock, ProductWindow } from '../components/ProductMock';
 import { CtaBand, ProofSection } from '../components/Sections';
-import { buyers, homeLevel } from '../data/buyers';
+import { buyers, homeLevel, type Panel } from '../data/buyers';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -99,48 +100,115 @@ function WhoSection() {
   );
 }
 
+const quotePanel: Panel = {
+  kind: 'list',
+  title: 'Guestroom casegoods, quote request',
+  rows: [
+    ['Harbor Contract', '5 of 5 lines', 'Submitted'],
+    ['Northline', '5 of 5 lines', 'Submitted'],
+    ['Kestrel and Co.', '4 of 5 lines', 'Open'],
+    ['Alder Millwork', 'Invited', 'Pending'],
+  ],
+  note: { text: 'Spec change on K-211 sent to all 4 vendors.' },
+};
+
+const HOW_STEPS: { title: string; text: string; panel: Panel }[] = [
+  {
+    title: 'Import in minutes, not days',
+    text: 'Drop in a spec book or plan set. Notch reads it page by page and builds the product list, with the source page behind every line.',
+    panel: buyers[0].features[0].panel,
+  },
+  {
+    title: 'Quote requests out to every vendor at once',
+    text: 'Vendors price line by line in their own portal. When specs change, every vendor is notified automatically.',
+    panel: quotePanel,
+  },
+  {
+    title: 'Side by side comparison',
+    text: 'Review pricing in a leveled view that shows the low number on each line, plus any comments or substitutions.',
+    panel: homeLevel,
+  },
+  {
+    title: 'Award, order and track',
+    text: 'Award by each line, issue purchase orders and track shipments from the warehouse to installation.',
+    panel: buyers[0].features[2].panel,
+  },
+];
+
+const HOW_INTERVAL = 6500;
+
 function HowSection() {
-  const steps = [
-    {
-      title: 'Import in minutes, not days',
-      text: 'Drop in a spec book or plan set. Notch reads it page by page and builds the product list, with the source page behind every line.',
-    },
-    {
-      title: 'Quote requests out to every vendor at once',
-      text: 'Vendors price line by line in their own portal. When specs change, every vendor is notified automatically.',
-    },
-    {
-      title: 'Side by side comparison',
-      text: 'Review pricing in a leveled view that shows the low number on each line, plus any comments or substitutions.',
-    },
-    {
-      title: 'Award, order and track',
-      text: 'Award by each line, issue purchase orders and track shipments from the warehouse to installation.',
-    },
-  ];
+  const [active, setActive] = useState(0);
+  const [auto, setAuto] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  // Start cycling once the section is on screen, unless the visitor prefers reduced motion.
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAuto(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!auto || paused) return;
+    const id = window.setTimeout(() => setActive((i) => (i + 1) % HOW_STEPS.length), HOW_INTERVAL);
+    return () => window.clearTimeout(id);
+  }, [auto, paused, active]);
 
   return (
-    <section className="n-section n-section--alt" id="how">
+    <section className="n-section n-section--alt" id="how" ref={ref}>
       <div className="n-wrap n-split">
         <div className="n-split__text reveal">
           <div className="n-head" style={{ marginBottom: 0 }}>
             <p className="n-eyebrow">How it works</p>
             <h2 className="n-h2">Built for the way procurement projects actually work.</h2>
           </div>
-          <ol className="n-steps">
-            {steps.map((s, i) => (
-              <li key={s.title}>
-                <span className="n-num">0{i + 1}</span>
-                <div>
-                  <h3 className="n-h3">{s.title}</h3>
-                  <p className="n-copy">{s.text}</p>
-                </div>
+          <ol className="n-steps n-steps--tabs">
+            {HOW_STEPS.map((s, i) => (
+              <li key={s.title} className={i === active ? 'is-active' : ''}>
+                <button
+                  type="button"
+                  aria-pressed={i === active}
+                  onClick={() => {
+                    setActive(i);
+                    setAuto(false);
+                  }}
+                >
+                  <span className="n-num">0{i + 1}</span>
+                  <span>
+                    <span className="n-h3">{s.title}</span>
+                    <span className="n-copy">{s.text}</span>
+                  </span>
+                </button>
+                {i === active && auto && (
+                  <i
+                    className="n-steps__timer"
+                    style={{ animationDuration: `${HOW_INTERVAL}ms`, animationPlayState: paused ? 'paused' : 'running' }}
+                  />
+                )}
               </li>
             ))}
           </ol>
         </div>
-        <div className="n-split__visual reveal">
-          <PanelMock panel={homeLevel} />
+        <div
+          className="n-split__visual n-how__visual reveal"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <div key={active} className="n-how__panel">
+            <PanelMock panel={HOW_STEPS[active].panel} />
+          </div>
         </div>
       </div>
     </section>

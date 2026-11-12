@@ -192,7 +192,9 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
 }
 
 const STATUS_TONE: Record<string, string> = {
-  Open: 'green',
+  Open: 'peach',
+  Submitted: 'green',
+  Pending: 'neutral',
   Received: 'green',
   Review: 'peach',
   'In transit': 'blue',
