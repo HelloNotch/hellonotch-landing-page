@@ -348,8 +348,8 @@ export const buyers: Buyer[] = [
     pointsTitle: 'Set up for how a job gets bought out.',
     points: [
       {
-        title: 'Scope by cost code',
-        text: 'Lines carry their spec section and group by cost code. Use CSI MasterFormat or the code set your company already runs.',
+        title: 'Scope by CSI code',
+        text: 'Every line carries its spec section and groups by CSI code, so each trade gets its own scope.',
       },
       {
         title: 'Every bidder on the same documents',
