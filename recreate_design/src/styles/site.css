@@ -1258,6 +1258,20 @@ button:focus-visible {
   animation: n-how-in 0.4s ease-out both;
 }
 
+.n-how__label {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.n-how__label .n-num {
+  line-height: 1;
+}
+
 @keyframes n-how-in {
   from {
     opacity: 0;

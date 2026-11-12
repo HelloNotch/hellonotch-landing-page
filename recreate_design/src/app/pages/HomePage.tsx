@@ -175,13 +175,15 @@ function HowSection() {
 
   return (
     <section className="n-section n-section--alt" id="how" ref={ref}>
+      <div className="n-wrap">
+        <div className="n-head reveal">
+          <p className="n-eyebrow">How it works</p>
+          <h2 className="n-h2">Built for the way procurement projects actually work.</h2>
+        </div>
+      </div>
       <div className="n-wrap n-split">
         <div className="n-split__text reveal">
-          <div className="n-head" style={{ marginBottom: 0 }}>
-            <p className="n-eyebrow">How it works</p>
-            <h2 className="n-h2">Built for the way procurement projects actually work.</h2>
-          </div>
-          <ol className="n-steps n-steps--tabs">
+          <ol className="n-steps n-steps--tabs" style={{ marginTop: 0 }}>
             {HOW_STEPS.map((s, i) => (
               <li key={s.title} className={i === active ? 'is-active' : ''}>
                 <button
@@ -214,6 +216,10 @@ function HowSection() {
           onMouseLeave={() => setPaused(false)}
         >
           <div key={active} className="n-how__panel">
+            <p className="n-how__label">
+              <span className="n-num">0{active + 1}</span>
+              {HOW_STEPS[active].title}
+            </p>
             <PanelMock panel={HOW_STEPS[active].panel} />
           </div>
         </div>
