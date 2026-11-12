@@ -353,7 +353,7 @@ export const buyers: Buyer[] = [
       },
       {
         title: 'Every bidder on the same documents',
-        text: 'Drawings, specs and addenda ride with the quote request. When something changes, every invited bidder is notified.',
+        text: 'Drawings, specs and addenda are attached to the quote request. When something changes, every invited bidder is notified.',
       },
       {
         title: 'Owner purchases too',
