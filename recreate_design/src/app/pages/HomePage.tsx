@@ -142,39 +142,11 @@ const HOW_STEPS: { title: string; text: string; panel: Panel }[] = [
   },
 ];
 
-const HOW_INTERVAL = 6500;
-
 function HowSection() {
   const [active, setActive] = useState(0);
-  const [auto, setAuto] = useState(false);
-  const [paused, setPaused] = useState(false);
-  const ref = useRef<HTMLElement>(null);
-
-  // Start cycling once the section is on screen, unless the visitor prefers reduced motion.
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAuto(true);
-          obs.disconnect();
-        }
-      },
-      { threshold: 0.35 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!auto || paused) return;
-    const id = window.setTimeout(() => setActive((i) => (i + 1) % HOW_STEPS.length), HOW_INTERVAL);
-    return () => window.clearTimeout(id);
-  }, [auto, paused, active]);
 
   return (
-    <section className="n-section n-section--alt" id="how" ref={ref}>
+    <section className="n-section n-section--alt" id="how">
       <div className="n-wrap">
         <div className="n-head reveal">
           <p className="n-eyebrow">How it works</p>
@@ -189,10 +161,7 @@ function HowSection() {
                 <button
                   type="button"
                   aria-pressed={i === active}
-                  onClick={() => {
-                    setActive(i);
-                    setAuto(false);
-                  }}
+                  onClick={() => setActive(i)}
                 >
                   <span className="n-num">0{i + 1}</span>
                   <span>
@@ -200,20 +169,12 @@ function HowSection() {
                     <span className="n-copy">{s.text}</span>
                   </span>
                 </button>
-                {i === active && auto && (
-                  <i
-                    className="n-steps__timer"
-                    style={{ animationDuration: `${HOW_INTERVAL}ms`, animationPlayState: paused ? 'paused' : 'running' }}
-                  />
-                )}
               </li>
             ))}
           </ol>
         </div>
         <div
           className="n-split__visual n-how__visual reveal"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
         >
           <div key={active} className="n-how__panel">
             <p className="n-how__label">

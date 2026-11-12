@@ -1231,7 +1231,7 @@ button:focus-visible {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--border);
+  background: var(--accent);
 }
 
 .n-steps__timer {
