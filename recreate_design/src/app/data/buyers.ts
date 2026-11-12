@@ -374,7 +374,7 @@ export const buyers: Buyer[] = [
         },
       },
       {
-        title: 'See who covered what.',
+        title: 'See who priced what.',
         text: 'Every bidder answers line by line, with a price or a no bid and the reason. Gaps in a number show up before bid day, not after award.',
         panel: {
           kind: 'level',
