@@ -296,9 +296,9 @@ export const buyers: Buyer[] = [
           kind: 'list',
           title: 'Export for your ERP',
           rows: [
-            ['Awarded labor, by cost code', '16 lines'],
-            ['Awarded materials and fixtures', '26 items'],
-            ['Vendor and trade assignments', '9 vendors'],
+            ['Awarded labor, by cost code', '16 lines', 'Ready'],
+            ['Awarded materials and fixtures', '26 items', 'Needs review'],
+            ['Vendor and trade assignments', '9 vendors', 'Ready'],
           ],
           note: { text: '2 items still need an item number before upload.', tone: 'caution' },
         },
@@ -498,16 +498,16 @@ export const buyers: Buyer[] = [
         },
       },
       {
-        title: 'Award with the record attached.',
-        text: 'Award by line or by vendor. Awarded and not awarded vendors are notified from Notch, and the activity behind the decision stays with the bid.',
+        title: 'Award, and keep a dated history of the bid.',
+        text: 'Award by line or by vendor, and Notch notifies every vendor of the outcome. Each invitation, addendum, response and award is logged with the date and the person who did it.',
         panel: {
           kind: 'list',
           title: 'Bid activity',
           rows: [
-            ['Bid published', '6 vendors invited'],
-            ['Addendum 1 sent', 'All 6 vendors'],
-            ['Responses received', '5 of 6'],
-            ['Awarded', 'Campus Interiors, 41 lines'],
+            ['Bid published', '6 vendors invited', 'Sent'],
+            ['Addendum 1', 'All 6 vendors', 'Sent'],
+            ['Responses', '5 of 6 vendors', 'Received'],
+            ['Award', 'Campus Interiors, 41 lines', 'Awarded'],
           ],
         },
       },
@@ -515,7 +515,7 @@ export const buyers: Buyer[] = [
     showQuote: true,
     cta: {
       title: 'Send us a recent bid package.',
-      text: 'We will show you how it runs in Notch, from the spec package to the leveled responses.',
+      text: 'We will show you how it runs in Notch, from spec book importing to leveled responses.',
     },
   },
 ];

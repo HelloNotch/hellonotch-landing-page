@@ -201,6 +201,10 @@ const STATUS_TONE: Record<string, string> = {
   Acknowledged: 'peach',
   'Partial delivery': 'amber',
   Draft: 'neutral',
+  Sent: 'blue',
+  Awarded: 'green',
+  Ready: 'green',
+  'Needs review': 'amber',
 };
 
 function ListCard({ panel }: { panel: ListPanel }) {

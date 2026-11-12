@@ -107,9 +107,6 @@ function Nav() {
               </div>
             )}
           </div>
-          <Link to={CASE_STUDY_PATH} className="n-nav__link">
-            Customers
-          </Link>
         </nav>
 
         <div className="n-nav__right">
@@ -144,7 +141,6 @@ function Nav() {
             </Link>
           ))}
           <p className="n-drawer__label">Notch</p>
-          <Link to={CASE_STUDY_PATH}>Customers</Link>
           <a href={SIGN_IN_URL}>Sign in</a>
         </nav>
       )}
