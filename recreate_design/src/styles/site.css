@@ -1586,3 +1586,117 @@ button:focus-visible {
     animation: none;
   }
 }
+
+/* Phones: product mocks fit the screen without sideways scrolling */
+@media (max-width: 640px) {
+  .n-table {
+    min-width: 0;
+    font-size: 13px;
+  }
+
+  .n-table__head,
+  .n-table__row {
+    grid-template-columns: 30px 94px 46px minmax(0, 1fr) !important;
+    padding: 0 6px;
+  }
+
+  .n-table:not(.n-table--bar) .n-table__head,
+  .n-table:not(.n-table--bar) .n-table__row {
+    grid-template-columns: 8px 78px 46px minmax(0, 1fr) !important;
+  }
+
+  .n-table__head > span:nth-child(4),
+  .n-table__row > span:nth-child(4),
+  .n-table__head > span:nth-child(n + 6),
+  .n-table__row > span:nth-child(n + 6) {
+    display: none;
+  }
+
+  .n-table .n-tag {
+    font-size: 11.5px;
+  }
+
+  .n-window__bar .is-right {
+    display: none;
+  }
+
+  .n-level {
+    min-width: 0;
+    font-size: 12px;
+  }
+
+  .n-level__row {
+    grid-template-columns: var(--cols-m) !important;
+  }
+
+  .n-level__cell {
+    padding: 9px 7px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .n-level__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    padding: 9px 8px 9px 12px;
+  }
+
+  .n-level__item .n-level__qty,
+  .n-level__row--cols .n-level__item span:not(:nth-child(2)),
+  .n-level__row--cols .n-level__item--notag span:nth-child(2) {
+    display: none;
+  }
+
+  .n-level__row--cols .n-level__item--notag span:first-child {
+    display: inline;
+  }
+
+  .n-level__vendor strong {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .n-level__view,
+  .n-level__selected {
+    font-size: 11px;
+  }
+
+  .n-level__selected {
+    padding: 3px 4px;
+  }
+
+  .n-level__delta {
+    font-size: 10.5px;
+  }
+
+  .n-level__note {
+    right: 6px;
+    width: 176px;
+  }
+
+  .n-logos__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  .n-logos__label {
+    flex: none;
+    text-align: center;
+  }
+
+  .n-logos__row {
+    flex: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 20px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .n-logos__row img {
+    width: 128px;
+    height: 28px !important;
+    object-fit: contain;
+  }
+}

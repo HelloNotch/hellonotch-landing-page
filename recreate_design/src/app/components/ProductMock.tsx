@@ -98,6 +98,7 @@ function money(v: string | null | undefined) {
 
 function LevelGrid({ panel }: { panel: LevelPanel }) {
   const cols = `minmax(206px, 1.5fr) repeat(${panel.vendors.length}, minmax(116px, 1fr))`;
+  const colsMobile = `minmax(0, 1.25fr) repeat(${panel.vendors.length}, minmax(0, 1fr))`;
   const cell = (i: number, extra = '') => `n-level__cell ${i === panel.picked ? 'is-picked' : ''} ${extra}`.trim();
   const totals = panel.totals.map(money);
   const full = totals.filter((t): t is number => t !== null);
@@ -114,7 +115,7 @@ function LevelGrid({ panel }: { panel: LevelPanel }) {
         <span className="n-pill">Leveling</span>
       </div>
       <div className="n-scroll" aria-hidden="true">
-        <div className="n-level">
+        <div className="n-level" style={{ ['--cols-m' as string]: colsMobile }}>
           <div className="n-level__row n-level__row--vendors" style={{ gridTemplateColumns: cols }}>
             <div className="n-level__key" />
             {panel.vendors.map((v, i) => (

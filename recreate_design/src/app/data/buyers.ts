@@ -110,12 +110,12 @@ const hotelLevel: LevelPanel = {
   vendors: ['Harbor Contract', 'Northline', 'Kestrel and Co.'],
   picked: 1,
   lines: [
+    { tag: 'K-211', qty: '8', name: 'Accessible king platform bed', prices: ['$2,210', '$2,040', '$2,120'], low: 1, sub: 2 },
     { tag: 'K-200', qty: '120', name: 'King headboard', prices: ['$1,480', '$1,395', '$1,540'], low: 1 },
     { tag: 'K-201', qty: '120', name: 'King nightstands, pair', prices: ['$920', '$905', '$870'], low: 2 },
-    { tag: 'K-211', qty: '8', name: 'Accessible king platform bed', prices: ['$2,210', '$2,040', '$2,120'], low: 1, sub: 2 },
   ],
   totals: ['$4,610', '$4,340', '$4,530'],
-  callout: { line: 2, vendor: 2, status: 'Substitution', note: 'Offering our 410 series bed. Same finish, ships 2 weeks sooner.' },
+  callout: { line: 0, vendor: 2, status: 'Substitution', note: 'Offering our 410 series bed. Same finish, ships 2 weeks sooner.' },
 };
 
 export const homeLevel = hotelLevel;
