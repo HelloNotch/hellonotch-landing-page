@@ -5,12 +5,40 @@ const WIDGET_CSS = 'https://assets.calendly.com/assets/external/widget.css';
 
 type CalendlyApi = { initPopupWidget: (opts: { url: string }) => void };
 
+type Gtag = (command: 'event', name: string, params?: Record<string, unknown>) => void;
+
+/** Sends a Google Analytics event, if the gtag snippet from index.html is on the page. */
+function trackEvent(name: string, params?: Record<string, unknown>): void {
+  const gtag = (window as Window & { gtag?: Gtag }).gtag;
+  if (typeof gtag === 'function') gtag('event', name, params);
+}
+
+let bookingListenerAdded = false;
+
+/**
+ * Calendly's popup posts messages to the page as the visitor moves through it.
+ * When a meeting is actually booked, send "demo_booked" to Google Analytics
+ * (marked as a key event there).
+ */
+function listenForBookings(): void {
+  if (bookingListenerAdded) return;
+  bookingListenerAdded = true;
+  window.addEventListener('message', (e: MessageEvent) => {
+    if (e.origin !== 'https://calendly.com') return;
+    const event = (e.data as { event?: unknown } | null)?.event;
+    if (event === 'calendly.event_scheduled') {
+      trackEvent('demo_booked', { page_path: window.location.pathname });
+    }
+  });
+}
+
 function getCalendly(): CalendlyApi | undefined {
   return (window as Window & { Calendly?: CalendlyApi }).Calendly;
 }
 
 /** Idempotent: safe to call from App mount and before opening the widget */
 export function ensureCalendlyAssets(): void {
+  listenForBookings();
   if (!document.querySelector(`link[href="${WIDGET_CSS}"]`)) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -46,6 +74,7 @@ function waitForCalendly(maxMs = 20000): Promise<CalendlyApi> {
 /** Opens Calendly inline popup only (Calendly.initPopupWidget). No new tab. */
 export async function openCalendlyPopup(): Promise<void> {
   ensureCalendlyAssets();
+  trackEvent('demo_popup_open', { page_path: window.location.pathname });
   try {
     const cal = await waitForCalendly();
     cal.initPopupWidget({ url: CALENDLY_EVENT_URL });
